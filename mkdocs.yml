@@ -1,5 +1,5 @@
-site_name: "Terminale NSI - Lycée François Mauriac - Bordeaux"
-site_url: https://glassus.github.io/terminale_nsi/
+site_name: "Terminale NSI - Lycée Angela Davis - Saint Denis"
+site_url: https://ebrunach.github.io/terminale_nsi/
 #nav:
 #  - 'accueil' : 'index.md'
 
@@ -100,16 +100,16 @@ extra:
 
   social:
     - icon: fontawesome/solid/paper-plane
-      link: mailto:gilles.lassus@ac-bordeaux.fr
+      link: mailto:emmanuel.brunache@ac-bordeaux.fr
       name: Écrire à l'auteur
 
     - icon: fontawesome/brands/github
-      link: https://github.com/glassus/terminale_nsi
+      link: https://github.com/ebrunach/terminale_nsi
       name: Dépôt git
 
     - icon: fontawesome/solid/school
       link: https://lyceemauriac.fr
-      name: Lycée François Mauriac - Bordeaux
+      name: Lycée Angela Davis - Saint Denis
 
 extra_javascript:
   - scripts/mathjax.js
@@ -123,8 +123,8 @@ extra_css:
   - xtra/stylesheets/pyoditeur.css
 
 
-copyright:  CC BY-SA / G.Lassus
+copyright:  CC BY-SA / E.Brunache
 
 repo_url: https://github.com/glassus/terminale_nsi
 
-repo_name: glassus/terminale_nsi
+repo_name: ebrunach/terminale_nsi
