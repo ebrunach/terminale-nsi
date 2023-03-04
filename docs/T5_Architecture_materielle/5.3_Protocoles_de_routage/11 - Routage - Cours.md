@@ -1,16 +1,7 @@
 
 # Protocoles de routage
 
-![image](data/banniere.png){: .center}
-
-![image](data/BO.png){: .center}
-
-
-## 0. Résumé des épisodes précédents
-
-- [cours](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/){:target="_blank"} de 1ère sur l'architecture d'un réseau
-- [cours](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.4_Protocoles_de_communication/cours/){:target="_blank"} de 1ère sur les différents protocoles de communication dans un réseau.
-
+**0. Résumé des épisodes précédents**
 
 !!! abstract "Notions essentielles :heart: :heart: :heart:"
     Lorsqu'une machine A, d'adresse IP_A veut discuter avec une machine B, d'adresse IP_B :
@@ -28,7 +19,7 @@
 
 ## 1. Tables de routage
 
-![](data/reseau_total2.png){: .center}
+![](data/reseau_total2.png){: .center width=70%}
 
 
 Les tables de routage sont des informations stockées dans le routeur permettant d'aiguiller intelligemment les données qui lui sont transmises.
@@ -57,7 +48,7 @@ Dans le réseau ci-dessus, si l'ordinateur d'adresse ```192.168.0.5``` veut inte
 | F | 192.168.0.254 | | 
 | A | 10.0.5.152 | |
 | E | 172.17.1.254 | |  
-| B | 172.17.1.254 |172.17.1.123| 
+| B | 172.17.1.254 |172.17.1.123|
 | C | 10.0.5.152 |10.0.5.135| 
 
 Les trois réseaux F, A et E sont directement accessibles au routeur R1, puisqu'il en fait partie : il n'a donc pas besoin d'adresse passerelle pour communiquer avec ces réseaux.
@@ -72,8 +63,6 @@ De la même manière, la communication avec le réseau C nécessite de confier l
 - Soit de manière **dynamique** : les réseaux s'envoient eux-mêmes des informations permettant de mettre à jour leurs tables de routages respectives. Des algorithmes de détermination de meilleur chemin sont alors utilisés : nous allons en découvrir deux, le protocole RIP et le protocole OSPF.
 
 ## 2. Le protocole RIP
-
-_voir le TP débranché_ : [le jeu dont vous êtes le routeur](https://github.com/glassus/nsi/tree/master/Terminale/Theme_5_Architecture_materielle/5.3_Protocoles_de_routage/TP_protocole_RIP){. target="_blank"}
 
 
 !!! abstract "Les règles du protocole RIP :heart: :heart: :heart:"
@@ -110,10 +99,6 @@ OSPF : *Open Shortest Path First*
 
 Un inconvénient majeur du protocole précédent est la non-prise en compte de la bande passante reliant les routeurs.
 
-![image](data/matrix.jpeg){: .center width=30%}
-
-
-
 !!! abstract "principe fondamental du protocole OSPF :heart:"
     Le chemin le plus rapide n'est pas forcément le plus court.
 
@@ -126,11 +111,6 @@ En gris, le chemin RIP. En bleu, l'OSPF.
 </i>
 </center>
 </div>
-
-
-
-
-
 
 Dans le protocole OSPF, les tables de routage vont prendre en considération la vitesse de communication entre les routeurs.
 
@@ -197,32 +177,6 @@ L'exemple précédent était très simple et de solution intuitive. Dans le cas 
 
 La réponse est **oui**, depuis la découverte en 1959 par Edsger Dijkstra de l'algorithme qui porte son nom, **l'algorithme de Dijkstra**.
 
-Pour le comprendre, vous pouvez regarder la vidéo d'un célèbre YouTuber :
-
-<p align="center">
-<iframe width="790" height="372" src="https://www.youtube.com/embed/rI-Rc7eF4iw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-
-Cet algorithme, ici exécuté de manière manuelle, est bien sûr programmable. Et c'est donc grâce à lui que chaque routeur calcule la route la plus rapide pour acheminer les données qu'il reçoit.
-
-!!! abstract "Exercice d'application de l'algorithme de Dijkstra (HP)"
-    
-    Donner le plus court chemin pour aller de E à F dans le graphe ci-dessous :
-    ![image](data/graph.png){: .center width=60%}
-
-    ??? tip "correction"
-        |E|A|B|C|D|F|Choix|
-        |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-        |**0**|--|--|--|--|--|E(0)|
-        |.|30vE|--|40vE|**10vE**|--|D(10)|       
-        |.|**20vD**|--|40vE|.|80vD|A(20)|
-        |.|.|60vA|**30vA**|.|80vD|C(30)|
-        |.|.|**50vC**|.|.|80vD|B(50)|
-        |.|.|.|.|.|**70vB**|F(70)|
-
-        Le meilleur trajet est donc E-D-A-C-B-F.  
-        _Attention ce trajet correspond à la colonne choix (dans l'ordre) mais c'est un hasard._
-
 
 ### 3.4 Exercice
 _(extrait du sujet 0)_
@@ -249,7 +203,7 @@ $$ \text{coût} = \frac{10^8}{d} $$
 
 Le routeur A doit transmettre un message au routeur G, en empruntant le chemin dont la somme des coûts sera la plus petite possible. Déterminer le chemin parcouru. On indiquera le raisonnement utilisé.
 
-??? tip "Correction"
+!!! tip "Correction"
     **Q1**  
     1. $\text{coût} = \dfrac{10^8}{10 \times 10^9}= \dfrac{10^8}{10^{10}}= 10^{-2}=0,01$  
     2. $5=\dfrac{10^8}{d}$ donc $d=\dfrac{10^8}{5}=20 \times 10^6$ = 20 Mb/s
@@ -268,6 +222,7 @@ Le routeur A doit transmettre un message au routeur G, en empruntant le chemin d
 
 ---
 !!! aide "Bibliographie"
+    - En quasi intégralité du cours de NSI au lycée François Mauriac [ici](https://glassus.github.io/terminale_nsi/T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
     - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
     - Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
     - Site d'Olivier Lécluse [https://www.lecluse.fr/nsi/NSI_T/archi/routage/](https://www.lecluse.fr/nsi/NSI_T/archi/routage/)
