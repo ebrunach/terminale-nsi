@@ -94,22 +94,22 @@ plugins:
  # - mkdocs-jupyter
 
 extra:
-  analytics: 
-    provider: google
-    property: G-NXDLLVVQEB
+  # analytics: 
+  #   provider: google
+  #   property: G-NXDLLVVQEB
 
   social:
     - icon: fontawesome/solid/paper-plane
-      link: mailto:emmanuel.brunache@ac-bordeaux.fr
+      link: mailto:emmanuel.brunache@ac-creteil.fr
       name: Écrire à l'auteur
 
     - icon: fontawesome/brands/github
       link: https://github.com/ebrunach/terminale_nsi
       name: Dépôt git
 
-    - icon: fontawesome/solid/school
-      link: https://lyceemauriac.fr
-      name: Lycée Angela Davis - Saint Denis
+    # - icon: fontawesome/solid/school
+    #   link: https://lyceemauriac.fr
+    #   name: Lycée Angela Davis - Saint Denis
 
 extra_javascript:
   - scripts/mathjax.js
@@ -125,6 +125,6 @@ extra_css:
 
 copyright:  CC BY-SA / E.Brunache
 
-repo_url: https://github.com/glassus/terminale_nsi
+repo_url: https://github.com/ebrunach/terminale_nsi
 
 repo_name: ebrunach/terminale_nsi
