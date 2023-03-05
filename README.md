@@ -1,6 +1,6 @@
 ## Cours de Terminale NSI 
 
-Ceci est le dépôt correspondant au site [https://ebrunach.github.io/terminale_nsi/](https://ebrunach.github.io/terminale_nsi/).
+Ceci est le dépôt correspondant au site [https://ebrunach.github.io/terminale-nsi/](https://ebrunach.github.io/terminale-nsi/).
 
 
 emmanuel.brunache [at] ac-bordeaux.fr
