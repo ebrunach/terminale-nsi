@@ -42,7 +42,7 @@
                 print("pas trouvée, ajoutée")
         ``` -->
 
-<!-- !!! abstract "{{ # exercice() }}"
+<!-- !!! abstract ""
     === "Énoncé"
         Créer une fonction ```meme_sous_reseau(ip_a, ip_b, masque)``` qui renvoie un booléen indiquant si A et B sont partie du même sous-réseau.
 
