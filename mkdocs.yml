@@ -104,7 +104,7 @@ extra:
       name: Écrire à l'auteur
 
     - icon: fontawesome/brands/github
-      link: https://github.com/ebrunach/terminale_nsi
+      link: https://github.com/ebrunach/terminale-nsi
       name: Dépôt git
 
     # - icon: fontawesome/solid/school
@@ -125,6 +125,6 @@ extra_css:
 
 copyright:  CC BY-SA / E.Brunache
 
-repo_url: https://github.com/ebrunach/terminale_nsi
+repo_url: https://github.com/ebrunach/terminale-nsi
 
-repo_name: ebrunach/terminale_nsi
+repo_name: ebrunach/terminale-nsi
