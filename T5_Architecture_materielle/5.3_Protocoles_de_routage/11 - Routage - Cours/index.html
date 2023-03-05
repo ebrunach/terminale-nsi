@@ -457,6 +457,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#0-resume-des-episodes-precedents" class="md-nav__link">
+    0. Résumé des épisodes précédents**
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-tables-de-routage" class="md-nav__link">
     1. Tables de routage
   </a>
@@ -826,7 +833,7 @@
 
 
 <h1 id="protocoles-de-routage">Protocoles de routage<a class="headerlink" href="#protocoles-de-routage" title="Permanent link">⚓︎</a></h1>
-<p><strong>0. Résumé des épisodes précédents</strong></p>
+<h2 id="0-resume-des-episodes-precedents">0. Résumé des épisodes précédents**<a class="headerlink" href="#0-resume-des-episodes-precedents" title="Permanent link">⚓︎</a></h2>
 <div class="admonition abstract">
 <p class="admonition-title">Notions essentielles <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
 <p>Lorsqu'une machine A, d'adresse IP_A veut discuter avec une machine B, d'adresse IP_B :</p>
@@ -912,6 +919,10 @@ Elle envoie donc dans le sous-réseau une trame ayant pour entête l'adresse MAC
 <li>Soit de manière <strong>dynamique</strong> : les réseaux s'envoient eux-mêmes des informations permettant de mettre à jour leurs tables de routages respectives. Des algorithmes de détermination de meilleur chemin sont alors utilisés : nous allons en découvrir deux, le protocole RIP et le protocole OSPF.</li>
 </ul>
 <h2 id="2-le-protocole-rip">2. Le protocole RIP<a class="headerlink" href="#2-le-protocole-rip" title="Permanent link">⚓︎</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Principe fondamentale du protocole RIP (Routing Information Protocol)</p>
+<p>Le protocole RIP cherche à minimiser le nombre de routeurs (c'est-à-dire la distance) à traverser pour atteindre la destination (on cherche ici à minimiser le nombre de sauts).</p>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title">Les règles du protocole RIP <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" title=":heart:" /></p>
 <p>Le Routing Information Protocol (RIP) est basé sur l'échange (toutes les 30 secondes) des tables de routage de chaque routeur.<br />
@@ -1091,7 +1102,7 @@ Pour le justifier, on peut (non obligatoire) faire un algorithme de Dijkstra :
   <small>
     
       Dernière mise à jour:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 mars 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 mars 2023</span>
       
     
   </small>
