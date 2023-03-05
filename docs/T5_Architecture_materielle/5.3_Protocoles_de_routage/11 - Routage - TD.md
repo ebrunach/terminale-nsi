@@ -42,7 +42,7 @@
                 print("pas trouvée, ajoutée")
         ``` -->
 
-<!-- !!! abstract "{{ exercice() }}"
+<!-- !!! abstract "{{ # exercice() }}"
     === "Énoncé"
         Créer une fonction ```meme_sous_reseau(ip_a, ip_b, masque)``` qui renvoie un booléen indiquant si A et B sont partie du même sous-réseau.
 
@@ -431,7 +431,7 @@
 !!! abstract "{{ exercice() }}"
     Parties 2, 3 et 4 de l'exercice 2 du sujet [Nouvelle-Calédonie J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J1.pdf){. target="_blank"}.
 
-    **Partie 2**
+<!--     **Partie 2**
     ??? tip "Correction Q1."
         Le réseau services a pour adresse IP ```195.168.254.0```.
 
@@ -464,4 +464,4 @@
         | R6 | R6 | 1 | 
 
     ??? tip "Correction Q2."
-        Pour minimiser le nombre de sauts (protocole RIP), le trajet sera ```R1-R2-R4-R6```. 
+        Pour minimiser le nombre de sauts (protocole RIP), le trajet sera ```R1-R2-R4-R6```.  -->
