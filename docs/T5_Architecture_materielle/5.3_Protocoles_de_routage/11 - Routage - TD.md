@@ -4,9 +4,9 @@
 
 !!! abstract "{{ exercice() }}"
 
-    Exercice 5 du sujet [La Réunion J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LeReunion_J1.pdf){. target="_blank"}
+    Exercice 5 du sujet [La Réunion J1 2022](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_10.pdf){. target="_blank"}
 
-    ??? tip "Correction Q1.a."
+<!--     ??? tip "Correction Q1.a."
         Une adresse IPv4 se code à l'aide de 4 octets.
 
     ??? tip "Correction Q1.b."
@@ -40,9 +40,9 @@
             else:
                 liste_IP.append(IP)
                 print("pas trouvée, ajoutée")
-        ```
+        ``` -->
 
-!!! abstract "{{ exercice() }}"
+<!-- !!! abstract "{{ exercice() }}"
     === "Énoncé"
         Créer une fonction ```meme_sous_reseau(ip_a, ip_b, masque)``` qui renvoie un booléen indiquant si A et B sont partie du même sous-réseau.
 
@@ -151,7 +151,7 @@
             assert meme_sous_reseau("192.168.0.1", "192.168.1.3", 20) == True
             assert meme_sous_reseau("192.168.0.1", "192.168.0.3", 30) == True
 
-        ```
+        ``` -->
 
 
 !!! abstract "{{ exercice() }}"
@@ -180,7 +180,7 @@
         protocole RIP.
 
 
-    === "Correction"
+<!--     === "Correction"
         **Q1.1.** Le trajet parcouru de A à G est A-C-F-G  
         **Q1.2.** 
         Table de routage de G :  
@@ -203,7 +203,7 @@
         |D|D|1|
         |E|D|2|
         |G|D|3|
-        |F|D|4|
+        |F|D|4| -->
 
 
 !!! abstract "{{ exercice() }}"
@@ -255,7 +255,7 @@
 
         c. Indiquer pour quel(s) routeur(s) l’extrait de la table de routage sera modifié pour un paquet à destination de L2, avec la métrique OSPF.
 
-    === "Correction"
+<!--     === "Correction"
         1.a. D'après la table, R1 doit passer par la passerelle 86.154.10.1 qui correspond au routeur R2.  
         1.b. Le paquet va traverser R1, R2, R6 avant d'arriver à L2.  
         2.a. RIP doit minimiser le nombre de sauts, donc les deux chemins minimaux possibles sont R1-R3-R4-R6 et R1-R3-R2-R6.  
@@ -263,7 +263,7 @@
         3.a $\dfrac{10^9}{10 \times 10^6}=100$ donc le coût R2-R3 est 100.  
         3.b. Avec OSPF, le chemin qui minimise le coût est le chemin R1-R2-R4-R5-R6 (coût 103) :
         ![image](data/bac1_corr.png){: .center width=50%}
-        3.c. Dans la table de routage initiale, il faut modifier R2 pour qu'elle envoie sur R4 (et non sur R6), mais aussi R4 pour qu'elle envoie sur R5 (et non sur R6).
+        3.c. Dans la table de routage initiale, il faut modifier R2 pour qu'elle envoie sur R4 (et non sur R6), mais aussi R4 pour qu'elle envoie sur R5 (et non sur R6). -->
         
 
 
@@ -321,7 +321,7 @@
 
         ![](data/ex3_4_corrige.png)
 
-    === "Correction"
+<!--     === "Correction"
         1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.6.0.0/16.   
         1.b Pour le réseau L1 (192.168.1.0/24), l'adresse min est 192.168.1.1/24, l'adresse max est 192.168.1.254/24.  
         Pour le réseau L2 (175.6.0.0/16), l'adresse min est 175.6.0.1/16 et l'adresse max est 175.6.255.254/16  
@@ -349,7 +349,7 @@
         | IP destination | Passerelle | Interface|
         |:--:|:--:|:--:|
         |10.1.7.0/24| |Interface 2|
-        |192.168.1.0/24|10.1.7.1|Interface 2|
+        |192.168.1.0/24|10.1.7.1|Interface 2| -->
     
 
 !!! abstract "{{ exercice() }}"
@@ -369,17 +369,17 @@
 
         En s'appuyant sur les tables de routage, tracer les liaisons entre les routeurs.
 
-    === "Correction"
+<!--     === "Correction"
         1. A-B-E-F  
 
         2.
-        ![image](data/graphAN_corr.png){: .center}
+        ![image](data/graphAN_corr.png){: .center} -->
     
 
 !!! abstract "{{ exercice() }}"
     Exercice 4 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}.
 
-    ??? tip "Correction Q1.a."
+<!--     ??? tip "Correction Q1.a."
         ```195.168.1.0/24``` 
 
     ??? tip "Correction Q1.b."
@@ -423,7 +423,7 @@
         - R1-R2 : 10
         - R1-R4-R3-R2 : 151
 
-        Le parcours R1-R4-R2 est donc bien le parcours minimal.
+        Le parcours R1-R4-R2 est donc bien le parcours minimal. -->
         
 
 
