@@ -1,7 +1,7 @@
 
 # Protocoles de routage
 
-**0. Résumé des épisodes précédents**
+## 0. Résumé des épisodes précédents**
 
 !!! abstract "Notions essentielles :heart: :heart: :heart:"
     Lorsqu'une machine A, d'adresse IP_A veut discuter avec une machine B, d'adresse IP_B :
@@ -64,6 +64,8 @@ De la même manière, la communication avec le réseau C nécessite de confier l
 
 ## 2. Le protocole RIP
 
+!!! info "Principe fondamentale du protocole RIP (Routing Information Protocol)"
+    Le protocole RIP cherche à minimiser le nombre de routeurs (c'est-à-dire la distance) à traverser pour atteindre la destination (on cherche ici à minimiser le nombre de sauts).
 
 !!! abstract "Les règles du protocole RIP :heart: :heart: :heart:"
     Le Routing Information Protocol (RIP) est basé sur l'échange (toutes les 30 secondes) des tables de routage de chaque routeur.  
