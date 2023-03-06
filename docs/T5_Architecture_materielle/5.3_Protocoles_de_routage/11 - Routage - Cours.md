@@ -1,7 +1,7 @@
 
 # Protocoles de routage
 
-## 0. Résumé des épisodes précédents**
+## 0. Résumé des épisodes précédents
 
 !!! abstract "Notions essentielles :heart: :heart: :heart:"
     Lorsqu'une machine A, d'adresse IP_A veut discuter avec une machine B, d'adresse IP_B :
