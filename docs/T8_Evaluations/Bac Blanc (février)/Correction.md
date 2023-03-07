@@ -60,3 +60,65 @@ def urgent_debiteur(liste_debiteurs):
 ```
 
 ## Exercice 2
+1. 
+    1. Une fonction récursice est une fonction qui s'appelle elle-même
+    2. Le programme s'arrête après l'affichage de 9 car l'appel récursif suivant est `mystere(10)`. Or, lors de cet appel, le test du `if` (`n < 10`) est `False` donc l'appel se termine sans rien afficher et la pile d'appel commence alors à se vider.
+2. 
+```python
+def mult(lst, i = None):
+    if i is None:
+        i = len(lst) - 1
+    if i == 0:
+        return lst[i]
+    else:
+        return lst[i] * mult(lst, i - 1)
+```
+3. 
+    1. 
+    ```
+    ce sujet ?
+    dur
+    est
+    il
+    Alors,
+    ```
+    2. 
+    ```
+    Alors, il est dur ce sujet ?
+    ```
+4. 
+```python
+def joindre(lst):
+    sortie = ""
+    for mot in lst:
+        sortie += mot
+    return sortie
+```
+
+## Exercice 3
+1. Le couple `(NumVacancier, NumEmplacement)` ne peut pas servir de clé primaire car cela signifierait qu'un vacancier ne peut pas faire deux séjours différents (à différentes vacances) au même emplacement car la clé primaire doit rester unique.
+2. 
+    1. 
+    ```SQL
+    SELECT NumEmplacement, Prix FROM Emplacement;
+    ``` 
+    2. 
+    ```SQL
+    SELECT Email FROM Vacancier WHERE Prenom = "Ada" AND Nom = "Lovelace";
+    ```
+3. 
+```SQL
+SELECT NumEmplacement FROM Reservation WHERE date(DateArrivee) <= date('2023-02-23') and date(DateDepart) > date('2023-02-23');
+```
+4. 
+    1. 
+    ```SQL
+    UPDATE Emplacement SET Prix = 25 WHERE NumEmplacement = 302
+    ```
+    2. 
+    ```SQL
+    SELECT Surface FROM Emplacement
+    JOIN Reservation ON Reservation.NumEmplacement = Emplacement.NumEmplacement
+    JOIN Vacancier ON Vacancier.NumVacancier = Reservation.NumVacancier
+    WHERE Vacancier.Prenom = "Hedy" AND Vacancier.Nom = "Lamarr";
+    ```
