@@ -2,7 +2,7 @@
 !!! abstract "{{ exercice() }}"
     **Partie 1**
     ??? tip "Q1" 
-    ```python
+        ```python
         def enlever(self, somme):
             self.solde -= somme
         ```
@@ -27,7 +27,7 @@
         cpt_0123456A.enlever(43)
         ```
     ??? tip "Q3" 
-    ```python
+        ```python
         def envoyer(self, autre_compte, montant):
             autre_compte.ajouter(montant)
             self.enlever(montant)
@@ -67,7 +67,7 @@
         Le programme s'arrête après l'affichage de 9 car l'appel récursif suivant est `mystere(10)`. Or, lors de cet appel, le test du `if` (`n < 10`) est `False` donc l'appel se termine sans rien afficher et la pile d'appel commence alors à se vider.
 
     ??? tip "Q2" 
-    ```python
+        ```python
         def mult(lst, i = None):
             if i is None:
                 i = len(lst) - 1
