@@ -6,16 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ebrunach.github.io/terminale-nsi/Evaluations/Bac%20Blanc%20%28f%C3%A9vrier%29/Correction/</loc>
-         <lastmod>2023-03-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ebrunach.github.io/terminale-nsi/Evaluations/Bac%20Blanc%20%28f%C3%A9vrier%29/Sujet/</loc>
-         <lastmod>2023-03-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://ebrunach.github.io/terminale-nsi/T1_Structures_de_donnees/sommaire/</loc>
          <lastmod>2023-03-07</lastmod>
          <changefreq>daily</changefreq>
@@ -282,6 +272,16 @@
     </url>
     <url>
          <loc>https://ebrunach.github.io/terminale-nsi/T7_Divers/9_AOC/cours/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ebrunach.github.io/terminale-nsi/T8_Evaluations/Bac%20Blanc%20%28f%C3%A9vrier%29/Correction/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ebrunach.github.io/terminale-nsi/T8_Evaluations/Bac%20Blanc%20%28f%C3%A9vrier%29/Sujet/</loc>
          <lastmod>2023-03-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
