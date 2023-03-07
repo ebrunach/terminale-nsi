@@ -1,6 +1,6 @@
 # Correction du sujet 22-NSIJ2AS1 / Amérique du Sud J2 2022
 
-:arrow_right: [Sujet](../../data/2022/2022_Amerique_Sud_J2.pdf){. target="_blank"}
+:arrow_right: [Sujet]
 
 ## Exercice 1
 

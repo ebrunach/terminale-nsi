@@ -1,3 +1,4 @@
+{{initexo(0)}}
 # Correction
 !!! abstract "{{ exercice() }}"
     **Partie 1**
