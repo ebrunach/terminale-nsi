@@ -887,6 +887,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercice-3" class="md-nav__link">
+    Exercice 3
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -994,6 +1001,65 @@
 </li>
 </ol>
 <h2 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h2>
+<ol>
+<li>
+<ol>
+<li>Une fonction récursice est une fonction qui s'appelle elle-même</li>
+<li>Le programme s'arrête après l'affichage de 9 car l'appel récursif suivant est <code>mystere(10)</code>. Or, lors de cet appel, le test du <code>if</code> (<code>n &lt; 10</code>) est <code>False</code> donc l'appel se termine sans rien afficher et la pile d'appel commence alors à se vider.</li>
+</ol>
+</li>
+<li><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mult</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">mult</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></li>
+<li>
+<ol>
+<li><div class="highlight"><pre><span></span><code>ce sujet ?
+dur
+est
+il
+Alors,
+</code></pre></div></li>
+<li><div class="highlight"><pre><span></span><code>Alors, il est dur ce sujet ?
+</code></pre></div></li>
+</ol>
+</li>
+<li><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">joindre</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">sortie</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">mot</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+        <span class="n">sortie</span> <span class="o">+=</span> <span class="n">mot</span>
+    <span class="k">return</span> <span class="n">sortie</span>
+</code></pre></div></li>
+</ol>
+<h2 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h2>
+<ol>
+<li>Le couple <code>(NumVacancier, NumEmplacement)</code> ne peut pas servir de clé primaire car cela signifierait qu'un vacancier ne peut pas faire deux séjours différents (à différentes vacances) au même emplacement car la clé primaire doit rester unique.</li>
+<li>
+<ol>
+<li><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NumEmplacement</span><span class="p">,</span><span class="w"> </span><span class="n">Prix</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Emplacement</span><span class="p">;</span>
+</code></pre></div></li>
+<li><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Email</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Vacancier</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Ada&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Lovelace&quot;</span><span class="p">;</span>
+</code></pre></div></li>
+</ol>
+</li>
+<li><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">NumEmplacement</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Reservation</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="n">DateArrivee</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;2023-02-23&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="n">DateDepart</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;2023-02-23&#39;</span><span class="p">);</span>
+</code></pre></div></li>
+<li>
+<ol>
+<li><div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Emplacement</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">Prix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">NumEmplacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">302</span>
+</code></pre></div></li>
+<li><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Surface</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Emplacement</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Reservation</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Reservation</span><span class="p">.</span><span class="n">NumEmplacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Emplacement</span><span class="p">.</span><span class="n">NumEmplacement</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">Vacancier</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Vacancier</span><span class="p">.</span><span class="n">NumVacancier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Reservation</span><span class="p">.</span><span class="n">NumVacancier</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Vacancier</span><span class="p">.</span><span class="n">Prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Hedy&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Vacancier</span><span class="p">.</span><span class="n">Nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Lamarr&quot;</span><span class="p">;</span>
+</code></pre></div></li>
+</ol>
+</li>
+</ol>
 
   <hr>
 <div class="md-source-file">
