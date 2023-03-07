@@ -883,65 +883,65 @@
 <p><strong>Partie 1</strong></p>
 <details class="tip">
 <summary>Q1</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">enlever</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">-=</span> <span class="n">somme</span>
+</code></pre></div>
 </details>
-<p><code>python
-    def enlever(self, somme):
-        self.solde -= somme</code></p>
 <details class="tip">
 <summary>Q2</summary>
-<p><code>python
-def ajouter(self, somme):
-    self.solde += somme</code> </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">ajouter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">somme</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">+=</span> <span class="n">somme</span>
+</code></pre></div>
 </details>
 <details class="tip">
 <summary>Q3</summary>
-<p><code>python
-def est_debiteur(self):
-    return self.solde &lt; 0</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">est_debiteur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">solde</span> <span class="o">&lt;</span> <span class="mi">0</span>
+</code></pre></div>
 </details>
 <p><strong>Partie 2</strong></p>
 <details class="tip">
 <summary>Q1</summary>
-<p><code>python
-cpt_0123456A = Compte("0123456A", "B128672", "r.mebarek@bleu.fr")</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">cpt_0123456A</span> <span class="o">=</span> <span class="n">Compte</span><span class="p">(</span><span class="s2">&quot;0123456A&quot;</span><span class="p">,</span> <span class="s2">&quot;B128672&quot;</span><span class="p">,</span> <span class="s2">&quot;r.mebarek@bleu.fr&quot;</span><span class="p">)</span>
+</code></pre></div>
 </details>
 <details class="tip">
 <summary>Q2</summary>
-<p><code>python
-cpt_0123456A.enlever(43)</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">cpt_0123456A</span><span class="o">.</span><span class="n">enlever</span><span class="p">(</span><span class="mi">43</span><span class="p">)</span>
+</code></pre></div>
 </details>
 <details class="tip">
 <summary>Q3</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">envoyer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">autre_compte</span><span class="p">,</span> <span class="n">montant</span><span class="p">):</span>
+    <span class="n">autre_compte</span><span class="o">.</span><span class="n">ajouter</span><span class="p">(</span><span class="n">montant</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">enlever</span><span class="p">(</span><span class="n">montant</span><span class="p">)</span>
+</code></pre></div>
 </details>
-<p><code>python
-    def envoyer(self, autre_compte, montant):
-        autre_compte.ajouter(montant)
-        self.enlever(montant)</code></p>
 <p><strong>Partie 3</strong></p>
 <details class="tip">
 <summary>Q1</summary>
-<p><code>python
-def recherche_debiteurs(liste_comptes):
-    lst = []
-    for compte in liste_comptes:
-        if compte.est_debiteur():
-            d = {}
-            d['email'] = compte.email
-            d['solde'] = compte.solde
-            lst.append(d)
-    return lst</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_debiteurs</span><span class="p">(</span><span class="n">liste_comptes</span><span class="p">):</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">compte</span> <span class="ow">in</span> <span class="n">liste_comptes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">compte</span><span class="o">.</span><span class="n">est_debiteur</span><span class="p">():</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">d</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">compte</span><span class="o">.</span><span class="n">email</span>
+            <span class="n">d</span><span class="p">[</span><span class="s1">&#39;solde&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">compte</span><span class="o">.</span><span class="n">solde</span>
+            <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lst</span>
+</code></pre></div>
 </details>
 <details class="tip">
 <summary>Q2</summary>
-<p><code>python
-def urgent_debiteur(liste_debiteurs):
-    if len(liste_debiteurs) == 0:
-        return ""
-    debiteur_min = liste_debiteur[0]
-    for debiteur in liste_debiteurs:
-        if debiteur['solde'] &lt; debiteur_min['solde']:
-            debiteur_min = debiteur
-    return debiteur_min['email']</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">urgent_debiteur</span><span class="p">(</span><span class="n">liste_debiteurs</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste_debiteurs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">debiteur_min</span> <span class="o">=</span> <span class="n">liste_debiteur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">debiteur</span> <span class="ow">in</span> <span class="n">liste_debiteurs</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">debiteur</span><span class="p">[</span><span class="s1">&#39;solde&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">debiteur_min</span><span class="p">[</span><span class="s1">&#39;solde&#39;</span><span class="p">]:</span>
+            <span class="n">debiteur_min</span> <span class="o">=</span> <span class="n">debiteur</span>
+    <span class="k">return</span> <span class="n">debiteur_min</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span>
+</code></pre></div>
 </details>
 </div>
 <div class="admonition abstract">
@@ -956,35 +956,37 @@ def urgent_debiteur(liste_debiteurs):
 </details>
 <details class="tip">
 <summary>Q2</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mult</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">mult</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
 </details>
-<p><code>python
-    def mult(lst, i = None):
-        if i is None:
-            i = len(lst) - 1
-        if i == 0:
-            return lst[i]
-        else:
-            return lst[i] * mult(lst, i - 1)</code></p>
 <details class="tip">
 <summary>Q3.a</summary>
-<p><code>ce sujet ?
+<div class="highlight"><pre><span></span><code>ce sujet ?
 dur
 est
 il
-Alors,</code></p>
+Alors,
+</code></pre></div>
 </details>
 <details class="tip">
 <summary>Q3.b</summary>
-<p><code>Alors, il est dur ce sujet ?</code></p>
+<div class="highlight"><pre><span></span><code>Alors, il est dur ce sujet ?
+</code></pre></div>
 </details>
 <details class="tip">
 <summary>Q4</summary>
-<p><code>python
-def joindre(lst):
-    sortie = ""
-    for mot in lst:
-        sortie += mot
-    return sortie</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">joindre</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">sortie</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">mot</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+        <span class="n">sortie</span> <span class="o">+=</span> <span class="n">mot</span>
+    <span class="k">return</span> <span class="n">sortie</span>
+</code></pre></div>
 </details>
 </div>
 <div class="admonition abstract">
