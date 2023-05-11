@@ -207,4 +207,98 @@ Les différentes modélisations ont des impacts sur la compléxité des algorith
 
 ## 3. Implémentation python
 
+L'objectif va être de créer une classe implémentant l'interface d'un graphe orienté suivant:
+
+| Opération | Description |
+|---|---|
+| ajouter_sommet() | Ajouter un sommet au graphe |
+| ajouter_arc(sommet_debut, sommet_fin) | AJouter un arc orienté de sommet_debut à sommet_fin |
+| arc(sommet_debut, sommet_fin) | Retoune True si un arc relie sommet_debut à sommet_fin |
+| adjacents(sommet) | Retourne la liste des sommets adjacents accessibles |
+
+### 3.1 En utilisant la matrice d'adjacence
+
+```python
+class graphe:
+    def __init__(self):
+        self.A = list()
+        self.ordre = 0
+        
+    def ajouter_noeud(self, sommet):
+        """sommet est de type entier"""
+        for i in range(self.ordre, sommet + 1):
+            for ligne in self.A: # Boucle ajoutant un élément à chaque liste
+                ligne.append(False)
+            self.A.append([False for i in range(self.ordre + 1)]) # Ajoute une liste à la fin
+            self.ordre += 1
+        
+    def ajouter_arc(self, depart, arrivee):
+        self.ajouter_noeud(depart)
+        self.ajouter_noeud(arrivee)
+        self.A[depart][arrivee] = True
+        
+    def arc(self, depart, arrivee):
+        return self.A[depart][arrivee]
+    
+    def adjacents(self, sommet):
+        lst = []
+        for j in range(len(self.A[sommet])):
+            if self.A[sommet][j]:
+                lst.append(j)
+        return lst
+```
+
+```python
+>>> G = graphe()
+>>> G.ajoute_arc(0, 1)
+>>> G.ajoute_arc(0, 2)
+>>> G.ajoute_arc(1, 2)
+>>> G.A
+[[False, True, True], [False, False, True], [False, False, False]]
+>>> G.arc(0, 1), G.arc(1, 0)
+(True, False)
+>>> G.adjacents(0)
+[1, 2]
+```
+
+### 3.2 En utilisant la liste d'adjacence
+
+```python
+class graphe:
+    def __init__(self):
+        self.adj = dict()
+
+    def ajouter_sommet(self, sommet):
+        if sommet not in self.adj:
+            self.adj[sommet] = dict()
+
+    def ajouter_arc(self, depart, arrivee):
+        self.ajouter_sommet(depart)
+        self.ajouter_sommet(arrivee)
+        self.adj[depart][arrivee] = None
+
+    def arc(self, depart, arrivee):
+        return arrivee in self.adj[depart]
+
+    def adjacents(self, sommet):
+        lst = []
+        for s in self.adj[sommet]:
+            lst.append(s)
+        return lst
+```
+
+```python
+>>> G = graphe()
+>>> G.ajouter_arc('A','B')
+>>> G.ajouter_arc('A','C')
+>>> G.ajouter_arc('B','C')
+>>> G.adj
+{'A': {'B': None, 'C': None}, 'B': {'C': None}, 'C': {}}
+>>> G.arc('A','B'), G.arc('B','A')
+(True, False)
+>>> G.adjacents('A')
+['B', 'C']
+```
+
+Pour implémenter un graphe non orienté, on utilisera le même principe en assurant maintenant que deux arcs (dans un sens et dans l'autre) soient systématiquement créés pour représenter une arête.
 
