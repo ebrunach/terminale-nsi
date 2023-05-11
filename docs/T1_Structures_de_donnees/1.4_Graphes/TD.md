@@ -66,6 +66,7 @@
     2. Soit la matrice d'adjacence suivante:
 
     ${\begin{pmatrix}1&1&1&0&1\\0&0&1&1&0\\1&0&0&1&0\\0&1&0&1&1\\0&1&0&0&0\\\end{pmatrix}}$
+    
         1. Donner le diagramme de ce graphe
         2. Donner le liste d'adjacence de ce graphe
 
