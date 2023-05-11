@@ -51,3 +51,23 @@
     1. Réseau routier
     2. Boggle
     3. Labyrinthe
+
+!!! example "{{ exercice() }}: représentations"
+    1. Soit le graphe suivant:
+    ```mermaid
+    flowchart RL
+    A((1)) --- B((2))
+    B --- B
+    B --- C((3))
+    B --- D((4))
+    ```
+        1. Donner le liste d'adjacence de ce graphe
+        2. Donner la matrice d'adjacence de ce graphe
+    2. Soit la matrice d'adjacence suivante:
+
+    ${\begin{pmatrix}1&1&1&0&1\\0&0&1&1&0\\1&0&0&1&0\\0&1&0&1&1\\0&1&0&0&0\\\end{pmatrix}}$
+        1. Donner le diagramme de ce graphe
+        2. Donner le liste d'adjacence de ce graphe
+
+        
+
