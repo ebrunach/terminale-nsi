@@ -70,5 +70,21 @@
         1. Donner le diagramme de ce graphe
         2. Donner le liste d'adjacence de ce graphe
 
+!!! example "{{ exercice() }}: utilisation d'une interface"
+    En utilisant l'interface du cours, écrire un programme permettant de créer le graphe correspondant au diagramme suivant:
+
+    ```mermaid
+    flowchart RL
+    F((F)) --> D((D))
+    E((E)) --> D
+    D --> C((C))
+    E --> B((B))
+    C --> B
+    E --> A((A))
+    E --> F
+    D --> G((G))
+    G --> B
+    A --> A
+    ```
         
 

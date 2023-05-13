@@ -2,8 +2,6 @@
 
 ![image](data/BO1.png){: .center}
 
-![image](data/BO2.png){: .center}
-
 ## 1. Définitions
 
 !!! abstract "Graphe, Sommet, Arrête"
@@ -48,8 +46,6 @@ On distingue les **graphes non orientés**, où les arêtes relient deux sommets
     </figure>
     </td></tr></table></figure>
 
-
-
 !!! example "Quelques application"
     On retrouvera les graphes pour modéliser:
     
@@ -58,7 +54,7 @@ On distingue les **graphes non orientés**, où les arêtes relient deux sommets
     - les situations successives dans un jeu
 
 !!! abstract "Vocabulaire"
-    - Deux sommets reliés par une arête sont dit **adjacents**.
+    - Lorsqu'un sommet $x$ est relié (par un arc ou une arête) au sommet $y$, on dit que $y$ est **adjacent** à $x$.
     - Une graphe est dit **complet** si tous les sommets sont adjacents.
     - L'**ordre** d'un graphe est le nombre de sommets de celui-ci.
     - Le **degré** d’un sommet est le nombre d’arêtes dont ce sommet est une extrémité.
@@ -211,7 +207,7 @@ L'objectif va être de créer une classe implémentant l'interface d'un graphe o
 
 | Opération | Description |
 |---|---|
-| ajouter_sommet() | Ajouter un sommet au graphe |
+| ajouter_sommet(sommet) | Ajouter un sommet nommé *sommet* au graphe |
 | ajouter_arc(sommet_debut, sommet_fin) | AJouter un arc orienté de sommet_debut à sommet_fin |
 | arc(sommet_debut, sommet_fin) | Retoune True si un arc relie sommet_debut à sommet_fin |
 | adjacents(sommet) | Retourne la liste des sommets adjacents accessibles |
