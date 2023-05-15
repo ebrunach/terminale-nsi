@@ -178,10 +178,15 @@ Les différentes modélisations ont des impacts sur la compléxité des algorith
         C --- B
         E --- A((1))
         B --- A
+        linkStyle 5 stroke:red,stroke-width:4px,color:red;
         ```
         Sa matrice d'adjacence est:
 
-        ${\begin{pmatrix}0&1&0&0&1&0\\1&0&1&0&1&0\\0&1&0&1&0&0\\0&0&1&0&1&1\\1&1&0&1&0&0\\0&0&0&1&0&0\\\end{pmatrix}}$
+        $$
+        \require{xcolor}
+        $$
+
+        ${\begin{pmatrix}0&1&0&0&\color{red}1&0\\1&0&1&0&1&0\\0&1&0&1&0&0\\0&0&1&0&1&1\\\color{red}1&1&0&1&0&0\\0&0&0&1&0&0\\\end{pmatrix}}$
 
         *Les matrices d'adjacence des graphes non orientées sont symétriques*
 
@@ -195,10 +200,11 @@ Les différentes modélisations ont des impacts sur la compléxité des algorith
         C --> B
         E --> A((1))
         B --> A
+        linkStyle 5 stroke:red,stroke-width:4px,color:red;
         ```
         Sa matrice d'adjacence est:
 
-        ${\begin{pmatrix}0&0&0&0&0&0\\1&0&0&0&0&0\\0&1&0&0&0&0\\0&0&1&0&1&0\\1&1&0&0&0&0\\0&0&0&1&0&0\\\end{pmatrix}}$
+        ${\begin{pmatrix}0&0&0&0&0&0\\1&0&0&0&0&0\\0&1&0&0&0&0\\0&0&1&0&1&0\\\color{red}1&1&0&0&0&0\\0&0&0&1&0&0\\\end{pmatrix}}$
 
 
 ## 3. Implémentation python
