@@ -37,11 +37,9 @@ def parcours_profondeur(graphe, sommet, lst_marque = [], lst_parcours = []):
 ```
 
 !!! example "Vidéo sur un graphe"
-    <video controls>
-    <source src="../data/graphe_profondeur.mp4" type="video/mp4">
-    <p>Votre navigateur ne prend pas en charge les vidéos HTML5.
-        Voici <a href="data/graphe_profondeur.mp4">un lien pour télécharger la vidéo</a>.</p>
-    </video>
+    <div>
+    {% include "T3_Algorithmique/3.5_Algorithmes_sur_les_graphes/data/graphe_profondeur.html" %}
+</div>
 
 ## 2. Parcours en largeur
 
@@ -70,6 +68,13 @@ def parcours_largeur(graphe, depart):
                 lst_a_parcourir.append(sommet_adjacent)
     return lst_parcours
 ```
+!!! example "Vidéo sur un graphe"
+    <div>
+    {% include "T3_Algorithmique/3.5_Algorithmes_sur_les_graphes/data/graphe_largeur.html" %}
+</div>
+    
+    
+
 
 ## 3. Chercher un chemin dans un graphe
 
