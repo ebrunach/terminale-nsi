@@ -34,4 +34,3 @@ requests>=2.26
 mkdocs-git-revision-date-localized-plugin>=1.2.0
 mkdocs-awesome-pages-plugin>=2.8.0
 mkdocs-macros-plugin>=0.7.0
-mkdocs-snippet-plugin>=1.0.2
