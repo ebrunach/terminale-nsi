@@ -18,7 +18,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Requirements for core
+# Requirements for cor
 jinja2>=3.0
 markdown>=3.2
 mkdocs>=1.4.2
