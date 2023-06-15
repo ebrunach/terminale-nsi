@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+    
+    <select name="Section" id="section"></select>
+    <select name="Classe" id="classe"></select>
+    <select name="Type formation" id="formation"></select>
+    <select name="Spé 1" id="spe1"></select>
+    <select name="Spé 2" id="spe2"></select>
+    <div id="plot_reponse"></div>
+    <div id="plot_formation"></div>
+    <div id="plot_oui_non"></div>
+    <script>
+        var aRemplir = {
+                'formation': 'Type',
+                'section' : 'Qualification présentée',
+                'classe' : 'Division de classe',
+                'spe1' : 'Spé1',
+                'spe2' : 'Spé2'
+            }
+        
+        function removeOptions(selectElement) {
+            var i, L = selectElement.options.length - 1;
+            for(i = L; i >= 0; i--) {
+                selectElement.remove(i);
+            }
+        }
+
+        function miseAJourSelect(dataframe) {
+            Object.entries(aRemplir).forEach(entry => {
+                const [selectid, dfid] = entry
+                const select = document.getElementById(selectid);
+                for (let option of select) {
+
+                        if (![...new Set(dataframe.column(dfid).values)].includes(option.value) && option.value != 'Tous'){
+                            option.disabled = true
+                    } else {
+                        option.disabled= false
+                    }
+                }
+            })
+        }
+
+        function remplissage(dataframe){
+            Object.entries(aRemplir).forEach(entry => {
+                const [selectid, dfid] = entry
+                const select = document.getElementById(selectid);
+                [...new Set(dataframe.column(dfid).values)].forEach((text, index) => {
+                    const Option = document.createElement('option');
+                    Option.text = text;
+                    Option.value = text;
+                    select.add(Option);
+                })
+                const Option = document.createElement('option');
+                Option.text = "Tous";
+                Option.value = 'Tous';
+                select.add(Option);
+                select.value = 'Tous';
+                select.addEventListener("change", faireGraphes)
+            });
+            
+        }
+        function pivot(dataframe) {
+            const pivoted = {};
+
+            // Perform the pivoting operation
+            dataframe.$data.forEach((item) => {
+            const reponse = item[0];
+            const date = item[1];
+            const nombre = item[2];
+            const moyenne = item[3];
+
+            if (!pivoted[reponse]) {
+                pivoted[reponse] = {};
+                pivoted[reponse]['hovertext'] = []
+                pivoted[reponse]['text'] = []
+                pivoted[reponse]['name'] = reponse
+                pivoted[reponse]['type'] = 'bar'
+                pivoted[reponse]['x'] = []
+                pivoted[reponse]['y'] = []
+            }
+            pivoted[reponse]['hovertext'].push(moyenne.toFixed(1) + " / " + nombre)
+            pivoted[reponse]['text'].push(moyenne.toFixed(1) + " / " + nombre)
+            pivoted[reponse]["x"].push(date)
+            pivoted[reponse]["y"].push(nombre);
+            
+            });
+            return Object.values(pivoted)
+        }
+
+        function prepareDataOuiNon(dataframe){
+            df = dataframe.copy();
+            df.resetIndex({ inplace: true })
+            df_oui_adapte = df.query(df["Réponse de la formation"].eq('Oui')).loc({columns : ["Numéro Candidat","date","Moyenne_Spe"]}).groupby(["Numéro Candidat", "date"])
+            df_oui = df_oui_adapte.count().groupby(["date"]).count().addColumn("Moyenne_Spe",df_oui_adapte.mean().groupby(["date"]).mean().column("Moyenne_Spe_mean_mean"));
+            df_non_adapte = df.loc({columns : ["Numéro Candidat","date","Moyenne_Spe"]}).groupby(["Numéro Candidat", "date"])
+            df_non = df_non_adapte.count().groupby(["date"]).count().addColumn("Moyenne_Spe",df_non_adapte.mean().groupby(["date"]).mean().column("Moyenne_Spe_mean_mean"));
+            df_quenon_adapte = df.query(df["Réponse de la formation"].eq('Oui').or(df["Réponse de la formation"].eq('Oui Si')).or(df["Réponse de la formation"].eq('En liste d\'attente')).or(df["Réponse de la formation"].eq('En liste d\'attente - Oui Si')).or(df["Réponse de la formation"].eq('En recherche de contrat'))).loc({columns : ["Numéro Candidat","date","Moyenne_Spe"]}).groupby(["Numéro Candidat", "date"])
+            df_quenon = df_quenon_adapte.count().groupby(["date"]).count().addColumn("Moyenne_Spe",df_quenon_adapte.mean().groupby(["date"]).mean().column("Moyenne_Spe_mean_mean"));
+            const pivoted = {};
+            df_oui.$data.forEach((item, index) => {
+                const date = item[0];
+                const nombre = item[1];
+                const moyenne = item[3];
+
+                if (!pivoted["oui"]) {
+                    pivoted["oui"] = {};
+                    pivoted["oui"]['name'] = "Oui"
+                    pivoted["oui"]['type'] = 'bar'
+                    pivoted["oui"]['x'] = []
+                    pivoted["oui"]['y'] = []
+                    pivoted["oui"]['text'] = []
+                }
+
+                pivoted["oui"]["x"].push(date);
+                pivoted["oui"]["y"].push(nombre);
+                pivoted["oui"]['text'].push(moyenne.toFixed(1));
+            
+            });
+            df_non.$data.forEach((item, index) => {
+                const date = item[0];
+                const nombre = item[1];
+                const moyenne = item[3];
+
+                if (!pivoted["non"]) {
+                    pivoted["non"] = {};
+                    pivoted["non"]['name'] = "Aucun oui"
+                    pivoted["non"]['type'] = 'bar'
+                    pivoted["non"]['x'] = []
+                    pivoted["non"]['y'] = []
+                    pivoted["non"]['text'] = []
+                    pivoted["non"]['moyenne'] = []
+                    pivoted["non"]['nombre'] = []
+                }
+
+                pivoted["non"]["x"].push(date)
+                pivoted["non"]["y"].push(nombre - pivoted["oui"]["y"][pivoted["oui"]["x"].indexOf(date)]);
+                pivoted["non"]["moyenne"].push(moyenne)
+                pivoted["non"]["nombre"].push(nombre)
+                pivoted["non"]['text'].push(((moyenne * nombre - pivoted["oui"]["y"][pivoted["oui"]["x"].indexOf(date)] * parseFloat(pivoted["oui"]["text"][pivoted["oui"]["x"].indexOf(date)]))/(pivoted["non"]["y"][pivoted["non"]["x"].indexOf(date)])).toFixed(1))
+            });
+            df_quenon.$data.forEach((item, index) => {
+                const date = item[0];
+                const nombre = item[1];
+                const moyenne = item[3];
+
+                if (!pivoted["quenon"]) {
+                    pivoted["quenon"] = {};
+                    pivoted["quenon"]['name'] = "Que des non"
+                    pivoted["quenon"]['type'] = 'bar'
+                    pivoted["quenon"]['x'] = []
+                    pivoted["quenon"]['y'] = []
+                    pivoted["quenon"]['text'] = []
+                }
+
+                pivoted["quenon"]["x"].push(date)
+                pivoted["quenon"]["y"].push(pivoted["non"]["y"][pivoted["non"]["x"].indexOf(date)] + pivoted["oui"]["y"][pivoted["oui"]["x"].indexOf(date)]- nombre);
+                pivoted["non"]["y"][pivoted["non"]["x"].indexOf(date)] -= pivoted["quenon"]["y"][pivoted["quenon"]["x"].indexOf(date)]
+                pivoted["quenon"]['text'].push(((pivoted["non"]["nombre"][pivoted["non"]["x"].indexOf(date)] * parseFloat(pivoted["non"]["moyenne"][pivoted["non"]["x"].indexOf(date)]) - moyenne * nombre)/(pivoted["non"]["nombre"][pivoted["non"]["x"].indexOf(date)] - nombre)).toFixed(1))
+            });
+            return Object.values(pivoted)
+        }
+
+
+        var dff;
+        dfd.readCSV(
+          "data_super.csv"
+        )
+        .then((df) => {
+            dff = df;
+            remplissage(df);
+            faireGraphes();
+        })
+
+        function faireGraphes() {
+            dffSelect = dff["Type"].ne(20);
+            Object.entries(aRemplir).forEach(entry => {
+                const [selectid, dfid] = entry
+                if (document.getElementById(selectid).value != 'Tous'){
+                    if (dffSelect == null) {
+                        dffSelect = dff[dfid].eq(document.getElementById(selectid).value);
+                    } else {
+                        dffSelect = dffSelect.and(dff[dfid].eq(document.getElementById(selectid).value))
+                    }
+                }
+            })
+            miseAJourSelect(dff.query(dffSelect));
+            // Plot 1
+            const dff_reponse_adapte = dff.query(dffSelect).loc({columns: ["Réponse de la formation","date","Moyenne_Spe"]}).groupby(["Réponse de la formation", "date"])
+            const data_reponse = pivot(dff_reponse_adapte.count().addColumn("Moyenne_Spe",dff_reponse_adapte.mean().column("Moyenne_Spe_mean")))
+            const ctx_reponse = document.getElementById('plot_reponse');
+            Plotly.newPlot( ctx_reponse, Object.values(data_reponse), {barmode: 'stack'});
+
+            // Plot 2
+            const dff_formation_adapte = dff.query(dffSelect.and(dff["Réponse de la formation"].eq('Oui'))).loc({columns: ["Type","date","Moyenne_Spe"]}).groupby(["Type", "date"])
+            const data_formation = pivot(dff_formation_adapte.count().addColumn("Moyenne_Spe",dff_formation_adapte.mean().column("Moyenne_Spe_mean")))
+            const ctx_formation = document.getElementById('plot_formation');
+            Plotly.newPlot( ctx_formation, Object.values(data_formation), {barmode: 'stack'});
+
+            // Plot 3
+            const data_oui_non = prepareDataOuiNon(dff.query(dffSelect))
+            const ctx_oui_non = document.getElementById('plot_oui_non');
+            Plotly.newPlot( ctx_oui_non, Object.values(data_oui_non), {barmode: 'stack'});
+            return dffSelect
+
+        }
+
+      
+
+    </script>
+
+</body>
+
+</html>

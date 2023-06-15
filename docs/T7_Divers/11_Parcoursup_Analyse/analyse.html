@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div id="myChart" "></div>
+      </div>
+      <div id="Type_Oui" "></div>
+      </div>
+      <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+      
+      <script>
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const ctx = document.getElementById('myChart');
+                Plotly.newPlot( ctx, data, {barmode: 'stack'}); 
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        fetch('data_type_oui.json')
+            .then(response => response.json())
+            .then(data => {
+                const ctx = document.getElementById('Type_Oui');
+                Plotly.newPlot( ctx, data, {barmode: 'stack'}); 
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });           
+      </script>
+</body>
+</html>
