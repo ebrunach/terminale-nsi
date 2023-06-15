@@ -50,16 +50,16 @@ def definir_query():
     WHEN Voeu LIKE 'DCG%' THEN 'DCG'
     WHEN Voeu LIKE 'D.E%' THEN 'D.E'
     WHEN Voeu LIKE 'DEUST%' THEN 'DEUST'
-    WHEN Voeu LIKE "Formation des écoles%" THEN "Formation des écoles"
-    WHEN Voeu LIKE "%Formations  des écoles%" THEN "Formation des écoles"
+    WHEN Voeu LIKE "Formation des écoles%" THEN "Ecoles (commerce, ingénieur...)"
+    WHEN Voeu LIKE "%Formations  des écoles%" THEN "Ecoles (commerce, ingénieur...)"
     WHEN Voeu LIKE "Mise à niveau%" THEN "Mise à niveau"
-    WHEN Voeu LIKE "Formations Bac + 5%" THEN "Formations Bac + 5"
+    WHEN Voeu LIKE "Formations Bac + 5%" THEN "Archi"
     WHEN Voeu LIKE "%Année préparatoire aux Etudes de Santé%" THEN "Année préparatoire aux Etudes de Santé"
     WHEN Voeu LIKE "%CPES%" THEN "Classe préparatoire"
     ELSE "Autre"
     END Type
     """
-    super = f'SELECT {Type}, "Qualification présentée", "Division de classe", "Numéro Candidat", "Spé1", "Spé2","Phase", "Réponse de la formation", "Situation du voeu", "Date de la situation", "date", (IFNULL(HGGSP, 0) + IFNULL(HLP, 0) + IFNULL(MATHS, 0) + IFNULL(NSI, 0) + IFNULL("PH-CH", 0) + IFNULL(SVT, 0) + IFNULL(SES, 0) + IFNULL(LLCE, 0) + IFNULL(CBPH, 0) + IFNULL(STSS, 0)) / 2.0 AS Moyenne_Spe FROM eleves JOIN details_admi ON eleves.Code = details_admi."Numéro d\'inscription";'
+    super = f'SELECT {Type}, "Qualification présentée", "Division de classe", "Numéro Candidat", "Spé1" || " / "|| "Spé2" As "Spe","Phase", "Réponse de la formation", "Situation du voeu", "Date de la situation", "date", (IFNULL(HGGSP, 0) + IFNULL(HLP, 0) + IFNULL(MATHS, 0) + IFNULL(NSI, 0) + IFNULL("PH-CH", 0) + IFNULL(SVT, 0) + IFNULL(SES, 0) + IFNULL(LLCE, 0) + IFNULL(CBPH, 0) + IFNULL(STSS, 0)) / 2.0 AS Moyenne_Spe FROM eleves JOIN details_admi ON eleves.Code = details_admi."Numéro d\'inscription";'
     Type_Formation_Oui = f'SELECT date, {Type}, AVG(Moyenne_Spe) AS Moyenne, COUNT(*) AS Nombre_Voeux FROM ({Formation_Oui}) GROUP BY Type, date ORDER BY date, Moyenne'
     return {"Type_Formation_Oui" : Type_Formation_Oui,
             "Moyenne" : Moyenne,
