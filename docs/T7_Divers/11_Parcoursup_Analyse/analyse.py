@@ -157,7 +157,7 @@ def export_json(json_file_path, data):
 
 queries = definir_query()
 conn = sqlite3.connect("/mnt/8db36fc9-e85d-4f5c-836f-33bd7ae1acdd/Documents/Google Drive Linux/Vie professionelle et scolaire/Professeur de Math/Fonctionnaire/2022-2023 - La Plaine/TNSI/Site/docs/data/parcoursup.db")
-# importer_fichier_parcoursup("2023-06-13_0932667U_details_admi.csv", conn)
+importer_fichier_parcoursup("2023-06-18_0932667U_details_admi.csv", conn)
 moyenne_query = queries["Moyenne"]
 # show_graphes_moyennes(moyenne_query, conn)
 data = export_json_moyennes(moyenne_query, conn)
