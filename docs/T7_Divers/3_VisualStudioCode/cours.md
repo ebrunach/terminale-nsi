@@ -1,4 +1,4 @@
-# Thonny
+# IDE
 
 Comme pour tous les langages de programmation, il n'existe pas **un** logiciel permettant de coder en Python, mais un très (très) grand nombre de logiciels différents, qu'on regroupe sous le nom d'IDE (interfaces de développement)
 

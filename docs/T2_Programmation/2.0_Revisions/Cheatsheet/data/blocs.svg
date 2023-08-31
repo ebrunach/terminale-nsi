@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="82.735298mm"
+   height="58.221226mm"
+   viewBox="0 0 82.735298 58.221226"
+   version="1.1"
+   id="svg14723"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="blocs.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview14725"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.9077568"
+     inkscape:cx="115.05659"
+     inkscape:cy="120.29835"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs14720">
+    <marker
+       style="overflow:visible"
+       id="Arrow1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1"
+       markerWidth="4.0606604"
+       markerHeight="6.7071066"
+       viewBox="0 0 4.0606602 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path5057"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1"
+       markerWidth="4.0606604"
+       markerHeight="6.7071066"
+       viewBox="0 0 4.0606602 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path5057-9"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-28.342202,-19.225507)">
+    <text
+       xml:space="preserve"
+       style="font-weight:normal;font-size:4.9389px;font-family:'Tlwg Mono';-inkscape-font-specification:'Tlwg Mono, Normal';text-align:start;text-anchor:start;fill:#000000;stroke-width:1.233;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       x="30.221243"
+       y="24.7339"
+       id="text15122"><tspan
+         sodipodi:role="line"
+         id="tspan15120"
+         style="text-align:start;text-anchor:start;fill:#000000;stroke-width:1.233;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         x="30.221243"
+         y="24.7339">instruction#<tspan
+   style="fill:#008000;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan17914">0</tspan>1</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;fill:#000000;stroke-width:1.233;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         x="30.221243"
+         y="30.907524"
+         id="tspan15142">instruction parente#<tspan
+   style="fill:#ff0000;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan18032">1</tspan>:</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;fill:#000000;stroke-width:1.233;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         x="30.221243"
+         y="37.08115"
+         id="tspan15124">    instruction#<tspan
+   style="fill:#ff0000;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan18020">1</tspan>1</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;fill:#000000;stroke-width:1.233;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         x="30.221243"
+         y="43.254776"
+         id="tspan15128">    instruction#<tspan
+   style="fill:#ff0000;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan18022">1</tspan>2</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;fill:#000000;stroke-width:1.233;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         x="30.221243"
+         y="49.428398"
+         id="tspan15130">    instruction parente#<tspan
+   style="fill:#0000ff;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan18030">2</tspan>:</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;fill:#000000;stroke-width:1.233;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         x="30.221243"
+         y="55.602024"
+         id="tspan15132">        instruction#<tspan
+   style="fill:#0000ff;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan18026">2</tspan>1</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;fill:#000000;stroke-width:1.233;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         x="30.221243"
+         y="61.77565"
+         id="tspan15134">        instruction#<tspan
+   style="fill:#0000ff;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan18028">2</tspan>2</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;fill:#000000;stroke-width:1.233;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         x="30.221243"
+         y="67.949272"
+         id="tspan15136">    instruction#<tspan
+   style="fill:#ff0000;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan18024">1</tspan>3</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;fill:#000000;stroke-width:1.233;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         x="30.221243"
+         y="74.122902"
+         id="tspan15138">instruction#<tspan
+   style="fill:#008000;-inkscape-font-specification:'Tlwg Mono, Normal';font-family:'Tlwg Mono';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.93889982px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+   id="tspan18018">0</tspan>2</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:none"
+       id="rect15200"
+       width="53.234997"
+       height="12.084903"
+       x="52.971832"
+       y="51.221085" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:none"
+       id="rect15200-0"
+       width="67.535904"
+       height="37.070057"
+       x="40.575691"
+       y="32.73243" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:none"
+       id="rect15200-0-7"
+       width="81.693565"
+       height="57.254227"
+       x="28.900436"
+       y="19.709007" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ff0000;stroke:#000000;stroke-width:0.966999;stroke-dasharray:none"
+       x="-65.964897"
+       y="103.34396"
+       id="text18036"
+       transform="rotate(-91.535977)"><tspan
+         sodipodi:role="line"
+         id="tspan18034"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#0000ff;stroke:none;stroke-width:0.967"
+         x="-65.964897"
+         y="103.34396">bloc2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ff0000;stroke:#000000;stroke-width:0.966999;stroke-dasharray:none"
+       x="-46.926201"
+       y="105.64339"
+       id="text18036-3"
+       transform="rotate(-91.535977)"><tspan
+         sodipodi:role="line"
+         id="tspan18034-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;stroke:none;stroke-width:0.967"
+         x="-46.926201"
+         y="105.64339">bloc1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#008000;stroke:#000000;stroke-width:0.966999;stroke-dasharray:none"
+       x="-34.918705"
+       y="108.98037"
+       id="text18036-3-1"
+       transform="rotate(-91.535977)"><tspan
+         sodipodi:role="line"
+         id="tspan18034-7-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#008000;stroke:none;stroke-width:0.967"
+         x="-34.918705"
+         y="108.98037">bloc0</tspan></text>
+    <path
+       style="fill:none;stroke:#ff6600;stroke-width:0.467;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
+       d="m 28.342354,36.790833 11.660103,0.0076"
+       id="path18964" />
+    <path
+       style="fill:#ff6600;stroke:#ff6600;stroke-width:0.467;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1-9)"
+       d="m 40.368113,53.497839 11.660103,0.0076"
+       id="path18964-3" />
+    <path
+       style="fill:#ff6600;stroke:#ff6600;stroke-width:1.067;stroke-dasharray:none;stroke-opacity:1"
+       d="M 40.716361,32.69249 40.556002,69.834921"
+       id="path19127" />
+    <path
+       style="fill:#ff6600;stroke:#ff6600;stroke-width:1.067;stroke-dasharray:none;stroke-opacity:1"
+       d="m 52.898709,50.981996 -0.0038,12.76473"
+       id="path19129" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.9389px;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed,  Bold';text-align:start;text-anchor:start;fill:#ff6600;stroke:#ff6600;stroke-width:1.067;stroke-dasharray:none;stroke-opacity:1"
+       x="-66.044212"
+       y="36.194424"
+       id="text19235"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan19233"
+         style="stroke:none;stroke-width:1.067"
+         x="-66.044212"
+         y="36.194424">indentation ⚠</tspan></text>
+  </g>
+</svg>
