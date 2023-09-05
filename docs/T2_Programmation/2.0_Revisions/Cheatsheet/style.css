@@ -3,27 +3,27 @@
 }
 
 .liste{
-    display: none;
+    display: initial;
 }
 
 .dictionnaire{
-    display: none;
+    display: initial;
 }
 
 .chapfonction{
-    display: none;
+    display: initial;
 }
 
 .conditionnelle{
-    display: none;
+    display: initial;
 }
 
 .boucle{
-    display: none;
+    display: initial;
 }
 
 .fichier{
-    display: none;
+    display: initial;
 }
 
 /* .md-sidebar{
@@ -85,7 +85,11 @@
 }
 
 .adroite[data-bracket]:before {
-    left: 100%;
+    left: 115%;
+}
+
+.lead{
+    font-size: 1.1rem;
 }
 
 [data-md-color-scheme=slate]{
@@ -95,6 +99,7 @@
     --motcme-color:lightblue;
     --variable-color:lightcoral;
     --module-color:lightpink;
+    --fonction-color:turquoise;
 }
 
 [data-md-color-scheme=default]{

@@ -1,18 +1,3 @@
-<!-- <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-    <link href="prism.css" rel="stylesheet" />
-</head> -->
-
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
@@ -82,10 +67,10 @@
                                 <td>
                                     <table class="table100">
                                         <tr>
-                                            <td class="type">list</td>
-                                            <td class="valeur">[1, 5, 3]</td>
-                                            <td class="valeur">["x", 8.9]</td>
-                                            <td class="valeur">["mot"]</td>
+                                            <td class="type w-25">list</td>
+                                            <td class="valeur w-25">[1, 5, 3]</td>
+                                            <td class="valeur w-25">["x", 8.9]</td>
+                                            <td class="valeur w-25">["mot"]</td>
                                         </tr>
                                     </table>
                                 </td>
@@ -97,12 +82,12 @@
                                 <td>
                                     <table class="table100">
                                         <tr>
-                                            <td class="type">tuple</td>
-                                            <td class="valeur">(1, 5, 3)</td>
-                                            <td class="valeur"><span
+                                            <td class="type w-25">tuple</td>
+                                            <td class="valeur w-25">(1, 5, 3)</td>
+                                            <td class="valeur w-25"><span
                                                     data-bracket="expression juste avec des virgules">11,
                                                     "y"</span></td>
-                                            <td class="valeur">("mot",)</td>
+                                            <td class="valeur w-25">("mot",)</td>
                                         </tr>
                                     </table>
                                 </td>
@@ -114,7 +99,7 @@
                                 <td>
                                     <table class="table100">
                                         <tr>
-                                            <td class="type">str</td>
+                                            <td class="type w-25">str</td>
                                             <td>séquences ordonnées de caractères</td>
                                         </tr>
                                     </table>
@@ -129,10 +114,10 @@
                                 <td>
                                     <table class="table100 dictionnaire">
                                         <tr>
-                                            <td class="type">dict</td>
+                                            <td class="type w-25">dict</td>
                                             <td class="valeur">{<span
-                                                    data-bracket="valeurs hachables &#xa;(types base, immutables...)">"clé"</span>:"val"}</td>
-                                            <td class="valeur">dict(("clé","val"))</td>
+                                                    data-bracket="valeurs hachables (types base, immutables...)">"clé"</span>:"val"}</td>
+                                            <td class="valeur px-2">dict(("clé","val"))</td>
                                         </tr>
                                     </table>
                                 </td>
@@ -306,7 +291,7 @@
                                 <td colspan="3" class="fst-italic">(résultats booléens)</td><td class="p-1">&leq;</td><td class="p-1">&geq;</td><td class="p-1">=</td><td class="p-1">&ne;</td>
                             </tr>
                         </table>
-                        <table>
+                        <table class="table100">
                             <tr>
                                 <td width="150px"><span class="variable">a</span> <span class="type">and</span> <span class="variable">b</span></td><td>et logique <span class="fst-italic small">(les deux en même temps)</span></td>
                             </tr>
@@ -403,7 +388,7 @@
             <div class="card">
             <div class="card-body">
                 <div class="row m-0 card-title">
-                    <div class="col col-8 h3">Instructions conditionnelles</div>
+                    <div class="col col-8"><h3>Instructions conditionnelles</h3></div>
                     <div class="col col-4"><img width="100%" src="../data/conditionnelle.png" alt=""></div>
                 </div>
                 <div class="card-text">
@@ -455,7 +440,7 @@
             <div class="card">
             <div class="card-body">
                 <div class="row m-0 card-title">
-                    <div class="col col-8 h3">Instruction boucle conditionnelle</div>
+                    <div class="col col-8"><h3>Instruction boucle conditionnelle</h3></div>
                     <div class="col col-4"><img width="50%" src="../data/boucleconditionnelle.png" alt=""></div>
                 </div>
                 <div class="card-text">
@@ -464,10 +449,15 @@
                 <p><span data-bracket="         ⚠ tabulation">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> bloc d'instructions</p>
                 <p class="lead mt-2 text-center">⚠ Attention aux boucles sans fin !</p>
                 <hr class="my-0 mx-2">
-                <table>
+                <table class="table100">
                     <tr>
                         <td><p><span class="variable">s</span> = <span class="valeur">0</span> </p>
-                            <span class="variable">i</span> = <span class="valeur">1</span> </td><td class="fst-italic">initialisations avant la boucle</td><td class="fst-italic" rowspan="3">
+                            <span class="variable">i</span> = <span class="valeur">1</span> </td>
+                            <td class="fst-italic" rowspan="2">
+                                <p>initialisations avant la boucle</p>
+                                <p class="mt-3">condition avec au moins une valeur variable (ici i)</p>
+                            </td>
+                            <td class="fst-italic" rowspan="3">
                                 <p class="small">Algo de :</p>
                                 <p class="lead">
                                 <math display="block" class="tml-display" style="display:block math;">
@@ -499,12 +489,16 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><span class="type">while </span><span class="variable">i</span> &lt;= <span class="valeur">100</span> :</td><td class="fst-italic">condition avec au moins une valeur variable (ici i)</td>
+                        <td><span class="type">while </span><span class="variable">i</span> &lt;= <span class="valeur">100</span> :</td>
                     </tr>
                     <tr>
-                        <td width="180px"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="variable">s</span> = <span class="variable">s</span> + <span class="variable">i</span> ** <span class="valeur">2</span></p>
+                        <td width="140px"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="variable">s</span> = <span class="variable">s</span> + <span class="variable">i</span> ** <span class="valeur">2</span></p>
                         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="variable">i</span> = <span class="variable">i</span> + <span class="valeur">1</span></p>
-                        <p><span class="fonction">print</span>(<span class="valeur">"somme :"</span>, <span class="variable">s</span>)</p></td><td class="fst-italic">☝ faire varier la variable de condition !</td>
+                        </td>
+                        <td class="fst-italic">☝ faire varier la variable de condition !</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><span class="fonction">print</span>(<span class="valeur">"somme :"</span>, <span class="variable">s</span>)</td>
                     </tr>
                 </table>
             </div>
@@ -515,7 +509,7 @@
             <div class="card">
             <div class="card-body">
                 <div class="row m-0 card-title">
-                    <div class="col col-8 h3">Instruction boucle itérative</div>
+                    <div class="col col-8"><h3>Instruction boucle itérative</h3></div>
                     <div class="col col-4"><img width="50%" src="../data/boucle.png" alt=""></div>
                 </div>
                 <div class="card-text">
@@ -525,7 +519,7 @@
                 <p class="lead mt-2 text-center">⚠ Bonne habitude : ne pas modifier la variable de boucle </p>
                 <hr class="my-0 mx-2">
                 <p>Parcours des <span class="fw-bold">valeurs</span> d'un conteneur</p>
-                <table>
+                <table class="table100">
                     <tr>
                         <td><p><span class="variable">s</span> = <span class="valeur">"Du texte"</span> </p>
                             <span class="variable">cpt</span> = <span class="valeur">0</span> </td><td class="fst-italic">initialisations avant la boucle</td>
@@ -546,7 +540,7 @@
                 <p>Parcours des <span class="fw-bold">index</span> d'un conteneur séquence</p>
                 <p>    ◽ changement de l'élément à la position</p>
                 <p>    ◽ accès aux éléments autour de la position (avant/après)</p>
-                <table>
+                <table class="table100">
                     <tr>
                         <td width="300px">
                             <p><span class="variable">lst</span> = [<span class="valeur">-1</span>,<span class="valeur">18</span>,<span class="valeur">-4</span>,<span class="valeur">12</span>,<span class="valeur">-7</span>,<span class="valeur">0</span>,<span class="valeur">17</span>]</p>
@@ -619,7 +613,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Opérations génériques sur les conteneurs</h3>
                     <div class="card-text">
-                        <table>
+                        <table class="table100">
                             <tr>
                                 <td><p><span class="fonction">len</span>(<span class="variable">c</span>)→ nb d'éléments</p></td><td rowspan="2" class="px-2 fst-italic">Note: Pour dictionnaires et ensembles, ces opérations travaillent sur les clés.</td>
                             </tr>
@@ -656,10 +650,10 @@
                 <div class="card-body">
                     <h3 class="card-title">Définition de fonction</h3>
                     <div class="card-text">
-                        <table>
+                        <table class="table100">
                         <tr><td colspan="2" class="fst-italic">nom de la fonction (identificateur)</td><td width="33%"></td></tr>
                         <tr><td class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2b63;</td><td width="33%"></td></tr>
-                        <tr><td width="33%"><span class="motcle">def</span> <span class="fonction">fct</span>(<span class="variable">x</span>,<span class="variable">y</span>,<span class="variable">z</span>):</td><td class="fst-italic" colspan="2"><span class="variable">x</span>,<span class="variable">y</span> et <span class="variable">z</span> sont des paramètres nommés</td></tr>
+                        <tr><td width="33%"><span class="motcle">def</span> <span class="fonction">fct</span>(<span class="variable">x</span>,<span class="variable">y</span>,<span class="variable">z</span>):</td><td class="fst-italic" colspan="2">&#x2b60; <span class="variable">x</span>,<span class="variable">y</span> et <span class="variable">z</span> sont des paramètres nommés</td></tr>
                             <tr><td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="valeur">"""documentation"""</span></td></tr>
                             <tr><td colspan="2" class="fw-bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# bloc instructions, calcul de res, etc.</td></tr>
                             <tr><td class="align-top"><span data-bracket="         ⚠ tabulation">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="motcle">return</span> <span class="variable">res</span></td><td colspan="2" class="fst-italic">&#x2b60; valeur résultat de l'appel, si pas de résultat
@@ -675,7 +669,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Appel de fonction</h3>
                     <div class="card-text">
-                        <table>
+                        <table class="">
                         <tr><td width="100px"></td><td><span class="variable">r</span> = </td><td><span class="fonction">fct</span>(</td><td><span class="valeur">3</span>, <span class="variable">i</span> + <span class="valeur">2</span>, <span class="valeur">2</span> * <span class="variable">i</span></td><td>)</td></tr>
                         <tr><td></td><td class="text-center">&#x2b61;</td><td></td><td class="text-center">&#x2b61;</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
                         <tr><td colspan="3" class="fst-italic">stockage/utilisation <br> de la valeur de retour</td><td class="fst-italic" colspan="2">une valeur d'argument <br> par paramètre</td></tr>
@@ -691,7 +685,7 @@
                     <h3 class="card-title">Opérations sur les listes</h3>
                     <div class="card-text">
                         <p class="">☝ modification de la liste originale</p>
-                        <table>
+                        <table class="table100">
                             <tr><td><span class="variable">lst</span>.<span class="fonction">append</span>(<span class="variable">val</span>)</td>
                             <td>ajout d'un élément à la fin</td></tr>
                             <tr><td><span class="variable">lst</span>.<span class="fonction">extend</span>(<span class="variable">seq</span>)</td>
@@ -714,7 +708,7 @@
                     <h3 class="card-title">Opérations sur les dictionnaires</h3>
                     <div class="card-text">
                         <p class="">☝ modification du dictionnaire original</p>
-                        <table>
+                        <table class="table100">
                             <tr><td><span class="variable">d</span>[<span class="variable">clé</span>] = <span class="variable">valeur</span></td><td>reaffectation ou création d'une clé</td></tr>
                             <tr><td><span class="variable">d</span>[<span class="variable">clé</span>] → valeur</td><td>récupération de la valeur d'une clé</td></tr>
                             <tr><td><span class="variable">d</span>.<span class="fonction">update</span>(<span class="variable">d2</span>)</td>
@@ -739,7 +733,7 @@
                     <h3 class="card-title">Fichiers</h3>
                     <div class="card-text">
                         <p class="">stockage de données sur disque, et relecture</p>
-                        <table>
+                        <table class="table100">
                             <tr><td><span class="variable">f</span> = <span class="fonction">open</span>(</td><td><span class="valeur">"fic.txt"</span></td><td>, </td><td width="100px"><span class="valeur">"w"</span></td><td>, </td><td>encoding=</td><td><span class="valeur">"utf8"</span>)</td></tr>
                             <tr><td>⭡</td><td>&nbsp;&nbsp;&nbsp;&nbsp;⭡</td><td></td><td>&nbsp;&nbsp;⭡</td><td></td><td></td><td>&nbsp;&nbsp;⭡</td></tr>
                             <tr class="align-top"><td>variable
@@ -756,7 +750,7 @@
                             <td>encodage des caractères pour les fichiers textes: utf8 ascii latin1 …</td></tr>
                         </table>
                         <hr class="my-0 mx-2">
-                        <table>
+                        <table class="table100">
                             <tr><td>en <span class="bold">écriture</span></td><td>en <span class="bold">lecture</span></td></tr>
                             <tr>
                                 <td>
@@ -775,7 +769,7 @@
                         <p class="text-center">☝ par défaut mode texte <span class="fw-bold">t</span> (lit/écrit <span class="type">str</span>), mode binaire <span class="fw-bold">b</span> possible (lit/écrit <span class="type">bytes</span>). Convertir de/vers le type désiré !</p>
                         <p><span class="variable">f</span>.<span class="fonction">close</span>() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ☝ ne pas oublier de refermer le fichier après son utilisation !</p>
                         <hr class="mx-2 my-0">
-                        <table>
+                        <table class="table100">
                             <tr>
                                 <td width="50%">
                                     Très courant : ouverture en bloc gardé (fermeture automatique) et boucle de lecture des lignes d'un fichier texte.
