@@ -26,9 +26,15 @@
     display: none;
 }
 
-.md-sidebar{
+/* .md-sidebar{
+    display: none;
+} */
+@media screen and (min-width: 76.25em){
+.md-sidebar {
     display: none;
 }
+}
+
 
 .md-source-file{
     display: none;
@@ -36,6 +42,7 @@
 
 .card, body {
     background-color: var(--md-default-bg-color);
+    color: var(--md-typeset-color);
 }
 
 .card{
