@@ -1,3 +1,51 @@
+.valeurtypevariable{
+    display:initial;
+}
+
+.liste{
+    display: none;
+}
+
+.dictionnaire{
+    display: none;
+}
+
+.chapfonction{
+    display: none;
+}
+
+.conditionnelle{
+    display: none;
+}
+
+.boucle{
+    display: none;
+}
+
+.fichier{
+    display: none;
+}
+
+.md-sidebar{
+    display: none;
+}
+
+.md-source-file{
+    display: none;
+}
+
+.card, body {
+    background-color: var(--md-default-bg-color);
+}
+
+.card{
+    border-color: var(--md-typeset-color);;
+}
+
+.card-title, .card-body {
+    color: var(--md-typeset-color);
+}
+
 [data-bracket] {
     display: inline-block;
     /* vertical-align: top; */
@@ -7,14 +55,14 @@
     content: "";
     display: block;
     height: 4px;
-    border: 2px solid black;
+    border: 2px solid var(--md-typeset-color);
     border-top: none;
     transform: translateY(-150%);
 }
 [data-bracket]:before {
     content: attr(data-bracket);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: black;
+    color: var(--md-typeset-color);
     position: absolute;
     top: 65%;
     font-size: 80%;
@@ -33,41 +81,68 @@
     left: 100%;
 }
 
+[data-md-color-scheme=slate]{
+    --valeur-color: lightgreen;
+    --valeurspe-color: lightsalmon;
+    --type-color:lightblue;
+    --motcme-color:lightblue;
+    --variable-color:lightcoral;
+    --module-color:lightpink;
+}
+
+[data-md-color-scheme=default]{
+    --valeur-color: green;
+    --valeurspe-color: darkorange;
+    --type-color:blue;
+    --motcme-color:blue;
+    --variable-color:brown;
+    --module-color:purple;
+    --fonction-color:teal;
+}
+
 .valeur{
-    color: green;
+    color: var(--valeur-color);
     font-family:'Courier New', Courier, monospace;
 }
 
 .valeurspe{
-    color: orange;
+    color: var(--valeurspe-color);
     font-family:'Courier New', Courier, monospace;
 }
 
 .type{
-    color: blue;
+    color: var(--type-color);
     font-family:'Courier New', Courier, monospace;
 }
 
 .motcle{
-    color: blue;
+    color: var(--motcme-color);
     font-family:'Courier New', Courier, monospace;
 }
 
 .variable{
-    color: brown;
+    color: var(--variable-color);
     font-family:'Courier New', Courier, monospace;
 }
 
 .module{
-    color: purple;
+    color: var(--module-color);
     font-family:'Courier New', Courier, monospace;
 }
 
 .fonction{
-    color: teal;
+    color: var(--fonction-color);
     font-family:'Courier New', Courier, monospace;
 }
 
+h3 {
+    margin: 0 !important;;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 td.type{
     vertical-align: baseline;
@@ -100,6 +175,8 @@ padding-right: 2px!important;
 .card-body{
     padding-left: 1px!important;
     padding-right: 1px!important;
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
 }
 
 .grid-item { width: 500px; }
