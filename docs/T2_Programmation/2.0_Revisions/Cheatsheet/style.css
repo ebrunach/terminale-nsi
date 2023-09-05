@@ -191,6 +191,10 @@ padding-right: 2px!important;
     padding-bottom: 5px!important;
 }
 
+code {
+    text-shadow: none!important;
+}
+
 .grid-item { width: 500px; }
 .grid-item--width2 { width: 100%; }
 .grid-item--width5 { width: 500px; }
