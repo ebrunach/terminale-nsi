@@ -8,7 +8,7 @@ Voici une feuille d'exercices à faire en autonomie. Ne pas hésiter à utiliser
 
 ## Ressources
 
-Pour tout ce travail de révision, vous allez travailler en autonomie avec cette feuille ([cheatsheet](Cheatsheet/cheatsheet.html)) résumant toute la syntaxe python vue en première.
+Pour tout ce travail de révision, vous allez travailler en autonomie avec cette feuille ([cheatsheet](Cheatsheet/cheatsheet.md)) résumant toute la syntaxe python vue en première.
 
 Le cours de premiere disponible [ici](https://premiere-nsi.vercel.app)
 
