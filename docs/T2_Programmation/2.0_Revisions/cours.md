@@ -5,6 +5,7 @@
 Voici une feuille d'exercices à faire en autonomie. Ne pas hésiter à utiliser les ressources et si besoin s'inscrire aux MOOC.
 
 - variables, fonctions, conditionnelles, boucles ([TNSINF1](https://moodle.monlycee.net/mod/lti/view.php?id=67691), [TNSINF2](https://moodle.monlycee.net/mod/lti/view.php?id=68444))
+- listes et dictionnaires ([TNSINF1](https://moodle.monlycee.net/mod/lti/view.php?id=70516))
 
 ## Ressources
 
