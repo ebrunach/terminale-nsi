@@ -107,10 +107,10 @@
 !!! example "{{ exercice() }}:  Utilisation de l'interface Pile"
     Écrire les instructions permettant de :
 
-    - créer une file
+    - créer une pile
     - la remplir avec les entiers 0,2,4,6,8
     - la faire afficher
-    - "défiler" la file en faisant afficher l’élément récupéré
+    - "dépiler" la pile en faisant afficher l’élément récupéré
 
 !!! example "{{ exercice() }}:  Extension de l'interface"
     1. Ecrire une fonction sommet() renvoyant le dernier élément de la pile (sans l'enlever)
