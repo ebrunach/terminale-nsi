@@ -32,14 +32,25 @@
             ```
 
 !!! example "{{ exercice() }}:  Liste chainée vers liste python"
-    Ecrire une fonction `TransformeListeChainee(liste)` transformant une liste chainée en liste python.
+    === "énoncé"
+        Ecrire une fonction `TransformeListeChainee(liste)` transformant une liste chainée en liste python.
 
-    ```python
-    >>> afficher(liste)
-    |1|*|-->|2|*|-->|3|None|
-    >>> TransformeListeChainee(liste)
-    [1, 2, 3]
-    ```
+        ```python
+        >>> afficher(liste)
+        |1|*|-->|2|*|-->|3|None|
+        >>> TransformeListeChainee(liste)
+        [1, 2, 3]
+        ```
+
+    === "corrigé"
+
+        ```python
+        def TransformeListeChainee(liste):
+            lst = []
+            for i in range(taille(liste)):
+                lst.append(get_valeur_maillon_indice(liste, i))
+            return lst
+        ```
 
 !!! example "{{ exercice() }}:  Quelques opérations sur les listes"
     Ecrire les fonctions renvoyant les valeurs suivantes:
