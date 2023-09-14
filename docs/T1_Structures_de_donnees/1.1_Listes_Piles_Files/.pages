@@ -1,5 +1,5 @@
-hide: true
+hide: false
 nav:
     - Cours : cours.md
-    - Exercices : Exercices.md
+    - TD : td.md
 
