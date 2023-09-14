@@ -5,10 +5,31 @@
 {{initexo(0)}}
 
 !!! example "{{ exercice() }}: Utilisation simple de l'interface Liste"
-    1. Ecrire le code permettant de faire la liste chainée suivante `|"World"|*|-->|"!"|None|`
-    2. Ecrire le code permettant modifier liste précédente en `|"Hello"|*|-->|"World"|*|-->|"!"|None|`
-    3. Ecrire le code permettant modifier liste précédente en `|"Hello"|*|-->|"world"|*|-->|"!"|None|`
-    3. Ecrire le code permettant modifier liste précédente en `|"Hello"|*|-->|"world"|*|-->|" "|*|-->|"!"|None|`
+    === "énoncé"
+        1. Ecrire le code permettant de faire la liste chainée suivante `|"World"|*|-->|"!"|None|`
+        2. Ecrire le code permettant modifier liste précédente en `|"Hello"|*|-->|"World"|*|-->|"!"|None|`
+        3. Ecrire le code permettant modifier liste précédente en `|"Hello"|*|-->|"world"|*|-->|"!"|None|`
+        3. Ecrire le code permettant modifier liste précédente en `|"Hello"|*|-->|"world"|*|-->|" "|*|-->|"!"|None|`
+
+    === "corrigé"
+        1. 
+            ```python
+            lst = creer_liste()
+            inserer_tete(lst, "!")
+            inserer_tete(lst, "World")
+            ```
+        2. 
+            ```python
+            inserer_tete(lst, "Hello")
+            ```
+        3. 
+            ```python
+            set_maillon_indice(lst, 1, "world")
+            ```
+        4. 
+            ```python
+            inserer_apres(lst, " ", get_maillon_indice(lst, 1))
+            ```
 
 !!! example "{{ exercice() }}:  Liste chainée vers liste python"
     Ecrire une fonction `TransformeListeChainee(liste)` transformant une liste chainée en liste python.
@@ -96,7 +117,7 @@
 
         L'interface d'une pile est proposée ci-dessous. On utilisera uniquement les fonctions
         figurant dans le tableau suivant : 
-        
+
         |Structure de données abstraite : Pile|
         |---|
         |• `creer_pile_vide()` renvoie une pile vide|
