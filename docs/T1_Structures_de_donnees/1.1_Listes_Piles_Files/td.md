@@ -53,12 +53,54 @@
         ```
 
 !!! example "{{ exercice() }}:  Quelques opérations sur les listes"
-    Ecrire les fonctions renvoyant les valeurs suivantes:
+    === "énoncé"
+        Ecrire les fonctions renvoyant les valeurs suivantes:
 
-    1. Le maximum d'une liste passée en paramètre
-    2. Le minimum d'une liste passée en paramètre
-    3. La somme des éléments de la liste
-    4. La moyenne des éléments de la liste
+        1. Le maximum d'une liste passée en paramètre
+        2. Le minimum d'une liste passée en paramètre
+        3. La somme des éléments de la liste
+        4. La moyenne des éléments de la liste
+
+    === "correction"
+        1.
+            ```python
+            def maximum(liste):
+                if not est_vide(liste):
+                    max = get_valeur_maillon_indice(liste,0)
+                    for i in range(1, taille(liste)):
+                        val = get_valeur_maillon_indice(liste,i)
+                        if val > max:
+                            max = val
+                    return max
+            ```
+
+        2.
+            ```python
+            def minimum(liste):
+                if not est_vide(liste):
+                    min = get_valeur_maillon_indice(liste,0)
+                    for i in range(1, taille(liste)):
+                        val = get_valeur_maillon_indice(liste,i)
+                        if val < min:
+                            min = val
+                    return min
+            ```
+
+        3.
+            ```python
+            def somme(liste):
+                val = 0
+                for i in range(taille(liste)):
+                    val += get_valeur_maillon_indice(liste,i)
+                return val
+            ```
+
+        4.
+            ```python
+            def moyenne(liste):
+                if not est_vide(liste):
+                    return somme(liste)/taille(liste)
+            ```
 
 **Sur les piles**
 
