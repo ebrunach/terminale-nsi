@@ -2,4 +2,5 @@ hide: false
 nav:
     - Cours : cours.md
     - TD : td.md
+    - TP : tp.md
 
