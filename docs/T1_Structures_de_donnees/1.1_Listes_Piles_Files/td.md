@@ -11,7 +11,7 @@
         3. Ecrire le code permettant modifier liste précédente en `|"Hello"|*|-->|"world"|*|-->|"!"|None|`
         3. Ecrire le code permettant modifier liste précédente en `|"Hello"|*|-->|"world"|*|-->|" "|*|-->|"!"|None|`
 
-    <!-- === "corrigé"
+    === "corrigé"
         1. 
             ```python
             lst = creer_liste()
@@ -29,7 +29,7 @@
         4. 
             ```python
             inserer_apres(lst, " ", get_maillon_indice(lst, 1))
-            ``` -->
+            ```
 
 !!! example "{{ exercice() }}:  Liste chainée vers liste python"
     === "énoncé"
@@ -42,7 +42,7 @@
         [1, 2, 3]
         ```
 
-<!--    === "corrigé"
+    === "corrigé"
 
         ```python
         def TransformeListeChainee(liste):
@@ -51,7 +51,6 @@
                 lst.append(get_valeur_maillon_indice(liste, i))
             return lst
         ``` 
--->
 
 !!! example "{{ exercice() }}:  Quelques opérations sur les listes"
     === "énoncé"
@@ -62,7 +61,7 @@
         3. La somme des éléments de la liste
         4. La moyenne des éléments de la liste
 
-<!-- === "correction"
+    === "correction"
         1.
             ```python
             def maximum(liste):
@@ -102,7 +101,6 @@
                 if not est_vide(liste):
                     return somme(liste)/taille(liste)
             ```
--->
 
 **Sur les piles**
 
