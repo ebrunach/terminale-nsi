@@ -1,9 +1,9 @@
 ## Cours de Terminale NSI 
 
-Ceci est le dépôt correspondant au site [https://ebrunach.github.io/terminale-nsi/](https://ebrunach.github.io/terminale-nsi/).
+Ceci est le dépôt correspondant au site [https://terminale-nsi.vercel.app](https://terminale-nsi.vercel.app).
 
 
-emmanuel.brunache [at] ac-bordeaux.fr
+emmanuel.brunache [at] ac-creteil.fr
 
 Lycée Angela Davis / Saint-Denis  
 
