@@ -60,3 +60,6 @@ La méthode est illustrée ci-dessous avec un tas de 6 crêpes.
 4. Écrire une fonction `tri_crepes(p,n)` , qui trie la pile de crepe `p` de taille `n`.
 
     *On pourra afficher les crepes après chaque retournement pour visualiser l'algorithme*
+
+
+Zone de rendu : [TNSINF1](https://moodle.monlycee.net/mod/assign/view.php?id=67410), TNSINF2
