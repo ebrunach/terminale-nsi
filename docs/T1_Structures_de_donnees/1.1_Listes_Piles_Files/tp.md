@@ -62,4 +62,4 @@ La méthode est illustrée ci-dessous avec un tas de 6 crêpes.
     *On pourra afficher les crepes après chaque retournement pour visualiser l'algorithme*
 
 
-Zone de rendu : [TNSINF1](https://moodle.monlycee.net/mod/assign/view.php?id=67410), TNSINF2
+Zone de rendu : [TNSINF1](https://moodle.monlycee.net/mod/assign/view.php?id=67410), [TNSINF2](https://moodle.monlycee.net/mod/assign/view.php?id=68454)
