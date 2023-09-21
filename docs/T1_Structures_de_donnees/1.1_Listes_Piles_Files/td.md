@@ -153,6 +153,7 @@
     On considère une pile constituée de nombres entiers tirés aléatoirement. Le jeu consiste à réduire la pile suivant la règle suivante : quand la pile contient du haut vers le bas un triplet dont les termes du haut et du bas sont de même parité, on supprime l'élément central.
 
     Par exemple :
+    
     - Si la pile contient du haut vers le bas, le triplet 1 0 3, on supprime le 0.
     - Si la pile contient du haut vers le bas, le triplet 1 0 8, la pile reste inchangée.
 
