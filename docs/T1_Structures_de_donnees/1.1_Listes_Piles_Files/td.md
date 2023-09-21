@@ -153,7 +153,7 @@
     On considère une pile constituée de nombres entiers tirés aléatoirement. Le jeu consiste à réduire la pile suivant la règle suivante : quand la pile contient du haut vers le bas un triplet dont les termes du haut et du bas sont de même parité, on supprime l'élément central.
 
     Par exemple :
-    
+
     - Si la pile contient du haut vers le bas, le triplet 1 0 3, on supprime le 0.
     - Si la pile contient du haut vers le bas, le triplet 1 0 8, la pile reste inchangée.
 
@@ -161,13 +161,13 @@
 
     Voici un exemple détaillé de déroulement d'une partie. 
 
-    ![](sources/annale2022%20-%201.png)
+    ![](data/annale2022%20-%201.png)
 
     1. 
         1. Donner les différentes étapes de réduction de la pile suivante :
-        ![](sources/annale2022%20-%202.png)
+        ![](data/annale2022%20-%202.png)
         2. Parmi les piles proposées ci-dessous, donner celle qui est gagnante. 
-        ![](sources/annale2022%20-%203.png)
+        ![](data/annale2022%20-%203.png)
 
         L'interface d'une pile est proposée ci-dessous. On utilisera uniquement les fonctions
         figurant dans le tableau suivant : 
