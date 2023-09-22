@@ -5,6 +5,8 @@ footer: ${pageNo} / ${pageCount}
 ---
 {{initexo(0)}}
 
+Zone de rendu : [TNSINF1](https://moodle.monlycee.net/mod/assign/view.php?id=67411)
+
 !!! example "{{ exercice() }}: Comparaison recherche liste/dico"
 
     **Préparation des données**
@@ -134,7 +136,7 @@ footer: ${pageNo} / ${pageCount}
     présent.
 
     Exemples :
-    
+
     - l’occurrence du caractère ‘o’ dans ‘bonjour’ est 2 ;
     - l’occurrence du caractère ‘b’ dans ‘Bébé’ est 1 ;
     - l’occurrence du caractère ‘B’ dans ‘Bébé’ est 1 ;
