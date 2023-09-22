@@ -2,27 +2,17 @@
 
 !!! abstract "Actualités"
     - :star: :star: :star: [Listes, Piles et Files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md) :star: :star: :star:
-    - On commence par des révisions [ici](T2_Programmation/2.0_Revisions/cours.md)
+
 <!--     - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}. 
     - [sujet](data/BacBlancTNSI_2023.pdf){. target="_blank"} du bac blanc et son [corrigé](data/BacBlancTNSI_2023_corr.pdf). -->
 
 
 <!-- !!! note ":star: Thèmes en cours d'étude :star: "
-    - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+    - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) -->
 
 
 ### *Thèmes déjà traités*
-- [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
-- [Dichotomie](T3_Algorithmique/3.1_Diviser_pour_regner/dichotomie/)
-- [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-- [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
-- [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
-- [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-- [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
-- [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
-- [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
-- [Projet en POO sur les balles rebondissantes](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)   
-- [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   --> 
+- [révisions première](T2_Programmation/2.0_Revisions/cours.md)
 
 
 <!--
