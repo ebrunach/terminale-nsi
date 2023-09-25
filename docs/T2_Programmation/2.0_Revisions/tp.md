@@ -5,7 +5,7 @@ footer: ${pageNo} / ${pageCount}
 ---
 {{initexo(0)}}
 
-Zone de rendu : [TNSINF1](https://moodle.monlycee.net/mod/assign/view.php?id=67411)
+Zone de rendu : [TNSINF1](https://moodle.monlycee.net/mod/assign/view.php?id=67411), [TNSINF2](https://moodle.monlycee.net/mod/assign/view.php?id=68455)
 
 !!! example "{{ exercice() }}: Comparaison recherche liste/dico"
 
