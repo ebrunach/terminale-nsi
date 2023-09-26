@@ -1,4 +1,4 @@
 nav:
     - Cours : cours.md
-    - ...
-hide : true
+    - TD : td.md
+hide : false
