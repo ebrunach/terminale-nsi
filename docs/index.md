@@ -2,6 +2,7 @@
 
 !!! abstract "Actualités"
     - :star: :star: :star: [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md) :star: :star: :star:
+    - DM en cours : [DM2](./T8_Evaluations/DM.md)
     - [Listes, Piles et Files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
 
 <!--     - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}. 
