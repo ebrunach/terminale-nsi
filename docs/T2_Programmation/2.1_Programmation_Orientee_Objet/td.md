@@ -265,7 +265,7 @@
             def tire(self):
                 ’’’méthode déclenchée par l'appui sur la gachette’’’
                 if self.est_actif == True:
-                self.nb_de_tirs_emis = self.nb_de_tirs_emis + 1
+                    self.nb_de_tirs_emis = self.nb_de_tirs_emis + 1
             def est_determine(self):
                 ’’’methode qui renvoie True si le joueur réalise un
                 grand nombre de tirs’’’
@@ -274,8 +274,8 @@
                 ’’’méthode déclenchée par les capteurs de la
                 veste’’’
                 if self.est_actif == True:
-                self.est_actif = False
-                self.liste_id_tirs_recus.append(id_recu)
+                    self.est_actif = False
+                    self.liste_id_tirs_recus.append(id_recu)
         ```
 
         1. Parmi les instructions suivantes, recopier celle qui permet de déclarer un objet `joueur1`, instance de la classe `Joueur`, correspondant à un joueur dont l`pseudo est “Sniper”, dont l’identifiant est 319 et qui est intégré à l’équipe “A”:
@@ -295,11 +295,14 @@
         3.  Lorsque la partie est terminée, les participants rejoignent leur camp de base respectif où un ordinateur, qui utilise la classe Base, récupère les données. La classe Base est définie par :
 
             - ses attributs :
+
                 – equipe : nom de l’équipe (str). Par exemple, “A” ,
                 – liste_des_id_de_l_equipe qui correspond à la liste (list) des
                 identifiants connus des joueurs de l’équipe,
                 – score : score (int) de l’équipe, dont la valeur initiale est 1000 ;
+
             - ses méthodes :
+
                 – est_un_id_allie qui renvoie True si l’identifiant passé en paramètre
                 est un identifiant d’un joueur de l’équipe, False sinon,
                 – incremente_score qui fait varier l’attribut score du nombre passé en
