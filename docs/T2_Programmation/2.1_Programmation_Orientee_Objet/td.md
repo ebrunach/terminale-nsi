@@ -220,12 +220,13 @@
 !!! example "{{ exercice() }}"
     === "énoncé"
 
-        1. créer une classe `Personnage` ayant pour attribut:
+        La classe `Personnage` ayant pour attribut:
 
             - `pseudo`: pseudo du personnage incarné par le joueur
             - `health`: points de vie du personnage
             - `attack`: points d’attaque du personnage
-        2. créer un constructeur ayant pour paramètre le pseudo uniquement et mettant les points de vie à 100 et les points d'attaque à 10.
+        
+        1. créer un constructeur ayant pour paramètre le pseudo uniquement et mettant les points de vie à 100 et les points d'attaque à 10.
         3. Créer les méthodes:
 
             - `get_pseudo`: retourne la valeur de l’attribut pseudo
@@ -286,14 +287,14 @@
         ```
 <!--     === "corrigé"
         ```python
-        # Q1 et Q2
+        # Q1
         class Personnage:
             def __init__(self, pseudo):
                 self.pseudo = pseudo
                 self.health = 100
                 self.attack = 10
 
-            #Q3
+            #Q2
             def get_pseudo(self):
                 return self.pseudo
 
@@ -312,7 +313,7 @@
             def __repr__(self):
                 return "Personnage : " + self.pseudo + " | Points de vie : " + str(self.health) + " | Points d'attaque : " + str(self.attack)
 
-        #Q4
+        #Q3
         class Arme:
             def __init__(self, name, damage):
                 self.name = name
@@ -324,7 +325,7 @@
             def get_damage_amount(self):
                 return self.damage
 
-        #Q5
+        #Q4
         class Personnage:
             def __init__(self, pseudo):
                 self.pseudo = pseudo
@@ -332,13 +333,14 @@
                 self.attack = 10
                 self.arme = None
 
-            #Q3
+            #Q5
             def set_arme(self, arme):
                 self.arme = arme
 
             def has_arme(self):
                 return self.arme is not None
 
+            #Q6
             def attack_player(self, autre_perso):
                 autre_perso.damage(self.attack + self.arme.get_damage_amount())
         ```
