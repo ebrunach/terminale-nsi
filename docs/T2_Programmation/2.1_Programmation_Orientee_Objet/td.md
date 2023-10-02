@@ -45,6 +45,10 @@
                 self.nom = nom
                 self.classe = classe
                 self.note = note
+
+        eleve1 = Eleve("Atos", "Mousquetaire", "18")
+        eleve2 = Eleve("Portos", "Mousquetaire", "16")
+        eleve3 = Eleve("Aramis", "Mousquetaire", "17")
                 
         def compare(eleve1, eleve2):
             if eleve1.note > eleve2.note:
