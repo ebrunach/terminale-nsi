@@ -40,16 +40,19 @@
 
    
         ```python linenums='1'
+        # Q1
         class Eleve:
             def __init__(self, nom, classe, note):
                 self.nom = nom
                 self.classe = classe
                 self.note = note
 
+        #Q2
         eleve1 = Eleve("Atos", "Mousquetaire", "18")
         eleve2 = Eleve("Portos", "Mousquetaire", "16")
         eleve3 = Eleve("Aramis", "Mousquetaire", "17")
-                
+
+        #Q3   
         def compare(eleve1, eleve2):
             if eleve1.note > eleve2.note:
                 return eleve1.nom
@@ -76,6 +79,39 @@
         2. déplacer le premier point de 40 suivant x et 50 suivant y.
         3. proposer une fonction prenant en paramètre deux instances de la classe Point et retournant la distance entre ceux-ci. Je rappelle que la distance entre $A(x_A, y_A)$ et $B(x_B, y_B)$ est $\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}$
         4. Ecrire une méthode `distance_origine` de la classe Point qui renvoie la distance entre le point et l'origine du repère.
+
+    === "corrigé"
+
+        1. 
+            ```python
+            p1 = Point(40, 50)
+            p2 = Point(60, -10)
+            ```
+        2.
+            ```python
+            p1.deplacer(40, 50)
+            ```
+        3.
+            ```python
+            def distance(point1, point2):
+                return ((point1.x - point2.x) ** 2 + (point1.y - point2.y) ** 2) ** 0.5
+            ```
+        4.
+            ```python
+            class Point:
+                def __init__(self, x, y):
+                    self.x = x
+                    self.y = y
+                
+                def deplacer(self, dx, dy):
+                    self.x += dx
+                    self.y += dy
+
+                def distance_origine(self):
+                    return ((self.x) ** 2 + (self.y) ** 2) ** 0.5
+            ```
+
+        
 
 
 !!! aexample "{{ exercice() }}"
