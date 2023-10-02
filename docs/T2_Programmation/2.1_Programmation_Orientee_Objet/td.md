@@ -342,7 +342,10 @@
 
             #Q6
             def attack_player(self, autre_perso):
-                autre_perso.damage(self.attack + self.arme.get_damage_amount())
+                if self.has_arme():
+                    autre_perso.damage(self.attack + self.arme.get_damage_amount())
+                else:
+                    autre_perso.damage(self.attack)
         ```
   
 !!! example "{{ exercice() }}"
