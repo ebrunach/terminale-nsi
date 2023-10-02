@@ -9,6 +9,18 @@
         1. Proposer les attributs et les méthodes d'une classe `personnage`.
         1. Proposer les attributs et les méthodes d'une classe `jeu_de_societe`.
 
+    === "corrigé"
+        1. 
+            - Attributs: nombre de roues, couleur, année de construction, direction....
+            - Méthodes: tourner, freiner, accélérer, faire le plein, recharger...
+        2. 
+            - Attributs: points de vie, taille, poids,....
+            - Méthodes: dormir, manger, attaquer, vieillir...
+        3. 
+            - Attributs: points de vie, taille, poids,....
+            - Méthodes: dormir, manger, attaquer, vieillir...
+
+
 !!! example "{{ exercice() }}"
     === "Énoncé"
         1. Écrire une classe ```Eleve``` qui contiendra les attributs ```nom```, ```classe``` et ```note```.
@@ -24,7 +36,7 @@
             'Philippe'
             ```
 
-<!--    === "Correction"
+    === "Correction"
 
    
         ```python linenums='1'
@@ -40,7 +52,7 @@
             else:
                 return eleve2.nom
         ``` 
--->
+
 
 !!! example "{{ exercice() }}"
     === "énoncé"
