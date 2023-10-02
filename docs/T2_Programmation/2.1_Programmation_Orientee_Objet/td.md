@@ -372,7 +372,7 @@
         ```python linenums='1'
         class Joueur:
             def __init__(self, pseudo, identifiant, equipe):
-                ’’’ constructeur ’’’
+                """ constructeur """ 
                 self.pseudo = pseudo
                 self.equipe = equipe
                 self.id = identifiant
@@ -380,17 +380,17 @@
                 self.liste_id_tirs_recus = []
                 self.est_actif = True
             def tire(self):
-                ’’’méthode déclenchée par l'appui sur la gachette’’’
-                if self.est_actif == True:
+                """ méthode déclenchée par l'appui sur la gachette""" 
+                if self.est_actif:
                     self.nb_de_tirs_emis = self.nb_de_tirs_emis + 1
             def est_determine(self):
-                ’’’methode qui renvoie True si le joueur réalise un
-                grand nombre de tirs’’’
+                """ methode qui renvoie True si le joueur réalise un
+                grand nombre de tirs""" 
                 return self.nb_de_tirs_emis > 500
             def subit_un_tir(self, id_recu):
-                ’’’méthode déclenchée par les capteurs de la
-                veste’’’
-                if self.est_actif == True:
+                """ méthode déclenchée par les capteurs de la
+                veste""" 
+                if self.est_actif:
                     self.est_actif = False
                     self.liste_id_tirs_recus.append(id_recu)
         ```
@@ -413,18 +413,22 @@
 
             - ses attributs :
 
-                – equipe : nom de l’équipe (str). Par exemple, “A” ,
-                – liste_des_id_de_l_equipe qui correspond à la liste (list) des
+                – `equipe` : nom de l’équipe (str). Par exemple, “A” ,
+
+                – `liste_des_id_de_l_equipe` qui correspond à la liste (list) des
                 identifiants connus des joueurs de l’équipe,
-                – score : score (int) de l’équipe, dont la valeur initiale est 1000 ;
+                
+                – `score` : score (int) de l’équipe, dont la valeur initiale est 1000 ;
 
             - ses méthodes :
 
-                – est_un_id_allie qui renvoie True si l’identifiant passé en paramètre
+                – `est_un_id_allie` qui renvoie True si l’identifiant passé en paramètre
                 est un identifiant d’un joueur de l’équipe, False sinon,
-                – incremente_score qui fait varier l’attribut score du nombre passé en
+
+                – `incremente_score` qui fait varier l’attribut score du nombre passé en
                 paramètre,
-                – collecte_information qui récupère les statistiques d’un participant
+
+                – `collecte_information` qui récupère les statistiques d’un participant
                 passé en paramètre (instance de la classe Joueur) pour calculer le score
                 de l’équipe . 
 
