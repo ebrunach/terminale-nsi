@@ -259,8 +259,8 @@
 
         **Exemple d'utilisation**
         ```python
-        obi = Personnage("Obi-Wan",30,5)
-        ani = Personnage("Anakin",40,10)
+        obi = Personnage("Obi-Wan")
+        ani = Personnage("Anakin")
         print(obi)
         print(ani)
         sabre_jedi = Arme("Sabre Jedi",10}
@@ -276,14 +276,14 @@
         ```
         Afficherait:
         ```
-        Personnage : Obi-Wan | Points de vie : 30| Points d'attaque : 5
-        Personnage : Anakin | Points de vie : 40| Points d'attaque : 10
+        Personnage : Obi-Wan | Points de vie : 100| Points d'attaque : 10
+        Personnage : Anakin | Points de vie : 100| Points d'attaque : 10
         Anakin attaque Obi-Wan
-        Personnage : Obi-Wan | Points de vie : 5| Points d'attaque : 5
-        Personnage : Anakin | Points de vie : 40| Points d'attaque : 10
+        Personnage : Obi-Wan | Points de vie : 75| Points d'attaque : 10
+        Personnage : Anakin | Points de vie : 100| Points d'attaque : 10
         Obi-Wan attaque Anakin
-        Personnage : Obi-Wan | Points de vie : 5| Points d'attaque : 5
-        Personnage : Anakin | Points de vie : 25| Points d'attaque : 10
+        Personnage : Obi-Wan | Points de vie : 75| Points d'attaque : 10
+        Personnage : Anakin | Points de vie : 80| Points d'attaque : 10
         ```
 <!--     === "corrigé"
         ```python
