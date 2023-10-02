@@ -81,22 +81,24 @@
         4. Ecrire une méthode `distance_origine` de la classe Point qui renvoie la distance entre le point et l'origine du repère.
 
     === "corrigé"
-
         1. 
             ```python
             p1 = Point(40, 50)
             p2 = Point(60, -10)
             ```
-        2.
+
+        2. 
             ```python
             p1.deplacer(40, 50)
             ```
-        3.
+
+        3. 
             ```python
             def distance(point1, point2):
                 return ((point1.x - point2.x) ** 2 + (point1.y - point2.y) ** 2) ** 0.5
             ```
-        4.
+
+        4. 
             ```python
             class Point:
                 def __init__(self, x, y):
@@ -172,7 +174,7 @@
         8 de coeur
         ```
 
-<!-- === "Correction"
+    === "Correction"
         ```python linenums='1'
         class Carte:
             """Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)"""
@@ -213,7 +215,7 @@
                     return self.contenu[pos]
 
         ``` 
--->
+
 
 !!! example "{{ exercice() }}"
     === "énoncé"
@@ -231,7 +233,7 @@
             - `get_attack`: retourne la valeur de l’attribut attack
             - `damage`: inflige un nombre depoints de dégâts
             - `attack_player`: permet au personnage d’attaquer le personage passé en paramètre en lui infligeant des dégâts
-            - `__str(self)__`: méthode spéciale affichant les attributs d’un personnage via print(instance)
+            - `__repr__(self)`: méthode spéciale affichant les attributs d’un personnage via print(instance)
         4. Créer une classe `Arme` ayant pour :
 
             - Attributs:
@@ -282,7 +284,65 @@
         Personnage : Obi-Wan | Points de vie : 5| Points d'attaque : 5
         Personnage : Anakin | Points de vie : 25| Points d'attaque : 10
         ```
-   
+<!--     === "corrigé"
+        ```python
+        # Q1 et Q2
+        class Personnage:
+            def __init__(self, pseudo):
+                self.pseudo = pseudo
+                self.health = 100
+                self.attack = 10
+
+            #Q3
+            def get_pseudo(self):
+                return self.pseudo
+
+            def get_health(self):
+                return self.health
+
+            def get_attack(self):
+                return self.attack
+
+            def damage(self, degat):
+                self.health -= degat
+
+            def attack_player(self, autre_perso):
+                autre_perso.damage(self.attack)
+
+            def __repr__(self):
+                return "Personnage : " + self.pseudo + " | Points de vie : " + str(self.health) + " | Points d'attaque : " + str(self.attack)
+
+        #Q4
+        class Arme:
+            def __init__(self, name, damage):
+                self.name = name
+                self.damage = damage
+
+            def get_name(self):
+                return self.name
+
+            def get_damage_amount(self):
+                return self.damage
+
+        #Q5
+        class Personnage:
+            def __init__(self, pseudo):
+                self.pseudo = pseudo
+                self.health = 100
+                self.attack = 10
+                self.arme = None
+
+            #Q3
+            def set_arme(self, arme):
+                self.arme = arme
+
+            def has_arme(self):
+                return self.arme is not None
+
+            def attack_player(self, autre_perso):
+                autre_perso.damage(self.attack + self.arme.get_damage_amount())
+        ```
+ -->   
 !!! example "{{ exercice() }}"
     === "énoncé"
 
