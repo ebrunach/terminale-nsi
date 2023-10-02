@@ -285,7 +285,7 @@
         Personnage : Obi-Wan | Points de vie : 75| Points d'attaque : 10
         Personnage : Anakin | Points de vie : 80| Points d'attaque : 10
         ```
-<!--     === "corrigé"
+    === "corrigé"
         ```python
         # Q1
         class Personnage:
@@ -344,7 +344,7 @@
             def attack_player(self, autre_perso):
                 autre_perso.damage(self.attack + self.arme.get_damage_amount())
         ```
- -->   
+  
 !!! example "{{ exercice() }}"
     === "énoncé"
 
