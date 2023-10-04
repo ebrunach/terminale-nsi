@@ -31,11 +31,10 @@ On considère la table suivante:
 
     *Intermède cours*
 
-3. 
-   1. Combien notre table possède t-elle d'enregistrements ?
-   2. Quels sont tous les attributs de la table ?
-   3. Citez un attribut atomique (ayant une seule valeur) et un attribut non atomique (ayant plusieurs valeurs)
-   4. Pour chaque attribut, précisez le domaine.
+1. Combien notre table possède t-elle d'enregistrements ?
+2. Quels sont tous les attributs de la table ?
+3. Citez un attribut atomique (ayant une seule valeur) et un attribut non atomique (ayant plusieurs valeurs)
+4. Pour chaque attribut, précisez le domaine.
 
 ## Construire un modèle robuste
 
