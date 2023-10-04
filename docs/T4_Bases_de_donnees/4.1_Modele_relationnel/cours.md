@@ -1,9 +1,9 @@
 
 # Cours
 
-## Le modèle relationnel
+## 1. Le modèle relationnel
 
-### Les grands principes
+### 1.1 Les grands principes
 
 Le **modèle relationnel** a été introduit par **Codd**, en 1970 au laboratoire de recherche d'IBM de San José. Il s'agit d'un modèle simple et puissant à la base de la majorité des bases de données, encore aujourd'hui.
 
@@ -13,7 +13,7 @@ Les objectifs du modèle relationnel, formulés par Codd, sont les suivants :
 - Gérer les problèmes de **cohérence** et de **redondance** des données (ne pas stocker des données qui peuvent être calculées (exemple : une ligne Total), chaque champ ne contient qu'une seule information)
 - Utiliser des langages de données basés sur des théories solides.
 
-### Vocabulaire
+### 1.2 Vocabulaire
 
 Le modèle relationnel permet de représenter les données que l'on va gérer à l'aide d'un très petit nombre de concepts très simples :
 
@@ -26,7 +26,7 @@ Le modèle relationnel permet de représenter les données que l'on va gérer à
 
 
 
-## Schéma relationnel
+## 2. Schéma relationnel
 Pour décrire sans ambiguité une relation, on utilise un **schéma relationnel** composé:
 - du nom de la relation
 - de la liste des attributs
