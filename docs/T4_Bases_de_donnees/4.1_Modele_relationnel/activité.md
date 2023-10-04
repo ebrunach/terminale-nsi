@@ -41,11 +41,12 @@ On considère la table suivante:
 
 1. Identifiez les éléments de la table qui sont en contradiciton avec les principes du modèle relationnel.
 
-Vous avez identifié plusieurs problèmes liés à cette table qui transgressent les règles du modèle relationnel que nous avons d'énoncé. Vous allez à présent redistribuer ces données dans 4 tables :
-- une table Livres
-- une table Auteurs
-- une table Themes
-- une table Langues
+    Vous avez identifié plusieurs problèmes liés à cette table qui transgressent les règles du modèle relationnel que nous avons d'énoncé. Vous allez à présent redistribuer ces données dans 4 tables :
+
+        - une table Livres
+        - une table Auteurs
+        - une table Themes
+        - une table Langues
 
 2. Quels attributs proposez-vous pour chacune des tables
 3. Comment peut-on connaître l'auteur de 1984
