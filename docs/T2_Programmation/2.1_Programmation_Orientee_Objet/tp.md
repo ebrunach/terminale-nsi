@@ -2,486 +2,206 @@
 
 ![image](data/balles1.png){: .center witdh=40%}
 
-## 1. Prise en main de Pygame
+## Objectifs:
 
-```python linenums='1'
-import pygame, sys
-import time
-from pygame.locals import *
+- Se familiariser avec une bibliothèque graphique
+- Travailler sur le concept de classes
 
+**NE PAS OUBLIER LE COMPTE RENDU : [Zone de rendu]()**
 
+## 1. Davistk
 
-pygame.display.init()
-fenetre = pygame.display.set_mode((640, 480))
-fenetre.fill([0,0,0])
+Ce TP utilise le module de dessin **[davistk](./data/davistk.py)** que vous devez télécharger et placer dans le même dossier que les programmes que vous allez écrire. 
+Pour pouvoir l'utiliser dans un programme, vous devez charger les fonctions de ce module en écrivant la ligne `from davistk import`  en début de fichier. 
+La documentation du module se trouve là: [davistk.brunache.ovh](https://davistk.brunache.ovh)
+Ce TP vous permettra de manipuler les fonctions du module de dessin et leurs arguments.
 
-x = 300
-y = 200
-dx = 4
-dy = -3
-couleur = (45,170,250)
+1. Copier le code ci-dessous dans un fichier et l'exécuter:
 
-while True :
-    fenetre.fill([0,0,0])
-    pygame.draw.circle(fenetre,couleur,(x,y),10)
+    ```python
+    from davistk import * # Importe les fonctions du module davistk
+
+    cree_fenetre(600,600) # Crée un fenetre de 600 par 600
     
-    x += dx
-    y += dy
-    
-    pygame.display.update()
-    
-    # routine pour pouvoir fermer «proprement» la fenêtre Pygame
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.display.quit()
-            sys.exit()
-    
-    
-    time.sleep(0.1)
-```
+    rectangle(10,10,100,50) # Crée un rectangle
+    rectangle(200,100,300,150) # Crée un autre rectangle
 
-### 1.1  Rajout d'un rebond sur les parois
-Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse ```dx``` et ```dy```).
+    attend_ev() # Attend un evenement (clic, touche clavier...)
+    ferme_fenetre() # ferme la fenêtre
+    ``` 
 
-??? info "Correction"
+1. Dans un nouveau fichier
+    1. Créer une fenêtre de 400 par 400
+    2. Dessiner un cercle de rayon 100 centré au milieu de la fenêtre
+    3. Dessiner un cercle rouge de rayon 100 légèrement à gauche du premier cercle.
+
+## 2. Balles rebondissantes sans classes
+
+1. Copier le code ci-dessous dans un nouveau fichier dans le même dossier que précédemment. L'exécuter. Que se passe-t-il ?
+
     ```python linenums='1'
-    import pygame, sys
+    from davistk import *
     import time
-    from pygame.locals import *
 
-    LARGEUR = 640
-    HAUTEUR = 480
-    RAYON = 40
+    def gestion_affichage():
+        mise_a_jour()
+        time.sleep(1/30)
+        efface_tout()
 
+    def gestion_evenement():
+        ev = donne_ev()
+        tev = type_ev(ev)
+        # Action dépendant du type d'événement reçu :
+        if tev == 'Quitte':  # on sort de la boucle
+            return False
+        else:  # dans les autres cas, on ne fait rien
+            return True
 
-    pygame.display.init()
-    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
-    fenetre.fill([0,0,0])
-
-    x = 300
-    y = 200
-    dx = 4
-    dy = -3
-    couleur = (45,170,250)
-
-    while True :
-        fenetre.fill([0,0,0])
-        pygame.draw.circle(fenetre,couleur,(x,y),RAYON)
-
-        x += dx
-        y += dy
-
-        if (y <= RAYON) or (y >= HAUTEUR - RAYON):
-           dy = -dy
-        if (x <= RAYON) or (x >= LARGEUR - RAYON):
-            dx = -dx
+    def mise_a_jour_position(x, y, dx, dy):
+        return x + dx, y+ dy
 
 
-
-        pygame.display.update()
-
-        # routine pour pouvoir fermer «proprement» la fenêtre Pygame
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.display.quit()
-                sys.exit()
-
-
-        time.sleep(0.02)
 
     ```
 
-### 1.2 Rajout d'une deuxième balle
-Attention au nommage des variables...
-
-<!-- ??? info "Correction"
-    ```python linenums='1'
-    import pygame, sys
-    import time
-    from pygame.locals import *
-
-    largeur = 64
-    hauteur = 480
-    taille = 20
-    dxA = 7
-    dyA = 4
-    dxB = -5
-    dyB = 3
-
-
-
-    pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
-    fenetre.fill([0,0,0])
-
-    xA = largeur // 2
-    yA = hauteur // 2
-    xB = largeur // 2
-    yB = hauteur // 2
-
-
-    couleurA = (45,170,250)
-    couleurB = (155,17,250)
-
-    while True :
-        fenetre.fill([0,0,0])
-        pygame.draw.circle(fenetre,couleurA,(xA,yA),taille)
-        pygame.draw.circle(fenetre,couleurB,(xB,yB),taille)
-        
-        xA += dxA
-        yA += dyA
-    
-        xB += dxB
-        yB += dyB
-    
-    
-        # rebond en haut ou en bas
-        if yA < taille or yA > hauteur - taille:
-            dyA = -dyA
-
-        # rebond à gauche ou à droite
-        if xA < taille or xA > largeur - taille:
-            dxA = -dxA
-
-        # rebond en haut ou en bas
-        if yB < taille or yB > hauteur - taille:
-            dyB = -dyB
-
-        # rebond à gauche ou à droite
-        if xB < taille or xB > largeur - taille:
-            dxB = -dxB   
-
-        pygame.display.update()
-
-        # routine pour pouvoir fermer «proprement» la fenêtre Pygame
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.display.quit()
-                sys.exit()
-
-
-        time.sleep(0.03)
-    ``` -->
-
-### 1.3 Gestion de la collision entre les deux balles
-1. À l'aide d'un schéma (papier-crayon !), mettez en évidence le test devant être réalisé pour détecter une collision.
-2. Implémentez ce test et affichez "collision" en console lorsque les deux balles se touchent.
-<!-- 
-    ??? info "Correction"
-        ```python linenums='1'
-        import pygame, sys
-        import time
-        from pygame.locals import *
-
-        largeur = 320
-        hauteur = 480
-        taille = 20
-        dxA = 7
-        dyA = 4
-        dxB = -5
-        dyB = 3
-
-
-
-        pygame.display.init()
-        fenetre = pygame.display.set_mode((largeur, hauteur))
-        fenetre.fill([0,0,0])
-
-        xA = largeur // 2
-        yA = hauteur // 2
-        xB = largeur // 2
-        yB = hauteur // 2
-
-
-        couleurA = (45,170,250)
-        couleurB = (155,17,250)
-
-        def distanceAB(xA, yA, xB, yB):
-            return ((xA-xB)**2 + (yA-yB)**2)**0.5
-
-
-
-        while True :
-            fenetre.fill([0,0,0])
-            pygame.draw.circle(fenetre,couleurA,(xA,yA),taille)
-            pygame.draw.circle(fenetre,couleurB,(xB,yB),taille)
-
-            xA += dxA
-            yA += dyA
-
-            xB += dxB
-            yB += dyB
-
-
-            # rebond en haut ou en bas
-            if yA < taille or yA > hauteur - taille:
-                dyA = -dyA
-
-            # rebond à gauche ou à droite
-            if xA < taille or xA > largeur - taille:
-                dxA = -dxA
-
-            # rebond en haut ou en bas
-            if yB < taille or yB > hauteur - taille:
-                dyB = -dyB
-
-            # rebond à gauche ou à droite
-            if xB < taille or xB > largeur - taille:
-                dxB = -dxB
-                
-            if distanceAB(xA, yA, xB, yB) < 2*taille:
-                print("collision")
-
-            pygame.display.update()
-
-            # routine pour pouvoir fermer «proprement» la fenêtre Pygame
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.display.quit()
-                    sys.exit()
-
-
-            time.sleep(0.03)
-
-        ```
- -->
-
-Q3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles.
-<!-- 
-    ??? info "Correction"
-        ```python linenums='1'
-        import pygame, sys
-        import time
-        from pygame.locals import *
-
-        largeur = 200
-        hauteur = 200
-        taille = 20
-        dxA = 7
-        dyA = 4
-        dxB = -5
-        dyB = 3
-
-
-
-        pygame.display.init()
-        fenetre = pygame.display.set_mode((largeur, hauteur))
-        fenetre.fill([0,0,0])
-
-        xA = largeur // 3
-        yA = hauteur // 3
-        xB = largeur // 2
-        yB = hauteur // 2
-
-
-        couleurA = (45,170,250)
-        couleurB = (155,17,250)
-
-        def distanceAB(xA, yA, xB, yB):
-            return ((xA-xB)**2 + (yA-yB)**2)**0.5
-
-
-
-        while True :
-            fenetre.fill([0,0,0])
-            pygame.draw.circle(fenetre,couleurA,(xA,yA),taille)
-            pygame.draw.circle(fenetre,couleurB,(xB,yB),taille)
-
-            xA += dxA
-            yA += dyA
-
-            xB += dxB
-            yB += dyB
-
-
-            # rebond en haut ou en bas
-            if yA < taille or yA > hauteur - taille:
-                dyA = -dyA
-
-            # rebond à gauche ou à droite
-            if xA < taille or xA > largeur - taille:
-                dxA = -dxA
-
-            # rebond en haut ou en bas
-            if yB < taille or yB > hauteur - taille:
-                dyB = -dyB
-
-            # rebond à gauche ou à droite
-            if xB < taille or xB > largeur - taille:
-                dxB = -dxB
-
-            if distanceAB(xA, yA, xB, yB) < 2*taille:
-                dxA, dxB = dxB, dxA
-                dyA, dyB = dyB, dyA
-
-            pygame.display.update()
-
-            # routine pour pouvoir fermer «proprement» la fenêtre Pygame
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.display.quit()
-                    sys.exit()
-
-
-            time.sleep(0.03)
-
-        ```
-
-
- -->
-
-
-
-### 1.4 Rajout d'une troisième balle et gestion du rebond avec les deux autres.
-... vraiment ? Peut-on continuer comme précédemment ?
-
-## 2. La POO à la rescousse : création d'une classe Balle
-
-### 2.1 la classe Balle
-L'objectif est que la méthode constructeur dote chaque nouvelle balle de valeurs aléatoires : abscisse, ordonnée, vitesse, couleur...  
-Créez cette classe et instanciez une balle.
-
-<!-- ??? info "Correction"
-    ```python linenums='1'
-    import pygame, sys
-    import time
-    from pygame.locals import *
-    from random import randint
-    # randint(0,10) -> nb aléatoire entre 0 et 10
-
-    largeur = 400
-    hauteur = 400
-    taille = 20
-
-
-    pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
-    fenetre.fill([0,0,0])
-
-
-    class Balle:
-        def __init__(self):
-            self.x = randint(0, largeur)
-            self.y = randint(0, hauteur)        
-            self.dx = randint(2,5)
-            self.dy = randint(2,5)
-            self.couleur = (randint(0,255), randint(0,255), randint(0,255))
-            self.taille = taille
-            
-        def dessine(self):
-            pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
-            
-        def bouge(self):
-            self.x += self.dx
-            self.y += self.dy
-            
-    ma_balle = Balle()     
-            
-    while True :
-        fenetre.fill([0,0,0])
-        
-        ma_balle.dessine()
-        ma_balle.bouge()
-        
-        pygame.display.update()
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.display.quit()
-                sys.exit()
-
-
-        time.sleep(0.05)
-
-    ``` -->
-
-
-
-Puis plusieurs balles ! (qui se collisionnent...)
-
-<!-- ??? info "Correction"
-    ```python linenums='1'
-    import pygame, sys
-    import time
-    from pygame.locals import *
-    from random import randint
-
-
-    largeur = 800
-    hauteur = 600
-    taille = 20
-    nb_balles = 100
-
-    pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
-    fenetre.fill([0,0,0])
-
-
-    class Balle:
-        def __init__(self):
-            self.x = randint(0, largeur)
-            self.y = randint(0, hauteur)        
-            self.dx = randint(2,5)
-            self.dy = randint(2,5)
-            self.couleur = (randint(0,255), randint(0,255), randint(0,255))
-            self.taille = taille
-
-        def dessine(self):
-            pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
-
-        def bouge(self):
-            self.x += self.dx
-            self.y += self.dy
-            
-            # 1. rebond sur les parois
-            if self.y < self.taille or self.y > hauteur - self.taille:
-                self.dy = -self.dy
-            if self.x < self.taille or self.x > largeur - self.taille:
-                self.dx = -self.dx
-
-            
-            # 4. gérer la collision de toutes les balles
-            # je teste la collision de self avec chacune des autres balles
-            for balle in mon_sac_a_balles:
-                # collision entre self et balle
-                if ((self.x-balle.x)**2 + (self.y-balle.y)**2)**0.5 < self.taille + balle.taille:
-                    self.dx, balle.dx = balle.dx, self.dx
-                    self.dy, balle.dy = balle.dy, self.dy
-       
-            
-            
-    # 2. Créer 10 balles  (par ex)     
-
-    mon_sac_a_balles = []
-    for k in range(nb_balles):
-        new_ball = Balle()
-        mon_sac_a_balles.append(new_ball)
-
-
-
-    while True :
-        fenetre.fill([0,0,0])
-        
-        #3. Animer toutes les balles
-        for balle in mon_sac_a_balles:
-            balle.dessine()
-            balle.bouge()
-
-
-        pygame.display.update()
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.display.quit()
-                sys.exit()
-            
-        time.sleep(0.05)
+2. Modifier la fonction `affiche_balle` de manière à ce qu'elle affiche un cercle de rayon `taille` centré en `(x, y)` et de couleur `couleur`. 
+
+3. Modifiez la fonction `gestion_collision_mur` afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse ```dx``` et ```dy```). La fonction devra suivre les doctests suivant:
+
+    ```python
+    def gestion_collision_mur(x, y, dx, dy, taille):
+        """
+        >>> gestion_collision(391, 25, 3, -4, 10)
+        -3, -4
+        """
     ```
 
- -->
-!!! capytale "Dépôt de projet sur Capytale : [fd7c-59906](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/fd7c-59906)"
-    Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.
-    Je pourrai ainsi le consulter au fur et à mesure de votre progression.
+4. Ajouter une deuxième balle. :warning: Attention au nommage des variables...
 
-    Ce que je ne veux pas voir :
-    ![](data/paste.jpg){: .center width=40%} 
+5. Gestion de la collision entre les deux balles
+
+    1. À l'aide d'un schéma (papier-crayon !), mettez en évidence le test devant être réalisé pour détecter une collision.
+
+    2. Implémentez ce test dans la fonction `gestion_collision_balles` affichez "collision" en console lorsque les deux balles se touchent.
+
+6. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et ```dy``` pour les deux balles. Finir la fonction `gestion_collision_balles` de manière à ce que les doctests suivant fonctionnent:
+
+    ```python
+    def gestion_collision_balles(xA, yA, xB, yB, dxA, dyA, dxB, dyB,tailleA, tailleB):
+        """ Cette fonction renvoie les nouvelles vitesses de balles A et B
+
+        Args:
+            xA, yA (int): coordonnées de la balle A
+            xB, yB (int): coordonnées de la balle B
+            dxA, dyA (int): vitesses de la balle A
+            dxB, dyB (int): vitesses de la balle B
+            tailleA, tailleB: tailles des balles A et B
+
+        Returns:
+            dxA, dyA, dxB, dyB : nouvelles vitesses des balles A et B
+
+        >>> gestion_collision_balles(50, 80, 70, 80, 3, -4, 5, 2, 10, 10)
+        5, 2, 3, -4
+        >>> gestion_collision_balles(49, 80, 70, 80, 3, -4, 5, 2, 10, 10)
+        3, -4, 5, 2
+        """
+    ```
+
+7. On veut ajouter une troisième balle. Peut-on continuer comme précédemment ?
+
+## 3. Balles rebondissantes avec classes
+
+1. LA structure du programme est maintenant la suivante. La copier dans un nouveau fichier dans le même dossier.
+
+    ```python
+    from davistk import *
+    import time
+    from random import randint
+
+    class Balle:
+        balles = [] # attribut de classe permettant d'accéder à toutes les balles crées
+        def __init__(self):
+            ... # A faire
+
+        def dessiner(self):
+            """Dessine la balle"""
+            ... # A faire
+
+        def bouger(self):
+            """Déplace la balles en fonction de sa vitesse"""
+            ... # A faire 
+
+        def distance(self, autre_balle):
+            """Calcule la distance séparant self et autre_balle"""
+            return ... # A faire
+
+        def en_collision(self, autre_balle):
+            """Renvoie True si la balle self et autre_balle sont en collision, False sinon"""
+            return ... # A faire
+
+        def contre_un_mur(self):
+            """Renvoie 'HautBas' si la balle self touche le mur du haut ou du bas, 'DroiteGauche' si la balle self touche le mur de gauche ou de droite, None sinon"""
+            return ... # A faire
+
+        def rebondir_contre_un_mur(self, mur):
+            """Modifie la vitesse de la balle self quand elle est contre un mur, mur vallant soit 'HautBas' soit 'DroiteGauche' """
+            ... # A faire
+
+        def rebondir_contre_une_balle(self, autre_balle):
+            """Modifie la vitesse des balles self et autre_balle quand elles rebondissent l'une contre l'autre.
+            Les vitesses de self et de autre_balle sont échangées."""
+            ... # A faire
+
+        def gerer_collisions(self):
+            """Modifie les vitesses en cas de collisoin ou de mur"""
+            for balle in Balle.balles:
+                if self != balle and self.en_collision(balle):
+                    self.rebondir_contre_une_balle(balle)
+            mur = self.contre_un_mur()
+            if mur is not None:
+                self.rebondir_contre_un_mur(mur)
+
+
+    def gestion_affichage():
+        mise_a_jour()
+        time.sleep(1/60)
+        efface_tout()
+
+    def gestion_evenement():
+        ev = donne_ev()
+        tev = type_ev(ev)
+        # Action dépendant du type d'événement reçu :
+        if tev == 'Quitte':  # on sort de la boucle
+            return False
+        else:  # dans les autres cas, on ne fait rien
+            return True
+
+    def affiche_balles(balles):
+        for balle in balles:
+            balle.dessiner()
+
+    def bouger_balles(balles):
+        for balle in balles:
+            balle.gerer_collisions()
+            balle.bouger()
+
+
+    balles = [Balle() for i in range(10)] # Instancie 10 balles
+    cree_fenetre(400, 400) 
+    encore = True # Booléen permettant d'arrêter lorsqu'on appuie sur l'icone pour fermer la fenêtre
+    while encore: # Boucle (on verra ca plus tard) permettant de répéter les actions indentées ci-dessous à chaque rafraichissement d'image
+        gestion_affichage() # permet de gérer le temps et le reaffichage
+        encore = gestion_evenement() # permet de récupérer les touches claviers et les clics
+        bouger_balles(balles)
+        affiche_balles(balles) # Affiche la balle
+    ferme_fenetre() # ferme la fenêtre lorque l'on clique sur l'icone pour fermer la fenetre
+    ```
+
+2. Finir le constructeur. L'objectif est que la méthode constructeur dote chaque nouvelle balle de valeurs aléatoires : abscisse, ordonnée, vitesse.
+
+3. Dans l'ordre des méthodes du fichier, les compléter et exécuter le programme régulèrement.
+
+
+
 
 
