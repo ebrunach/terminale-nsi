@@ -60,10 +60,6 @@ Ce TP vous permettra de manipuler les fonctions du module de dessin et leurs arg
     def mise_a_jour_position(x, y, dx, dy):
         return x + dx, y+ dy
 
-    def affiche_balle(x, y, taille, couleur):
-        ... # A modifier
-
-
 
 
     ```
