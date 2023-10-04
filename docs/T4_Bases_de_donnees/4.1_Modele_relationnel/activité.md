@@ -29,7 +29,7 @@ On considère la table suivante:
 
 2. Quelles solutions peut-on imaginer pour y remédier ?
 
-*Intermède cours*
+    *Intermède cours*
 
 3. 
    1. Combien notre table possède t-elle d'enregistrements ?
