@@ -1,4 +1,5 @@
 nav:
+    - Activité : activite.md
     - Cours : cours.md
-    - Exercices : exercices.md
+    - TD : td.md
     
