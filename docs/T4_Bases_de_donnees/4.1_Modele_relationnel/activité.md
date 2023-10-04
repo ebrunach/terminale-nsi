@@ -3,7 +3,7 @@
 ## Soulever les problèmes
 
 On considère la table suivante:
-| titre | nom_aut | prenom_aut | nai\_aut | langue | ann_pub | thèmes |
+| titre | nom\_aut | prenom\_aut | nai\_aut | langue | ann\_pub | thèmes |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1984 | Orwell | George | 1903 | anglais | 1949 | Totalitarisme, science-fiction, anticipation, Dystopie |
 | Dune | Herbert | Frank | 1920 | anglais | 1965 | science-fiction, anticipation |
