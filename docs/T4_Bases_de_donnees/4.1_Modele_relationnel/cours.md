@@ -28,12 +28,14 @@ Le modèle relationnel permet de représenter les données que l'on va gérer à
 
 ## 2. Schéma relationnel
 Pour décrire sans ambiguité une relation, on utilise un **schéma relationnel** composé:
+
 - du nom de la relation
 - de la liste des attributs
 - de la clé primaire (clé choisie pour être l'"entrée" de l'enregistrement)
 - des clés étrangères
 
 *Exemple:*
+
 - Un schéma relationnel:
 
 Personne (<u>Numero</u>:Entier, Nom:Chaîne, Prénom:Chaîne, #LieuNaissance=>Ville)
@@ -50,6 +52,7 @@ Personne (<u>Numero</u>:Entier, Nom:Chaîne, Prénom:Chaîne, #LieuNaissance=>Vi
 La structure d'une base de données relationnelle est un ensemble de schémas relationnels qui respecte les contraintes du modèle relationnel.
 
 *Exemple:*
+
 - Ensemble de schémas relationnels:
 
 Personne (<u>Numero</u>:Entier, Nom:Chaîne, Prénom:Chaîne, #LieuNaissance=>Ville)
