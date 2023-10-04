@@ -3,6 +3,7 @@
 ## Soulever les problèmes
 
 On considère la table suivante:
+
 | titre | nom\_aut | prenom\_aut | nai\_aut | langue | ann\_pub | thèmes |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1984 | Orwell | George | 1903 | anglais | 1949 | Totalitarisme, science-fiction, anticipation, Dystopie |
