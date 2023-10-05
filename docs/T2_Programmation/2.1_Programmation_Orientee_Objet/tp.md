@@ -58,10 +58,15 @@ Ce TP vous permettra de manipuler les fonctions du module de dessin et leurs arg
             return True
 
     def mise_a_jour_position(x, y, dx, dy):
-        return x + dx, y+ dy
+        return x + dx, y + dy# A modifier
 
     def gestion_collision_mur(x, y, dx, dy, taille):
         return dx, dy # A modifier
+
+    def affiche_balle(x, y, taille, couleur):
+        ... # A modifier
+
+    
 
     x, y = 100, 50 # Position initiale de la balle
     taille = 10 # Rayon de la balle
