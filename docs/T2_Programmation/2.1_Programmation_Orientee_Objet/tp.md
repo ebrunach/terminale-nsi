@@ -7,7 +7,7 @@
 - Se familiariser avec une bibliothèque graphique
 - Travailler sur le concept de classes
 
-**NE PAS OUBLIER LE COMPTE RENDU : Zone de rendu [TNSINF1](https://moodle.monlycee.net/mod/assign/view.php?id=67428)**
+**NE PAS OUBLIER LE COMPTE RENDU : Zone de rendu [TNSINF1](https://moodle.monlycee.net/mod/assign/view.php?id=67428), [TNSINF2](https://moodle.monlycee.net/mod/assign/view.php?id=68472)**
 
 ## 1. Davistk
 
