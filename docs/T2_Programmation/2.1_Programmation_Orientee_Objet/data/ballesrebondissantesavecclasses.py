@@ -4,20 +4,23 @@ from random import randint
 
 class Balle:
     balles = []
+    couples_de_balle = []
     def __init__(self):
         self.x = randint(10, 390)
         self.y = randint(10, 390)
         self.dx = randint(-2, 2)
         self.dy = randint(-2, 2)
-        self.taille = randint(5, 10)
+        self.taille = randint(1, 3)
         Balle.balles.append(self)
+    
+    def creer_couples():
+        Balle.couples_de_balle = [(a, b) for idx, a in enumerate(Balle.balles) for b in Balle.balles[idx + 1:]]
 
     def dessiner(self):
         cercle(self.x, self.y, self.taille)
 
     def gerer_collisions():
-        couples_de_balle = [(a, b) for idx, a in enumerate(Balle.balles) for b in Balle.balles[idx + 1:]]
-        for balle1, balle2 in couples_de_balle:
+        for balle1, balle2 in Balle.couples_de_balle:
             if balle1.en_collision(balle2):
                 balle1.rebondir_contre_une_balle(balle2)
         for balle in Balle.balles:
@@ -51,7 +54,7 @@ class Balle:
 
 def gestion_affichage():
     mise_a_jour()
-    time.sleep(1/60)
+    time.sleep(1/30)
     efface_tout()
 
 def gestion_evenement():
@@ -73,7 +76,8 @@ def bouger_balles(balles):
         balle.bouger()
 
 
-balles = [Balle() for i in range(30)]
+balles = [Balle() for i in range(300)]
+Balle.creer_couples()
 cree_fenetre(400, 400) 
 encore = True # Booléen permettant d'arrêter lorsqu'on appuie sur l'icone pour fermer la fenêtre
 while encore: # Boucle (on verra ca plus tard) permettant de répéter les actions indentées ci-dessous à chaque rafraichissement d'image

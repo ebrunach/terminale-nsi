@@ -7,7 +7,7 @@
 - Se familiariser avec une bibliothèque graphique
 - Travailler sur le concept de classes
 
-**NE PAS OUBLIER LE COMPTE RENDU : [Zone de rendu]()**
+**NE PAS OUBLIER LE COMPTE RENDU : Zone de rendu [TNSINF1](https://moodle.monlycee.net/mod/assign/view.php?id=67428)**
 
 ## 1. Davistk
 
@@ -86,7 +86,7 @@ Ce TP vous permettra de manipuler les fonctions du module de dessin et leurs arg
     ```python
     def gestion_collision_mur(x, y, dx, dy, taille):
         """
-        >>> gestion_collision(391, 25, 3, -4, 10)
+        >>> gestion_collision_mur(391, 25, 3, -4, 10)
         -3, -4
         """
     ```
