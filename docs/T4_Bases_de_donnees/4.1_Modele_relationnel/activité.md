@@ -24,8 +24,8 @@ On considère la table suivante:
 | De la Terre à la Lune | Verne | Jules | 1828 | français | 1865 | Science-Fiction, aventure |
 
 1. Imaginez quels problèmes peuvent se poser cette table si on cherche à:
- - modifier la date de naissance d'un auteur
- - chercher tous les livres de science-fiction
+    - modifier la date de naissance d'un auteur
+    - chercher tous les livres de science-fiction
 
 2. Quelles solutions peut-on imaginer pour y remédier ?
 
@@ -42,10 +42,10 @@ On considère la table suivante:
 
     Vous avez identifié plusieurs problèmes liés à cette table qui transgressent les règles du modèle relationnel que nous avons d'énoncé. Vous allez à présent redistribuer ces données dans 4 tables :
 
-        - une table Livres
-        - une table Auteurs
-        - une table Themes
-        - une table Langues
+    - une table Livres
+    - une table Auteurs
+    - une table Themes
+    - une table Langues
 
 2. Quels attributs proposez-vous pour chacune des tables
 3. Comment peut-on connaître l'auteur de 1984
