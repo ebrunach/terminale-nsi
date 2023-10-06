@@ -5,18 +5,29 @@
 
 !!! example "{{ exercice() }}"
     === "énoncé"
-    On souhaite modéliser un annuaire téléphonique simple dans lequel chaque personne (identifiée par son nom et son prénom) est associée à son numéro de téléphone. Proposer une modélisation relationnelle de cet annuaire.
+        On souhaite modéliser un annuaire téléphonique simple dans lequel chaque personne (identifiée par son nom et son prénom) est associée à son numéro de téléphone. Proposer une modélisation relationnelle de cet annuaire.
+
+    === "corrigé"
+        annuaire(Nom: chaine, Prénom: chaine, <u>Numéro</u>: entier ou chaine)
 
 
 !!! example "{{ exercice() }} : Bulletin"
     === "énoncé"
-    Donner la modélisation relationnelle d'un bulletin scolaire. Cette dernière doit permettre de mentionner:
+        Donner la modélisation relationnelle d'un bulletin scolaire. Cette dernière doit permettre de mentionner:
 
-    - des élèves, possédants un numéro d'étudiant alphanumérique unique
-    - un ensemble de matières fixées, mais qui ne sont pas données
-    - au plus une note sur 20, par matière et par élève. 
+        - des élèves, possédants un numéro d'étudiant alphanumérique unique
+        - un ensemble de matières fixées, mais qui ne sont pas données
+        - au plus une note sur 20, par matière et par élève. 
 
-    On prendra soin de préciser toutes les contraintes utilisateurs qui ne peuvent êtres inscrites dans les schémas des relations.
+        On prendra soin de préciser toutes les contraintes utilisateurs qui ne peuvent êtres inscrites dans les schémas des relations.
+
+    === "corrigé"
+
+        Eleves(<u>num_etudiant</u>: chaine, Nom: chaine, Prénom: chaine)
+
+        Matieres(<u>Nom_matiere</u>: chaine)
+        
+        Notes(<u>num_etudiant => Eleves, Nom_matiere => Matieres</u>, Note: Flottant)
 
 
 !!! example "{{ exercice() }} : Des erreurs"
