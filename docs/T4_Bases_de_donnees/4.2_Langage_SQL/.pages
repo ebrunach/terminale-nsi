@@ -3,4 +3,5 @@ nav:
     - Exercices SQL interactifs : 02_exercices_inter.md
     - Exercices SQL débranchés : 02_exercices_ecrit.md
     - Exercices Python-SQL : 03_python_et_SQL.md
+hide: true
     
