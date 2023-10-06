@@ -23,7 +23,7 @@
     === "énoncé"
     On propose un tableau qui donne les enregistrements d'une relation Joueur définie par le schéma relationnel : 
 
-    Joueur(#IdJoueur:Entier,nomJoueur:Chaîne,pNomJoueur:Chaîne,dNaissanceJoueur:Date)
+    Joueur(<u>IdJoueur</u>:Entier,nomJoueur:Chaîne,pNomJoueur:Chaîne,dNaissanceJoueur:Date)
 
     |IdJoueur	|nomJoueur	|pNomJoueur	|dNaissanceJoueur|
     |--|--|--|--|
@@ -59,7 +59,7 @@
 
 
     1. Combien la relation ```Voitures``` comporte-t-elle d'attributs ?
-    2. Que vaut son cardinal ?
+    2. Combien d'enregistrements y a-t-il dans la relation `Voitures` ?
     3. Quel est le domaine de l'attribut ```ig_agence```  dans la relation ```Voitures``` ?
     4. Quel est le schéma relationnel de la relation ```Agences ``` ?
     5. Quelle est la clé primaire de la relation ```Agences ``` ?
@@ -166,6 +166,34 @@
         2. Aucun des deux, ils sont arrivés dans le même temps (04:21:22)
         "
         ) }} -->
+
+!!! example "{{ exercice() }}"
+    === "énoncé"
+    Voici comment le logiciel phpMyadmin représente les bases de données:
+    ![data/bdd_1.png](./data/bdd_1.png)
+
+    1. Repérez les différentes relations.
+    2. Repérez les clés primaires et les clés étrangères de la relation question.
+    3. Repérez les domaines des différents attributs de cette relation question.
+
+!!! example "{{ exercice() }}"
+    === "énoncé"
+
+    On considère la table Films suivante :
+
+    | Titre | Annee | Realisateur | Note | NbAavis | Duree | Type |
+    | --- | --- | --- | --- | --- | --- | --- |
+    | Apocalypse Now | 1979 | Francis Ford Coppola | 8,4 | 578150 | 2h27 | Drama, Mystery, War |
+    | Full Metal Jacket | 1987 | Stanley Kubrick | 8,3 | 644089 | 1h56 | Drama, War |
+    | Scarface | 1983 | Brian De Palma | 8,3 | 704025 | 170 min | Crime, Drama |
+    | Orange mécanique | 1971 | S. Kubrick | 8,3 | 725846 | 136' | Crime, Drama, Sci-Fi |
+    | 2001, l'odyssée de l'espace | 1968 | Kubrick | 8,3 | 574171 | 2h29 | Adventure, Science fiction |
+    | Taxi Driver | 1976 | Martin Scorsese | 8,3 | 685042 | 1h54 | Crime, Drama |
+    *source https://www.imdb.com*
+
+    1. Proposer une structure conforme au modèle relationnel pour ces données.
+    2. Donner le contenu de chacune des tables.
+
 
 
 
