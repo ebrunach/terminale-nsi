@@ -2,6 +2,37 @@
 
 {{initexo(0)}}
 
+
+!!! example "{{ exercice() }}"
+    === "énoncé"
+    On souhaite modéliser un annuaire téléphonique simple dans lequel chaque personne (identifiée par son nom et son prénom) est associée à son numéro de téléphone. Proposer une modélisation relationnelle de cet annuaire.
+
+
+!!! example "{{ exercice() }} : Bulletin"
+    === "énoncé"
+    Donner la modélisation relationnelle d'un bulletin scolaire. Cette dernière doit permettre de mentionner:
+
+    - des élèves, possédants un numéro d'étudiant alphanumérique unique
+    - un ensemble de matières fixées, mais qui ne sont pas données
+    - au plus une note sur 20, par matière et par élève. 
+
+    On prendra soin de préciser toutes les contraintes utilisateurs qui ne peuvent êtres inscrites dans les schémas des relations.
+
+
+!!! example "{{ exercice() }} : Des erreurs"
+    === "énoncé"
+    On propose un tableau qui donne les enregistrements d'une relation Joueur définie par le schéma relationnel : 
+
+    Joueur(#IdJoueur:Entier,nomJoueur:Chaîne,pNomJoueur:Chaîne,dNaissanceJoueur:Date)
+
+    |IdJoueur	|nomJoueur	|pNomJoueur	|dNaissanceJoueur|
+    |--|--|--|--|
+    |1	|Terez	|Pascual	|124|
+    |1	|Gosse	|452	| |
+    |4	|Terez	|Pascual|	124|
+
+    Repérez les anomalies dans ces enregistremenrs. Quelles sont les contraintes non respectées et/ou à mettre en œuvre ?
+
 !!! example "{{ exercice() }}"
     === "énoncé"
     *(d'après Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.)*
