@@ -217,12 +217,13 @@
             a = depiler(p)
             b = depiler(p)
             empiler(p, a + b)
+        ```
 
 **Sur les files**
 
 !!! example "{{ exercice() }}:  Extension de l'interface"
     === "énoncé"
-        1. Ecrire une fonction sommet() renvoyant le prochain élément de la file qui va sortir (sans l'enlever) 
+        1. Ecrire une fonction sommet() renvoyant le prochain élément de la file qui va sortir (sans l'enlever). La file est supposée non vide.
         2. Ecrire une fonction taille() renvoyant la taille de la file
 
     === "corrigé"
@@ -237,8 +238,19 @@
             while not est_vide(sauv):
                 enfiler(f, defiler(sauv))
             return a
-        ``` 
-
+        ```
+        2. 
+        ```python
+        def taille(f):
+            cpt = 0
+            sauv = file_vide()
+            while not est_vide(f):
+                enfiler(sauv, defiler(f))
+                cpt += 1
+            while not est_vide(sauv):
+                enfiler(f, defiler(sauv))
+            return cpt
+        ```
 
 **Vers le bac**
 
@@ -323,4 +335,60 @@
                     return jouer(...) 
             ```
     === "corrigé"
-        pas encore
+        1. 
+            1.
+            ```python
+            4
+            9
+            8
+            7
+            4
+            2
+            ```
+            ```python
+            4
+            8
+            7
+            4
+            2
+            ```
+            ```python
+            4
+            8
+            4
+            2
+            ```
+            fin du premier parcours
+            ```python
+            4
+            8
+            4
+            2
+            ```
+            ```python
+            4
+            4
+            2
+            ```
+            fin du deuxième parcours
+            ```python
+            4
+            4
+            2
+            ```
+            ```python
+            4
+            2
+            ```
+            Fin du troisième parcours --> pile gagnante
+            2. Pile B
+        2.
+        ```python
+        def reduire_triplet_au_sommet(p):
+            a = depiler(p)
+            b = depiler(p)
+            c = sommet(p)
+            if a % 2 != c % 2 :
+                empiler(p, b)
+            empiler(p, a) 
+        ```
