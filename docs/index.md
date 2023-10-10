@@ -2,7 +2,7 @@
 
 !!! abstract "Actualités"
     - :star: :star: :star: [Modèle relationnel](./T4_Bases_de_donnees/4.1_Modele_relationnel/cours.md) :star: :star: :star:
-    - DM en cours : [DM2](./T8_Evaluations/DM.md)
+    - DM en cours : [DM3](./T8_Evaluations/DM.md)
     
 
 <!--     - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}. 
