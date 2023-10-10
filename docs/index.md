@@ -1,9 +1,9 @@
 
 
 !!! abstract "Actualités"
-    - :star: :star: :star: [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md) :star: :star: :star:
+    - :star: :star: :star: [Modèle relationnel](./T4_Bases_de_donnees/4.1_Modele_relationnel/cours.md) :star: :star: :star:
     - DM en cours : [DM2](./T8_Evaluations/DM.md)
-    - [Listes, Piles et Files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
+    
 
 <!--     - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}. 
     - [sujet](data/BacBlancTNSI_2023.pdf){. target="_blank"} du bac blanc et son [corrigé](data/BacBlancTNSI_2023_corr.pdf). -->
@@ -14,6 +14,8 @@
 
 
 ### *Thèmes déjà traités*
+- [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md)
+- [Listes, Piles et Files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
 - [révisions première](./T2_Programmation/2.0_Revisions/cours.md)
 
 
