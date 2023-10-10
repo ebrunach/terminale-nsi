@@ -335,54 +335,57 @@
                     return jouer(...) 
             ```
     === "corrigé"
+
         1. 
-            1.
-            ```python
-            4
-            9
-            8
-            7
-            4
-            2
-            ```
-            ```python
-            4
-            8
-            7
-            4
-            2
-            ```
-            ```python
-            4
-            8
-            4
-            2
-            ```
-            fin du premier parcours
-            ```python
-            4
-            8
-            4
-            2
-            ```
-            ```python
-            4
-            4
-            2
-            ```
-            fin du deuxième parcours
-            ```python
-            4
-            4
-            2
-            ```
-            ```python
-            4
-            2
-            ```
-            Fin du troisième parcours --> pile gagnante
+            1. 
+                ```python
+                4
+                9
+                8
+                7
+                4
+                2
+                ```
+                ```python
+                4
+                8
+                7
+                4
+                2
+                ```
+                ```python
+                4
+                8
+                4
+                2
+                ```
+                fin du premier parcours
+                ```python
+                4
+                8
+                4
+                2
+                ```
+                ```python
+                4
+                4
+                2
+                ```
+                fin du deuxième parcours
+                ```python
+                4
+                4
+                2
+                ```
+                ```python
+                4
+                2
+                ```
+                Fin du troisième parcours --> pile gagnante
+
             2. Pile B
-        2.
+
+        2. 
         ```python
         def reduire_triplet_au_sommet(p):
             a = depiler(p)
@@ -392,3 +395,28 @@
                 empiler(p, b)
             empiler(p, a) 
         ```
+
+        3. 
+            1. De taille 3
+            2. 
+                ```python
+                def parcourir_pile_en_reduisant(p):
+                    q = creer_pile_vide()
+                    while taille(p) >= 3:
+                        reduire_triplet_au_sommet(p)
+                        e = depiler(p)
+                        empiler(q, e)
+                    while not est_vide(q):
+                        e = depiler(q)
+                        empiler(p, e)
+                    return p 
+                ```
+        4. (hors programme pour l'instant)
+            ```python
+            def jouer(p):
+                q = parcourir_pile_en_reduisant(p)
+                if len(q) == len(p) :
+                    return p
+                else:
+                    return jouer(q)
+            ```
