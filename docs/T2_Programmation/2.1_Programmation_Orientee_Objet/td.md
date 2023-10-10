@@ -356,14 +356,84 @@
 
         **Remarque** : On utilisera le type `list` de Python pour typer notre attribut privé contenant les éléments. Nous n’avons ici pas besoin d’accesseurs ou de mutateurs, seulement les méthodes publiques.
 
+    === "corrigé"
+        1.
+        ```python
+        class Pile:
+            def __init__(self):
+                self.contenu = []
+
+            def empiler(self, elem):
+                self.contenu.append(elem)
+
+            def depiler(self):
+                return self.contenu.pop()
+
+            def est_vide(self):
+                return len(self.contenu) == 0
+        ```
+        2.
+        ```python
+        class File:
+            def __init__(self):
+                self.contenu = []
+
+            def enfiler(self, elem):
+                self.contenu.append(elem)
+
+            def defiler(self):
+                return self.contenu.pop(0) # Attention n'est pas en complexité linéaire. Ici c'est O(n).
+
+            def est_vide(self):
+                return len(self.contenu) == 0
+        ```
+
 !!! example "{{ exercice() }}"
     === "énoncé"
         Soit la classe Date définie par les attributs suivant: `jour` de type `int`, `mois` de type `int`, `annee` de type `int`.
 
-        1. Implémenter cette classe en Python avec un constructeur permettant d'éviter les dates impossibles (du genre 32/14/2020). Dans ce cas, la création doit provoquer une erreur, chose possible grâce à l’instruction raise (documentation à rechercher !).
+        1. Implémenter cette classe en Python avec un constructeur permettant d'éviter les dates impossibles (du genre 32/14/2020). Dans ce cas, la création doit provoquer une erreur, chose possible grâce à l’instruction assert.
         2. Créer deux dates le 20 janvier 2012 et le 14 février 2022.
         3. Ajouter une méthode `__repr__` permettant d’afficher la date sous la forme “25 janvier 1989”. Les noms des mois seront définis en tant qu’attribut de classe à l’aide d’une liste.
         4. Ajouter une méthode `__lt__` qui permet de comparer deux dates. L’expression `d1 < d2` (`d1` et `d2` étant deux objets de type `Date`) doit grâce à cette méthode renvoyer `True` ou `False` .
+
+    === "corrigé"
+        ```python
+        class Date:
+            info_mois = {
+                1 : ["janvier", 31],
+                2 : ["février", 28], # On ne gèrera pas les années bisextiles
+                3 : ["mars", 31],
+                ...
+            }
+
+            def __init__(self, jour, mois, annee):
+                assert 0 < mois < 13
+                assert 0 < jour <= Date.info_mois[mois][1]
+                self.annee = annee
+                self.mois = mois
+                self.jour = jour
+
+            def __repr__(self):
+                return str(self.jour) + " " + Date.info_mois[self.mois][0] + " " + str(self.annee)
+
+            def __lt__(self, autre_date):
+                if self.annee < autre_date.annee:
+                    return True
+                elif self.annee > autre_date.annee:
+                    return False
+                elif self.mois < autre_date.mois:
+                    return True
+                elif self.mois > autre_date.mois:
+                    return False
+                if self.jour < autre_date.jour:
+                    return True
+                else:
+                    return False
+
+        d1 = Date(1, 1, 2000)
+        d2 = Date(30, 12, 1999)
+        ```
 
 !!! example "{{ exercice() }} : Bac metropole 2022"
     === "énoncé"
@@ -452,4 +522,26 @@
         ```python
         ........ #si le participant réalise un grand nombre de tirs
             ......... #le score de la Base augmente de 40
+        ```
+    === "corrigé"
+        1. ```joueur1 = Joueur("Sniper", 319, "A")```
+        2. 
+            1. 
+            ```python
+            def redevenir_actif(self):
+                if not self.est_actif:
+                    self.est_actif = True
+            ```
+            2. 
+            ```python
+            def nb_de_tirs_recus(self):
+                return len(self.liste_id_tirs_recus)
+            ```
+        3. 
+            1. test1
+            2. On perd 20 points quand un coéquipier nous tire dessus, 10 points si c'est un adversaire
+        4. 
+        ```python
+        if participant.est_determine(): #si le participant réalise un grand nombre de tirs
+            self.incremente_score(40)  #le score de la Base augmente de 40
         ```
