@@ -1,7 +1,8 @@
 
 
 !!! abstract "Actualités"
-    - :star: :star: :star: [Modèle relationnel](./T4_Bases_de_donnees/4.1_Modele_relationnel/cours.md) :star: :star: :star:
+    - :star: :star: :star: [SGBD](./T4_Bases_de_donnees/4.2_SGBD/cours.md) :star: :star: :star:
+    - [Modèle relationnel](./T4_Bases_de_donnees/4.1_Modele_relationnel/cours.md)
     - DM en cours : [DM3](./T8_Evaluations/DM.md)
     
 
