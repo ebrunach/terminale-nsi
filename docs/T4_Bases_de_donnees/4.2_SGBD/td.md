@@ -13,6 +13,17 @@
         1. Ecrire la requête SQL permettant de créer la table correspondant à cette relation.
         2. Ecrire la requête SQL permettant de vous rajouter dans cet annuaire.
 
+    === "corrigé"
+        1. 
+        ```SQL
+        CREATE TABLE annuaire (
+            nom VARCHAR(30) NOT NULL;
+            prenom VARCHAR(30) NOT NULL;
+            tel VARCHAR(12) PRIMARY KEY
+        );```
+        2. 
+        
+
 !!! example "{{ exercice() }}: Bulletin"
     === "énoncé"
         La modélisation relationnelle d'un bulletin scolaire est la suivante:
