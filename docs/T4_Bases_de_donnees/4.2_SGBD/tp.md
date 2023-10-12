@@ -68,6 +68,7 @@
             int id_film FK
         }
     ```
+    
     1. Créer un nouveau projet et une nouvelle base de données que vous rendrez à la fin du TP.
     1. Créer les requêtes SQL permettant de créer ces différentes tables
     2. Créer les requêtes permettant de remplir les données suivantes: le film américains "les septs mercenaires" sortie en 1961 a fait 7047964 entrées en salle. Il a été réalisé par John Sturges, réalisateur américain né le 3 janvier 1910.
