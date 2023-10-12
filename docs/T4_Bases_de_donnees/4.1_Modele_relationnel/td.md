@@ -254,12 +254,12 @@
 
             | idFilm | Titre | Annee | idRealisateur | Note | NbAavis | Duree |
             |---| --- | --- | --- | --- | --- | --- | --- |
-            | 1 | Apocalypse Now | 1979 | 1 | 8,4 | 578150 | 2h27 | Drama, Mystery, War |
-            | 2 | Full Metal Jacket | 1987 | 2 | 8,3 | 644089 | 1h56 | Drama, War |
-            | 3 | Scarface | 1983 | 3 | 8,3 | 704025 | 170 min | Crime, Drama |
-            | 4 | Orange mécanique | 1971 | 2 | 8,3 | 725846 | 136' | Crime, Drama, Sci-Fi |
-            | 5 | 2001, l'odyssée de l'espace | 1968 | 2 | 8,3 | 574171 | 2h29 | Adventure, Science fiction |
-            | 6 | Taxi Driver | 1976 |4 | 8,3 | 685042 | 1h54 | Crime, Drama |
+            | 1 | Apocalypse Now | 1979 | 1 | 8,4 | 578150 | 2h27 |
+            | 2 | Full Metal Jacket | 1987 | 2 | 8,3 | 644089 | 1h56 | 
+            | 3 | Scarface | 1983 | 3 | 8,3 | 704025 | 170 min |
+            | 4 | Orange mécanique | 1971 | 2 | 8,3 | 725846 | 136' | 
+            | 5 | 2001, l'odyssée de l'espace | 1968 | 2 | 8,3 | 574171 | 2h29 | 
+            | 6 | Taxi Driver | 1976 |4 | 8,3 | 685042 | 1h54 | 
 
             | idRealisateur | Nom | Prenom |
             |---| --- | --- |
