@@ -253,7 +253,7 @@
         2. Si on prend la modélisation 1
 
             | idFilm | Titre | Annee | idRealisateur | Note | NbAavis | Duree |
-            |---| --- | --- | --- | --- | --- | --- | --- |
+            |---| --- | --- | --- | --- | --- | --- | 
             | 1 | Apocalypse Now | 1979 | 1 | 8,4 | 578150 | 2h27 |
             | 2 | Full Metal Jacket | 1987 | 2 | 8,3 | 644089 | 1h56 | 
             | 3 | Scarface | 1983 | 3 | 8,3 | 704025 | 170 min |

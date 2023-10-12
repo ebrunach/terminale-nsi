@@ -35,7 +35,7 @@ Pour le second exercice, un programme est fourni au candidat. Cet exercice ne de
     - [https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi](https://eduscol.education.fr/2661/banque-des-epreuves-pratiques-de-specialite-nsi)
 
 
-Une page spécifique consacrée aux exercices de la BNS est disponible [ici](../../T6_6_Epreuve_pratique/BNS_2022/).
+Une page spécifique consacrée aux exercices de la BNS est disponible [ici](../T6_6_Epreuve_pratique/BNS_2023.md).
 
 
 ## Épreuve Écrite
@@ -75,6 +75,6 @@ Une page spécifique consacrée aux exercices de la BNS est disponible [ici](../
         - Méthode « diviser pour régner »
 
 
-La liste de tous les sujets d'épreuves écrites déjà posés peut être consultée [ici](T6_Annales/liste_sujets/){. target="_blank"}
+La liste de tous les sujets d'épreuves écrites déjà posés peut être consultée [ici](./liste_sujets.md){. target="_blank"}
 
 

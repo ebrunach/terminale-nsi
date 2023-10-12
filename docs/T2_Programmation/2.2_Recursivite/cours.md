@@ -209,7 +209,7 @@ Lien vers une [correction](https://gist.github.com/glassus/de73e52a753f58e2e29e2
 
 
 ### 3.1 Notion de pile
-Lors d'un appel à une fonction récursive, le processeur utilise une structure de **pile** pour stocker les contextes d'exécution de chaque appel. Dans la notion de pile (voir [ici](../../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)), seule l'instruction «en haut de la pile» peut être traitée et enlevée (on dit «dépilée»).
+Lors d'un appel à une fonction récursive, le processeur utilise une structure de **pile** pour stocker les contextes d'exécution de chaque appel. Dans la notion de pile (voir [ici](../../T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)), seule l'instruction «en haut de la pile» peut être traitée et enlevée (on dit «dépilée»).
 
 La pile d'appels de notre fonction ```mystere(5)``` peut donc être schématisée comme ceci :
 
