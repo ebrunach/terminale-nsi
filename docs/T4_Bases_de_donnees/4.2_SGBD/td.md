@@ -78,7 +78,7 @@
                                 nom VARCHAR(100),
                                 prenom VARCHAR(100),
                                 points_fidelite INT NOT NULL,
-                                CHECK (points fidelite > 0)); 
+                                CHECK (points_fidelite > 0)); 
                                 
         CREATE TABLE produit (  pid INT PRIMARY KEY,
                                 nom VARCHAR(100),
