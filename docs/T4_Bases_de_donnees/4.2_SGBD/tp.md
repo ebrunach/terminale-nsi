@@ -1,5 +1,8 @@
 # TP
 
+**NE PAS OUBLIER LE COMPTE RENDU : Zone de rendu [TNSINF1](https://moodle.monlycee.net/mod/assign/view.php?id=67442), [TNSINF2](https://moodle.monlycee.net/mod/assign/view.php?id=68486)**
+
+
 {{initexo(0)}}
 
 
