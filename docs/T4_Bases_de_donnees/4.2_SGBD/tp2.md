@@ -1,7 +1,7 @@
 
 # TP2
 
-**NE PAS OUBLIER LE COMPTE RENDU : Zone de rendu [TNSINF1](), [TNSINF2]()**
+**NE PAS OUBLIER LE COMPTE RENDU : Zone de rendu [TNSINF1](https://idf-93-1.elea.apps.education.fr/mod/assign/view.php?id=1253), [TNSINF2](https://idf-93-1.elea.apps.education.fr/mod/assign/view.php?id=1436)**
 
 
 {{initexo(0)}}
