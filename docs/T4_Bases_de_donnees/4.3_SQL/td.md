@@ -4,65 +4,109 @@
 
 
 !!! example "{{ exercice() }}: Requêtes de sélection"
-    Soit le base de données crées par le requête ci-dessous:
+    === "énoncé"
+        Soit le base de données crées par le requête ci-dessous:
 
-    ```SQL
-    CREATE TABLE usager (
-        nom VARCHAR(90) NOT NULL, 
-        prenom VARCHAR(90) NOT NULL,
-        adresse VARCHAR(300) NOT NULL, 
-        cp VARCHAR(5) NOT NULL,
-        ville VARCHAR(60) NOT NULL,
-        email VARCHAR(60) NOT NULL,
-        code_barre CHAR(15) PRIMARY KEY);
+        ```SQL
+        CREATE TABLE usager (
+            nom VARCHAR(90) NOT NULL, 
+            prenom VARCHAR(90) NOT NULL,
+            adresse VARCHAR(300) NOT NULL, 
+            cp VARCHAR(5) NOT NULL,
+            ville VARCHAR(60) NOT NULL,
+            email VARCHAR(60) NOT NULL,
+            code_barre CHAR(15) PRIMARY KEY);
 
-    CREATE TABLE livre (titre VARCHAR(300) NOT NULL,
-                        editeur VARCHAR(90) NOT NULL,
-                        annee INT NOT NULL,
-                        isbn CHAR(14) PRIMARY KEY);
+        CREATE TABLE livre (titre VARCHAR(300) NOT NULL,
+                            editeur VARCHAR(90) NOT NULL,
+                            annee INT NOT NULL,
+                            isbn CHAR(14) PRIMARY KEY);
 
-    CREATE TABLE auteur (a_id INT PRIMARY KEY,
-                        nom VARCHAR(90) NOT NULL,
-                        prenom VARCHAR(90) NOT NULL);
+        CREATE TABLE auteur (a_id INT PRIMARY KEY,
+                            nom VARCHAR(90) NOT NULL,
+                            prenom VARCHAR(90) NOT NULL);
 
-    CREATE TABLE auteur_de (a_id INT REFERENCES Auteur(a_id),
-                            isbn CHAR(14)
+        CREATE TABLE auteur_de (a_id INT REFERENCES Auteur(a_id),
+                                isbn CHAR(14)
+                                REFERENCES Livre(isbn),
+                                PRIMARY KEY (a_id, isbn));
+
+        CREATE TABLE emprunt (code_barre CHAR(15)
+                            REFERENCES Usager(code_barre),
+                            isbn CHAR(14) PRIMARY KEY
                             REFERENCES Livre(isbn),
-                            PRIMARY KEY (a_id, isbn));
+                            retour DATE NOT NULL);
+        ```
 
-    CREATE TABLE emprunt (code_barre CHAR(15)
-                        REFERENCES Usager(code_barre),
-                        isbn CHAR(14) PRIMARY KEY
-                        REFERENCES Livre(isbn),
-                        retour DATE NOT NULL);
-    ```
+        Donner le code SQL de chacune des requêtes ci-dessous. Les mots en police fixe donnent une indication sur les attributs et les tables à utiliser dans la requête.
 
-    Donner le code SQL de chacune des requêtes ci-dessous. Les mots en police fixe donnent une indication sur les attributs et les tables à utiliser dans la requête.
+        1. Tous les titres de livre.
+        2. Tous les noms d'usager.
+        3. Tous les noms d'usager en retirant les doublons. 
+        4. Les titres des livres publiés avant 1980.
+        5. Les titres des livres dont le titre contient la lettre "A".
+        6. Les isbn des livres à rendre pour le 01/01/2020. 
+        7. Les noms d'auteurs triés par ordre alphabétique.
+        8. Les noms d'usagers vivant dans le 12e ou 13e arrondissement de Paris(codes postaux 75012 et 75013). 
+        9. Les noms et adresses des usagers n'habitant pas dans une rue. (la chaine "Rue" ne doit pas apparaître dans l'adresse).
+        10. Les annees et titres des livres publiés lors d'une année bissextile. On rappelle que ce sont les années divisibles par 4, mais pas celles divisibles par 100 sauf si elles sont divisibles par 400.
 
-    1. Tous les titres de livre.
-    2. Tous les noms d'usager.
-    3. Tous les noms d'usager en retirant les doublons. 
-    4. Les titres des livres publiés avant 1980.
-    5. Les titres des livres dont le titre contient la lettre "A".
-    6. Les isbn des livres à rendre pour le 01/01/2020. 
-    7. Les noms d'auteurs triés par ordre alphabétique.
-    8. Les noms d'usagers vivant dans le 12e ou 13e arrondissement de Paris(codes postaux 75012 et 75013). 
-    9. Les noms et adresses des usagers n'habitant pas dans une rue. (la chaine "Rue" ne doit pas apparaître dans l'adresse).
-    10. Les annees et titres des livres publiés lors d'une année bissextile. On rappelle que ce sont les années divisibles par 4, mais pas celles divisibles par 100 sauf si elles sont divisibles par 400.
+    === "correction"
+        ```SQL
+        SELECT titre FROM livre;
+        SELECT nom FROM usager;
+        SELECT DISTINCT nom FROM usager;
+        SELECT titre FROM livre WHERE annee < 1980;
+        SELECT titre FROM livre WHERE titre LIKE "%A%";
+        SELECT isbn FROM emprunt WHERE retour = '2020-01-01';
+        SELECT nom FROM auteur ORDER BY nom;
+        SELECT nom, prenom FROM usager WHERE cp IN ('75012', '75013');
+        SELECT nom, prenom FROM usager WHERE cp = '75012' OR cp='75013';
+        SELECT nom, adresse FROM usager WHERE adresse NOT LIKE '%Rue%';
+        SELECT annee, titre FROM livre WHERE annee % 4 = 0 AND annee % 100 <> 0;
+        ```
 
 !!! example "{{ exercice() }}: Requêtes avec jointure"
+    === "énoncé"
+        Toujours sur la même base. Donner le code SQL de chacune des requêtes ci-dessous. Les mots en police fixe donnent une indication sur les attributs et les tables à utiliser dans la requête.
 
-    Toujours sur la même base. Donner le code SQL de chacune des requêtes ci-dessous. Les mots en police fixe donnent une indication sur les attributs et les tables à utiliser dans la requête.
+        1. Le titre des livres empruntés.
+        2. Le titre des livres empruntés à rendre avant le 31/03/2020.
+        3. Le nom et prenom de l'auteur du livre 1984
+        4. Le nom et le prenom des usagers ayant emprunté des livres, sans doublons (c'est à dire que si un usager a emprunté plusieurs livres, il ne doit apparaître qu'une fois dans le résultat). 
+        5. Même requête que précédemment, avec les noms triés par ordre alphabétique.
+        6. Les titre des livres publiés strictement avant 'Dune'. 
+        7. Les noms et prenoms des auteurs des livres trouvés à la question précédente.
+        8. Comme la question précédente, en retirant les doublons.
+        9. Le nombre de résultats trouvés à la question précédente.
 
-    1. Le titre des livres empruntés.
-    2. Le titre des livres empruntés à rendre avant le 31/03/2020.
-    3. Le nom et prenom de l'auteur du livre 1984
-    4. Le nom et le prenom des usagers ayant emprunté des livres, sans doublons (c'est à dire que si un usager a emprunté plusieurs livres, il ne doit apparaître qu'une fois dans le résultat). 
-    5. Même requête que précédemment, avec les noms triés par ordre alphabétique.
-    6. Les titre des livres publiés strictement avant 'Dune'. 
-    7. Les noms et prenoms des auteurs des livres trouvés à la question précédente.
-    8. Comme la question précédente, en retirant les doublons.
-    9. Le nombre de résultats trouvés à la question précédente.
+    === "corrigé"
+        ```SQL
+        SELECT titre FROM livre JOIN emprunt ON livre.isbn = emprunt.isbn;
+        SELECT titre FROM livre JOIN emprunt ON livre.isbn = emprunt.isbn WHERE retour < '2020-03-31';
+        SELECT nom, prenom FROM auteur 
+            JOIN auteur_de ON auteur_de.a_id =  auteur.a_id
+            JOIN livre ON livre.isbn = auteur_de.isbn
+            WHERE livre.titre = "1984";
+        SELECT DISTINCT nom, prenom FROM usager JOIN emprunt ON usager.code_barre = emprunt.code_barre;
+        SELECT DISTINCT nom, prenom FROM usager JOIN emprunt ON usager.code_barre = emprunt.code_barre ORDER BY nom;
+        SELECT titre, annee FROM livre WHERE annee < (SELECT annee FROM livre WHERE titre = 'Dune');
+        SELECT nom, prenom FROM auteur
+            JOIN auteur_de ON auteur_de.a_id =  auteur.a_id
+            JOIN livre ON livre.isbn = auteur_de.isbn
+            WHERE annee < (SELECT annee FROM livre WHERE titre = 'Dune');
+        SELECT DISTINCT nom, prenom FROM auteur
+            JOIN auteur_de ON auteur_de.a_id =  auteur.a_id
+            JOIN livre ON livre.isbn = auteur_de.isbn
+            WHERE annee < (SELECT annee FROM livre WHERE titre = 'Dune');
+        SELECT COUNT(nom) AS nombre FROM 
+            (SELECT DISTINCT nom, prenom FROM auteur
+            JOIN auteur_de ON auteur_de.a_id =  auteur.a_id
+            JOIN livre ON livre.isbn = auteur_de.isbn
+            WHERE annee < (SELECT annee FROM livre WHERE titre = 'Dune'));
+
+        ```
+
 
 !!! example "{{ exercice() }}: Lecture de requêtes"
 
