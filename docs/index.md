@@ -2,8 +2,7 @@
 
 !!! abstract "Actualités"
     - :star: :star: :star: [SQL](./T4_Bases_de_donnees/4.3_SQL/cours.md) :star: :star: :star:
-    - [SGBD](./T4_Bases_de_donnees/4.2_SGBD/cours.md)
-    - DM en cours : [DM3](./T8_Evaluations/DM.md)
+    - :star: [Projets 1er trimestre](./T8_Evaluations/T1_-_vers_le_grand_oral.md) :star:
     
 
 <!--     - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}. 
@@ -15,6 +14,7 @@
 
 
 ### *Thèmes déjà traités*
+- [SGBD](./T4_Bases_de_donnees/4.2_SGBD/cours.md)
 - [Modèle relationnel](./T4_Bases_de_donnees/4.1_Modele_relationnel/cours.md)
 - [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md)
 - [Listes, Piles et Files](./T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours.md)
