@@ -15,6 +15,7 @@ L'objectif de ce projet est de réaliser unjeu en 3D en utilisant la bibliothèq
     - [https://pythonprogramming.net/opengl-rotating-cube-example-pyopengl-tutorial/](https://pythonprogramming.net/opengl-rotating-cube-example-pyopengl-tutorial/)
     - [https://stackabuse.com/brief-introduction-to-opengl-in-python-with-pyopengl/](https://stackabuse.com/brief-introduction-to-opengl-in-python-with-pyopengl/)
 - [OpenGL](https://fr.wikipedia.org/wiki/OpenGL)
+- [Comprendre les bases d'OpenGL](https://www.haroldserrano.com/blog/understanding-opengl-basics)
 - [pyOpenGL reference](https://pyopengl.sourceforge.net/documentation/manual-3.0/index.html)
 - Bibliothèque graphique :
     - [pygame](https://www.pygame.org/docs/)
