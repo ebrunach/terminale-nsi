@@ -26,9 +26,9 @@ def define_env(env):
 
     env.variables['compteur_exo'] = 0
     @env.macro
-    def exercice():
+    def exercice(nom = "Exercice "):
         env.variables['compteur_exo'] += 1
-        return f"Exercice  { env.variables['compteur_exo']}"
+        return f"{nom}{ env.variables['compteur_exo']}"
 
 #---------------- </exo perso>-------------------- 
 
