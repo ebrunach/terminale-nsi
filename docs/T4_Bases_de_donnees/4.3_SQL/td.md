@@ -59,7 +59,7 @@
         SELECT nom FROM usager;
         SELECT DISTINCT nom FROM usager;
         SELECT titre FROM livre WHERE annee < 1980;
-        SELECT titre FROM livre WHERE titre LIKE "%A%";
+        SELECT titre FROM livre WHERE titre LIKE '%A%';
         SELECT isbn FROM emprunt WHERE retour = '2020-01-01';
         SELECT nom FROM auteur ORDER BY nom;
         SELECT nom, prenom FROM usager WHERE cp IN ('75012', '75013');
