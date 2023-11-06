@@ -93,7 +93,7 @@
         SELECT nom, prenom FROM auteur 
             JOIN auteur_de ON auteur_de.a_id =  auteur.a_id
             JOIN livre ON livre.isbn = auteur_de.isbn
-            WHERE livre.titre = "1984";
+            WHERE livre.titre = '1984';
         SELECT DISTINCT nom, prenom FROM usager JOIN emprunt ON usager.code_barre = emprunt.code_barre;
         SELECT DISTINCT nom, prenom FROM usager JOIN emprunt ON usager.code_barre = emprunt.code_barre ORDER BY nom;
         SELECT titre, annee FROM livre WHERE annee < (SELECT annee FROM livre WHERE titre = 'Dune');
