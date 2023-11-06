@@ -52,6 +52,8 @@
         10. Les annees et titres des livres publiés lors d'une année bissextile. On rappelle que ce sont les années divisibles par 4, mais pas celles divisibles par 100 sauf si elles sont divisibles par 400.
 
     === "correction"
+        {{ correction(False,
+        """
         ```SQL
         SELECT titre FROM livre;
         SELECT nom FROM usager;
@@ -65,6 +67,8 @@
         SELECT nom, adresse FROM usager WHERE adresse NOT LIKE '%Rue%';
         SELECT annee, titre FROM livre WHERE annee % 4 = 0 AND annee % 100 <> 0;
         ```
+        """
+        )}}
 
 !!! example "{{ exercice() }}: Requêtes avec jointure"
     === "énoncé"
@@ -81,6 +85,8 @@
         9. Le nombre de résultats trouvés à la question précédente.
 
     === "corrigé"
+        {{ correction(False,
+        """
         ```SQL
         SELECT titre FROM livre JOIN emprunt ON livre.isbn = emprunt.isbn;
         SELECT titre FROM livre JOIN emprunt ON livre.isbn = emprunt.isbn WHERE retour < '2020-03-31';
@@ -106,6 +112,8 @@
             WHERE annee < (SELECT annee FROM livre WHERE titre = 'Dune'));
 
         ```
+        """
+        )}}
 
 
 !!! example "{{ exercice() }}: Lecture de requêtes"
