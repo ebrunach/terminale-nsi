@@ -150,23 +150,39 @@
         )}}
 
 !!! example "{{ exercice() }}: Mise à jour de valeurs"
+    === "énoncé"
+        Toujours sur la base même base. On a ajouté deux livres, deux usagers et un emprunt à la bibliothèque avec les requêtes suivantes:
+        ```SQL
+        INSERT INTO livre VALUES ('Les Aventures de Huckleberry Finn', 'Flammarion', '2020', '978-2081509511');
+        INSERT INTO auteur VALUES (0, 'Twain', 'Mark');
+        INSERT INTO auteur_de VALUES (0, '978-2081509511');
+        INSERT INTO livre VALUES ('Fondation et Empire', 'Editions Denoël', '1999', '978-2207249123');
+        INSERT INTO auteur VALUES (1, 'Asimov', 'Isaac');
+        INSERT INTO auteur_de VALUES (1, '978-2207249123');
+        INSERT INTO usager VALUES('MICHEL', 'VALÉRIE', '104, Rue du Stade', '75013', 'Paris', 'vmichel5@monmail.com', '199614051174633');
+        INSERT INTO usager VALUES('DURAND', 'JULIEN', '183, Rue de la Gare', '75019', 'Paris', 'jdurand9@email.fr', '782124241492509');
+        INSERT INTO emprunt VALUES ('199614051174633', '978-2081509511', '2022-12-09');
+        ```
 
-    Toujours sur la base même base. On a ajouté deux livres, deux usagers et un emprunt à la bibliothèque avec les requêtes suivantes:
-    ```SQL
-    INSERT INTO livre VALUES ('Les Aventures de Huckleberry Finn', 'Flammarion', '2020', '978-2081509511');
-    INSERT INTO auteur VALUES (0, 'Twain', 'Mark');
-    INSERT INTO auteur_de VALUES (0, '978-2081509511');
-    INSERT INTO livre VALUES ('Fondation et Empire', 'Editions Denoël', '1999', '978-2207249123');
-    INSERT INTO auteur VALUES (1, 'Asimov', 'Isaac');
-    INSERT INTO auteur_de VALUES (1, '978-2207249123');
-    INSERT INTO usager VALUES('MICHEL', 'VALÉRIE', '104, Rue du Stade', '75013', 'Paris', 'vmichel5@monmail.com', '199614051174633');
-    INSERT INTO usager VALUES('DURAND', 'JULIEN', '183, Rue de la Gare', '75019', 'Paris', 'jdurand9@email.fr', '782124241492509');
-    INSERT INTO emprunt VALUES ('199614051174633', '978-2081509511', '2022-12-09');
-    ```
+        1. Valérie MICHEL est passé à la bibliothèque pour prolonger son prêt jusqu'au 16 décembre 2022. Quelle requête sera réalisée sur le SGBD de la bibliothèque ?
 
-    1. Valérie MICHEL est passé à la bibliothèque pour prolonger son prêt jusqu'au 16 décembre 2022. Quelle requête sera réalisée sur le SGBD de la bibliothèque ?
+        2. Une semaine plus tard, elle rend le livre. Quelle requête sera réalisée sur le SGBD de la bibliothèque ?
+    
+    === "corrigé"
+        {{ correction(True,
+        """
+        1. 
+        
+        ```SQL
+        UPDATE emprunt SET retour = '2022-12-16' WHERE isbn = '978-2081509511' AND code_barre = '199614051174633';
+        ```
+        2. 
+        ```SQL
+        DELETE FROM emprunt WHERE isbn = '978-2081509511' AND code_barre = '199614051174633';
+        ```
+        """
+        )}}
 
-    2. Une semaine plus tard, elle rend le livre. Quelle requête sera réalisée sur le SGBD de la bibliothèque ?
 
 !!! example "{{ exercice() }}: Type bac"
 
