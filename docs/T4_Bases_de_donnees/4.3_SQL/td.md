@@ -117,27 +117,37 @@
 
 
 !!! example "{{ exercice() }}: Lecture de requêtes"
+    === "énoncé"
+        Toujours sur la même base. Formuler simplement en francais les requêtes SQL suivantes. 
 
-    Toujours sur la même base. Formuler simplement en francais les requêtes SQL suivantes. 
-
-    1. 
-    ```SQL
-    SELECT * FROM livre WHERE titre LIKE '%Robot%':
-    ```
-    2. 
-    ```SQL
-    SELECT nom, prenom FROM usager WHERE ville = 'Guingamp';
-    ```
-    3. 
-    ```SQL
-    SELECT u.nom, u.prenom FROM usager AS u JOIN emprunt AS e ON u.code_barre = e.code_barre WHERE retour < "2020-04-02":
-    ```
-    4. 
-    ```SQL
-    SELECT l.titre 
-    FROM livre AS l 
-    WHERE l.isbn IN (SELECT isbn FROM livres WHERE annee > 1990);
-    ```
+        1. 
+        ```SQL
+        SELECT * FROM livre WHERE titre LIKE '%Robot%':
+        ```
+        2. 
+        ```SQL
+        SELECT nom, prenom FROM usager WHERE ville = 'Guingamp';
+        ```
+        3. 
+        ```SQL
+        SELECT u.nom, u.prenom FROM usager AS u JOIN emprunt AS e ON u.code_barre = e.code_barre WHERE retour < "2020-04-02":
+        ```
+        4. 
+        ```SQL
+        SELECT l.titre 
+        FROM livre AS l 
+        WHERE l.isbn IN (SELECT isbn FROM livre WHERE annee > 1990);
+        ```
+    
+    === "corrigé"
+        {{ correction(True,
+        """
+        1. Selectionne toutes les colonnes de livre ayant robot dans la titre
+        2. Sélectionne le nom et le prenom des usagers habitant à Guingamp
+        3. Selectionne le nom et le prenom des usager ayant un retour à faire avant le 2 avril 2020
+        4. Selectionne le titre des livres parus après 1990
+        """
+        )}}
 
 !!! example "{{ exercice() }}: Mise à jour de valeurs"
 
