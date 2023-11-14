@@ -7,6 +7,18 @@
 !!! example "{{ exercice() }} : BD"
     === "énoncé"
         Coder la fonction `prix(etage)` de la BD présentée dans le cours.
+    === "correction"
+        {{ correction(True,
+        """
+        ```python
+        def prix(etage):
+            if etage == 0:
+                return 3
+            else:
+                return 2 * prix(etage - 1)
+        ```
+        """
+        )}}
 
 !!! example "{{ exercice() }} : Factorielle"
     === "énoncé"
@@ -22,6 +34,26 @@
         2. Programmer de façon récursive la fonction factorielle. On l'appelera `fact_rec()`.
 
         Quelle paradigme de programmation vous a semblé le plus naturel ?
+    === "correction"
+        {{ correction(True,
+        """
+        ```python
+        # 1. Itératif
+        def fact_it(nb):
+            res = 1
+            for i in range(1, nb + 1):
+                res *= i
+            return res
+        
+        # 2. récursif
+        def fact_rec(nb):
+            if nb == 0:
+                return 1
+            else:
+                return nb * fact_rec(nb - 1)
+        ```
+        """
+        )}}
 
 !!! example "{{ exercice() }} : Minimum liste"
     === "énoncé"
@@ -31,14 +63,73 @@
         2. Programmmer une fonction récursive `mini_rec(lst)` permettant de déterminer le minimum de la liste `lst`.
         3. Ecrire l'arbre d'appels récursifs de cette dernière fonction pour l'appel de `mini_rec([4, 7, -1, 8])`
         4. Ecrire une fonction récursive `mini_rec2(lst, i = 0)` déterminant le minimum de la liste `lst` sans détruire la liste. *`i = 0` est un paramètre optionnel à 0 par défaut permettant de gérer l'indice à partir duquel on cherche le minimum.*
+    === "correction"
+        {{ correction(True,
+        """
+        ```python
+        # 1. Itératif
+        def mini_it(lst):
+            mini = lst[0]
+            for elem in lst:
+                mini = min(mini, elem)
+            return mini
+        
+        # 2. récursif
+        def mini_rec(lst):
+            if len(lst) == 1:
+                return lst[0]
+            else:
+                dernier_element = lst.pop()
+                return min(dernier_element, mini_rec(lst))
+        
+        # 3. mini_rec([4, 7, -1, 8]) --> mini_rec([4, 7, -1]) --> mini_rec([4, 7]) --> mini_rec([4])
+        # 4. 
+        def mini_rec2(lst, i = 0):
+            if i == len(lst) - 1:
+                return lst[-1]
+            else:
+                return min(lst[i], mini_rec2(lst, i + 1))
+        ```
+        """
+        )}}
 
 !!! example "{{ exercice() }} : Occurences liste"
     === "énoncé"
-        Programmer une fonction récursive `counr_rec(lst, elem, i = 0)` comptant le nombre d'occurence de l'élément `elem` dans la liste `lst`.
+        Programmer une fonction récursive `count_rec(lst, elem, i = 0)` comptant le nombre d'occurence de l'élément `elem` dans la liste `lst`.
+    === "correction"
+        {{ correction(True,
+        """
+        ```python
+        def count_rec(lst, elem, i = 0):
+            if i == len(lst):
+                return 0
+            else:
+                if lst[i] == elem:
+                    return 1 + count_rec(lst, i + 1)
+                else:
+                    return count_rec(lst, i + 1)
+        ```
+        """
+        )}}
 
 !!! example "{{ exercice() }} : Doublons liste"
     === "énoncé"
-        Programmer une fonction récursive `contient_doublons(lst, i = 0)` renvoyant `True` si la liste `lst` contient des doublons, et `False` sinon.
+        Programmer une fonction récursive `contient_doublons(lst, i = 0)` renvoyant `True` si la liste non vide `lst` contient des doublons, et `False` sinon.
+    === "correction"
+        {{ correction(True,
+        """
+        ```python
+        def contient_doublons(lst, i = 0):
+            if i == len(lst) - 1:
+                return False
+            else:
+                for j in range(i + 1, len(lst)):
+                    if lst[i] == lst[j]:
+                        return True
+                return contient_doublons(lst, i + 1)
+        ```
+        """
+        )}}
 
 !!! example "{{ exercice() }} : Palindrome"
     === "énoncé"
@@ -46,6 +137,23 @@
         
         - `True` si la chaîne passée en paramètre est un palindrome, et 
         - `False` sinon (on suppose que tous les caractères sont des minuscules non accentuées).
+    === "correction"
+        {{ correction(True,
+        """
+        ```python
+        def est_palindrome(chaine, i = 0):
+            if i == len(chaine) // 2:
+                return True
+            else:
+                if chaine[i] == chaine[- i - 1]:
+                    return est_palindrome(chaine, i + 1)
+                else:
+                    return False
+            # OU en plus simple mais plus tricky:
+            #   return chaine[i] == chaine[- i - 1] and est_palindrome(chaine, i + 1)
+        ```
+        """
+        )}}
 
 !!! example "{{ exercice() }} : Fibonacci"
     === "énoncé"
@@ -59,11 +167,48 @@
 
         1. Programmer une fonction itérative `fibo_it(n)` retournant $F_n$. Exemple:
         ```python
-        >>> fibo_it(5)
-        5
+        >>> fibo_it(6)
+        8
+        >>> fibo_it(7)
+        13
         ```
         2. Programmer un fonction récursive `fibo_rec(n)` retournont $F_n$. *Conseil: se rapprocher de la définition*
         3. Dessiner l'arbre d'appel de `fibo_rec(5)`.
+
+    === "correction"
+        {{ correction(False,
+        """
+        ```python
+        # 1. itératif
+        def fibo_it(nb):
+            if nb == 0:
+                return 0
+            elif nb == 1:
+                return 1
+            else:
+                f0, f1 = 0, 1
+                for i in range(2, nb + 1):
+                    f2 = f1 + f0
+                    f0 = f1
+                    f1 = f2
+                return f2
+
+        # 2. récursif
+        def fibo_rec(nb):
+            if nb == 0:
+                return 0
+            elif nb == 1:
+                return 1
+            else:
+                return fibo_rec(nb - 1) + fibo_rec(nb - 2)
+
+        #3. 
+        ```
+        <figure markdown>
+        ![arbre](./data/fibo_arbre.png)
+        </figure>
+        """
+        )}}
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
