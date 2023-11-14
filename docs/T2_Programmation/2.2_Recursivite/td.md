@@ -176,7 +176,7 @@
         3. Dessiner l'arbre d'appel de `fibo_rec(5)`.
 
     === "correction"
-        {{ correction(False,
+        {{ correction(True,
         """
         ```python
         # 1. itératif
