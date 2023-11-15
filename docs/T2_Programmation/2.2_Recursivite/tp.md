@@ -60,7 +60,7 @@ Voici l’instruction d’import du module turtle, et notre tortue se nommera t:
     # on accélère la tortue
     t.speed(0)
     # définition des caractéristiques du tracé
-    t.color(’blue’)
+    t.color('blue')
     t.pensize(1)
 
     # on trace la figure
@@ -101,7 +101,25 @@ Voici l’instruction d’import du module turtle, et notre tortue se nommera t:
     FinDéfinition
     ```
 !!! example "{{ exercice(nom = "Q") }}"
-    Implémenter en Python la fonction `flocon`.
+    === "énoncé"
+        Implémenter en Python la fonction `flocon`.
+    === "corrigé"
+        {{ correction(True, """
+        ```python
+        import turtle as t
+        def flocon(n, taille):
+            if n == 0:
+                t.forward(taille)
+            else:
+                flocon(taille / 3)
+                t.left(60)
+                flocon(taille / 3)
+                t.right(120)
+                flocon(taille / 3)
+                t.left(60)
+                flocon(taille / 3)
+        ```
+        """)}}
 
 !!! example "{{ exercice(nom = "Q") }}"
     Écrire un programme Python utilisant la fonction `flocon` afin de construire les figures ci-dessous :
