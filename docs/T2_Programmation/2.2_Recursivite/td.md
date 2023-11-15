@@ -220,7 +220,7 @@
         2. On appelle «temps de vol» le nombre d'étapes nécessaires avant de retomber sur 1. Modifier la fonction précédente afin qu'elle affiche le temps de vol pour tout nombre ```n```.
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         "
         1.
         ```python linenums='1'
@@ -231,20 +231,18 @@
             if n % 2 == 0:
                 syracuse(n // 2)
             else:
-                syracuse(3*n + 1)
+                syracuse(3 * n + 1)
         ```
         2.
         ```python linenums='1'
-        def syracuse(n, t=0):
+        def syracuse(n):
             print(n)
-            t += 1
             if n == 1:
-                print('temps de vol :', t)
-                return None
+                return 1
             if n % 2 == 0:
-                syracuse(n // 2, t)
+                return 1 + syracuse(n // 2)
             else:
-                syracuse(3*n + 1, t)
+                return 1 + syracuse(3 * n + 1)
         ``` 
         "
         ) }}        
@@ -268,7 +266,7 @@
         Écrire une fonction récursive ```hanoi(n, A, B, C)``` qui donnera la suite d'instructions (sous la forme " A vers C") pour faire passer une pile de taille n de A vers C en prenant B comme intermédiaire.
 
     === "Correction"
-        {{ correction(False,
+        {{ correction(True,
         """
         ```python linenums='1'
         def hanoi(n, depart, inter, arrivee):
@@ -281,7 +279,7 @@
                 print(depart + ' vers ' + arrivee)
             else :
                 hanoi(n-1, depart, arrivee, inter) 
-                print(depart + ' vers ' + arrivee)
+                hanoi(1, depart, inter, arrivee)
                 hanoi(n-1, inter, depart, arrivee)
 
         hanoi(5, 'A', 'B', 'C')
