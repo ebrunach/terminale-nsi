@@ -104,7 +104,7 @@ Voici l’instruction d’import du module turtle, et notre tortue se nommera t:
     === "énoncé"
         Implémenter en Python la fonction `flocon`.
     === "corrigé"
-        {{ correction(True, """
+        {{ correction(False, """
         ```python
         import turtle as t
         def flocon(n, taille):
