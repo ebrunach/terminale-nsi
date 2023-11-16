@@ -212,7 +212,14 @@ Il existe donc une classe `Image` ayant pour attributs:
 
 !!! example "{{ exercice(nom = "Q") }}"
     Compléter la méthode `colorer_zone` de paramètres `i`, `j` (les corrdonnées du pixel d'origine) et `couleur` l'entier correspondant à la nouvelle couleur. La nouvelle couleur doit se *propager* dans les pixels voisins de même couleur initiale suivant l'algorithme :
-
+    
+        - On récupère la couleur à `i` et `j`
+        - On colore le pixel `(i, j)` avec la nouvelle couleur
+        - On récupère les voisins
+        - Tant que la pile des voisins n'est pas vide:
+            - On dépile le pixel
+            - On vérifie qu'il est de la bonne couleur
+            - Si il l'est, on colore la zone autour de celui-ci.
 
 
 
