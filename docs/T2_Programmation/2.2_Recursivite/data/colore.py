@@ -38,16 +38,44 @@ class Image:
             if self.est_dedans(x + i, y + j):
                 p.empiler((x + i, y +j))
         return p
+    
+    def voisins_de_meme_couleur(self, i, j):
+        c =  self.get_pixel(i, j)
+        p =  Pile()
+        for x, y in Image.lst_voisins:
+            if self.est_dedans(x + i, y + j) and c == self.get_pixel(x + i, y + j):
+                p.empiler((x + i, y +j))
+        return p
+    
+    # def voisins_de_meme_couleur_ens(self, i, j):
+    #     c =  self.get_pixel(i, j)
+    #     p =  set()
+    #     for x, y in Image.lst_voisins:
+    #         if self.est_dedans(x + i, y + j) and c == self.get_pixel(x + i, y + j):
+    #             p.add((x + i, y +j))
+    #     return p
 
     def colorer_zone(self, i, j, couleur):
-        c_prec = self.image[i][j]
-        if c_prec != couleur:
-            self.set_pixel(i, j, couleur)
-        pile = self.voisins(i, j)
+        cpt = 1
+        c_prec = self.get_pixel(i, j)
+        pile = self.voisins_de_meme_couleur(i, j)
+        self.set_pixel(i, j, couleur)
         while not pile.est_vide():
             x, y = pile.depiler()
             if self.get_pixel(x, y) == c_prec:
-                self.colorer_zone(x, y, couleur)
+                cpt += self.colorer_zone(x, y, couleur)
+        return cpt
+
+    # def colorer_zone_ens(self, i, j, couleur, ens = set()):
+    #     cpt = 1
+    #     c_prec = self.get_pixel(i, j)
+    #     ens_voisin = self.voisins_de_meme_couleur_ens(i, j)
+    #     ens.update(ens_voisin)
+    #     self.set_pixel(i, j, couleur)
+    #     while len(ens) != 0:
+    #         x, y = ens.pop()
+    #         cpt += self.colorer_zone_ens(x, y, couleur, ens)
+    #     return cpt
 
     def affiche(self):
         plt.imshow(self.image, vmin = 0, vmax = 2)
@@ -55,5 +83,5 @@ class Image:
 
 i = Image()
 i.affiche()
-i.colorer_zone(2,2,1)
+print(i.colorer_zone(2,1,1))
 i.affiche()

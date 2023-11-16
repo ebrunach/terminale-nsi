@@ -208,15 +208,15 @@ Il existe donc une classe `Image` ayant pour attributs:
     - `False` sinon.
 
 !!! example "{{ exercice(nom = "Q") }}"
-    Compléter la méthode `voisins` de paramètres `i` et `j` qui retourne une pile de toutes les coordonnées des voisins *existants* du pixel de coordonnées `(i, j)`. *Remarque : vous pouvez utiliser le tuple itérable `lst_voisins` permettant d'aider à trouver les quatre voisins potentiels de `(i, j)`.*
+    Compléter la méthode `voisins_de_meme_couleur` de paramètres `i` et `j` qui retourne une pile de toutes les coordonnées des voisins *existants* et de même couleur du pixel de coordonnées `(i, j)`. *Remarque : vous pouvez utiliser le tuple itérable `lst_voisins` permettant d'aider à trouver les quatre voisins potentiels de `(i, j)`.*
 
 !!! example "{{ exercice(nom = "Q") }}"
     Compléter la méthode `colorer_zone` de paramètres `i`, `j` (les corrdonnées du pixel d'origine) et `couleur` l'entier correspondant à la nouvelle couleur. La nouvelle couleur doit se *propager* dans les pixels voisins de même couleur initiale suivant l'algorithme :
-    
-        - On récupère la couleur à `i` et `j`
+
+        - On récupère la couleur à `(i, j)`
+        - On récupère les voisins de même couleur
         - On colore le pixel `(i, j)` avec la nouvelle couleur
-        - On récupère les voisins
-        - Tant que la pile des voisins n'est pas vide:
+        - Tant que la pile des voisins de même couleur n'est pas vide:
             - On dépile le pixel
             - On vérifie qu'il est de la bonne couleur
             - Si il l'est, on colore la zone autour de celui-ci.
