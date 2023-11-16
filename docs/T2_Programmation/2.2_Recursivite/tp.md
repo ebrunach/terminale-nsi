@@ -1,6 +1,8 @@
 
 # TP
 
+ZONE DE RENDU: [TNSINF1](https://idf-93-1.elea.apps.education.fr/mod/assign/view.php?id=1244), [TNSINF2]()
+
 ## 1. Flocon
 
 ### 1.1 Le flocon de Von-Koch
