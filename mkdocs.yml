@@ -82,6 +82,7 @@ markdown_extensions:
   - toc:
       permalink: ⚓︎
       toc_depth: 3
+  - sane_lists
 
 
 plugins:
