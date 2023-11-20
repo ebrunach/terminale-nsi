@@ -1,7 +1,7 @@
 
 
 !!! abstract "Actualités"
-    - :star: :star: :star: [SQL](./T4_Bases_de_donnees/4.3_SQL/cours.md) :star: :star: :star:
+    - :star: :star: :star: [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md) :star: :star: :star:
     - :star: [Projets 1er trimestre](./T8_Evaluations/T1_-_vers_le_grand_oral.md) :star:
     
 
@@ -14,6 +14,7 @@
 
 
 ### *Thèmes déjà traités*
+- [SQL](./T4_Bases_de_donnees/4.3_SQL/cours.md)
 - [SGBD](./T4_Bases_de_donnees/4.2_SGBD/cours.md)
 - [Modèle relationnel](./T4_Bases_de_donnees/4.1_Modele_relationnel/cours.md)
 - [Programmation Orientée Objet](./T2_Programmation/2.1_Programmation_Orientee_Objet/cours.md)
