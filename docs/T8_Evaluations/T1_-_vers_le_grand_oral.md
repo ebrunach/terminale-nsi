@@ -4,6 +4,8 @@ Pour préparer le grand oral, nous allons développer des projets individualisé
 
 ## Projets de 1er timestre
 
+Zone de rendu : [TNSINF1](https://idf-93-1.elea.apps.education.fr/mod/assign/view.php?id=2580) et [TNSINF2](https://idf-93-1.elea.apps.education.fr/mod/assign/view.php?id=1505)
+
 | Thème | Projet | Thèmes du programme |
 |---|---|---|
 |Cybersécurité| [Créer une campagne de fishing éthique](./Projets/fishing.md) | ... |
