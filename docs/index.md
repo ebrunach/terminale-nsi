@@ -1,8 +1,7 @@
 
 
 !!! abstract "Actualités"
-    - :star: :star: :star: [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md) :star: :star: :star:
-    - :star: [Projets 1er trimestre](./T8_Evaluations/T1_-_vers_le_grand_oral.md) :star:
+    - :star: :star: :star: [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md) :star: :star: :star:
     
 
 <!--     - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}. 
@@ -14,6 +13,8 @@
 
 
 ### *Thèmes déjà traités*
+- [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)
+- [Projets 1er trimestre](./T8_Evaluations/T1_-_vers_le_grand_oral.md)
 - [SQL](./T4_Bases_de_donnees/4.3_SQL/cours.md)
 - [SGBD](./T4_Bases_de_donnees/4.2_SGBD/cours.md)
 - [Modèle relationnel](./T4_Bases_de_donnees/4.1_Modele_relationnel/cours.md)
