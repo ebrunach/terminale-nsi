@@ -7,50 +7,7 @@
 !!! example "{{ exercice() }}"
     === "énoncé"
         Dessiner tous les arbres binaires ayant respectivement 3 et 4 nœuds.
-    === "corrigé"
-        3 noeuds :
 
-        ```mermaid
-        graph TB
-            A((1))-->B((2))
-            B-->C((3))
-        ```
-
-        ```mermaid
-        graph TB
-            A((1))-->B((2))
-            A-->C((3))
-        ```
-
-        4 noeuds:
-
-        ```mermaid
-        graph TB
-            A((1))-->B((2))
-            A-->C((3))
-            A-->D((4))
-        ```
-
-        ```mermaid
-        graph TB
-            A((1))-->B((2))
-            A-->C((3))
-            B-->D((4))
-        ```
-
-        ```mermaid
-        graph TB
-            A((1))-->B((2))
-            A-->C((3))
-            C-->D((4))
-        ```
-
-        ```mermaid
-        graph TB
-            A((1))-->B((2))
-            B-->C((3))
-            C-->D((4))
-        ```
 
 !!! example "{{ exercice() }}"
     === "énoncé"
