@@ -1,7 +1,7 @@
 
 
 !!! abstract "Actualités"
-    - :star: :star: :star: [Arbres](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md) :star: :star: :star:
+    - :star: :star: :star: [Arbres](./T1_Structures_de_donnees/1.2_Arbres/cours.md) :star: :star: :star:
     - :star: :star: :star: [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md) :star: :star: :star:
     
 
