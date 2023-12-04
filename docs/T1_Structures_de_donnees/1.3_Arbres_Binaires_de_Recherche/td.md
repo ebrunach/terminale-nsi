@@ -324,7 +324,7 @@
 
         Donc un arbre de taille $t$ et de hauteur $h$ est *mal construit* si $t < 2^{h-1}$, puisqu'on a démontré que $2^{h-1}$ était la taille minimale.
 
-        Pour tester si un arbre est *bien construit*, on va donc juste vérifier que $t \geqslant 2^{h-1}$ :
+        Pour tester si un arbre est *bien construit*, on va donc juste vérifier que $ t \\geqslant 2^{h-1} $ :
 
         ```python linenums='1'
         def bien_construit(self):
@@ -453,7 +453,7 @@
     {{correction(False,"""
     ??? tip \"corrigé\"  
         *question difficile*
-        Pour créer l'ABR, il faut d'abord insérer chacune des valeurs. La fonction ```insertion``` reposant sur une division par 2 à chaque étape de la taille de l'espace de recherche, on peut dire qu'elle a une complexité logarithmique. Mais cette opération est à effectuer autant de fois qu'il y a d'éléments à insérer : il faut donc multiplier la complexité logarithmique par ```n```, ce qui fera donc une complexité en $n \log(n)$.
+        Pour créer l'ABR, il faut d'abord insérer chacune des valeurs. La fonction ```insertion``` reposant sur une division par 2 à chaque étape de la taille de l'espace de recherche, on peut dire qu'elle a une complexité logarithmique. Mais cette opération est à effectuer autant de fois qu'il y a d'éléments à insérer : il faut donc multiplier la complexité logarithmique par ```n```, ce qui fera donc une complexité en $n \\log(n)$.
         L'algorithme de parcours infixe est lui aussi linéraire, ce qui ne change pas la complexité totale.
         Cette complexité est meilleure que le tris par insertion ou sélection, qui sont de complexité quadratique.
     """)}}
