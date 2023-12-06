@@ -86,17 +86,16 @@ markdown_extensions:
 
 
 plugins:
-  - search
-  - git-revision-date-localized:
-      enable_creation_date: false
-      locale: fr
-  - awesome-pages:
-      collapse_single_pages: false
-  - macros
-  #- page-to-pdf
- 
- 
- # - mkdocs-jupyter
+    - search
+    - git-revision-date-localized:
+        enable_creation_date: false
+        locale: fr
+    - awesome-pages:
+        collapse_single_pages: false
+    - macros
+    #- page-to-pdf
+    - mkdocs-jupyter:
+        include: ["tp.correction.ipynb"]
 
 extra:
   # analytics: 
