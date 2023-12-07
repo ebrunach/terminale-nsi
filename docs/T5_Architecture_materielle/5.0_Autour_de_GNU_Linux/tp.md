@@ -25,7 +25,9 @@ En 2023:
 ## L'arborescence d'un disque dur
 Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arborescence ci-dessous :
 <figure markdown>
-![arbolinux](./data/arbo-unix.gif)
+
+![image](./data/arbo-unix.gif)
+
 </figure>
 
 {{ initexo(0) }}
@@ -46,4 +48,5 @@ Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arb
         - ```sudo apt install monprog``` : pour installer le programme ```monprog``` si celui-ci est manquant.
 
         1. Sur un PC du lycée, ouvrir l'application ubuntu. Ubuntu est une distribution Linux et peut fonctionner dans une machine virtuelle dans windows.
-        2. récupérer le fichier dossier.zip en tapant dans le shell : `wget `
+        2. récupérer le fichier dossier.zip en tapant dans le shell : `wget https://terminale-nsi.vercel.app/T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/data/dossiers.zip`
+        3. décompresser l'archive et chercher le secret.
