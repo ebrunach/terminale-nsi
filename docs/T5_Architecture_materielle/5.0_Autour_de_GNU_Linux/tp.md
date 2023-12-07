@@ -46,4 +46,4 @@ Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arb
         - ```sudo apt install monprog``` : pour installer le programme ```monprog``` si celui-ci est manquant.
 
         1. Sur un PC du lycée, ouvrir l'application ubuntu. Ubuntu est une distribution Linux et peut fonctionner dans une machine virtuelle dans windows.
-        2. récupérer le fichier dossier.zip en tapant dans le shell : `wget 
+        2. récupérer le fichier dossier.zip en tapant dans le shell : `wget `
