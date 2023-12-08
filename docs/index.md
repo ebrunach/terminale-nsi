@@ -1,8 +1,9 @@
 
 
 !!! abstract "Actualités"
-    - :star: :star: :star: [Arbres Binaires de Recherche](./T1_Structures_de_donnees/1.3_Arbres_Binaires_de_Recherche/cours.md) :star: :star: :star:
-    - :star: :star: :star: [Arbres](./T1_Structures_de_donnees/1.2_Arbres/cours.md) :star: :star: :star:
+    - :star: :star: :star: [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md) :star: :star: :star:
+    - :star: :star: :star: [Autour de GNU/Linux](./T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/tp.md) :star: :star: :star:
+
     
     
 
@@ -15,6 +16,8 @@
 
 
 ### *Thèmes déjà traités*
+- [Arbres Binaires de Recherche](./T1_Structures_de_donnees/1.3_Arbres_Binaires_de_Recherche/cours.md)
+- [Arbres](./T1_Structures_de_donnees/1.2_Arbres/cours.md) 
 - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)
 - [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)
 - [Projets 1er trimestre](./T8_Evaluations/T1_-_vers_le_grand_oral.md)
