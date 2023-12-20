@@ -35,7 +35,7 @@
         Montrer que les applications s'attendent mutuellement. Comment s'appelle cette situation ?
 
     === "correction"
-        {{ correction(True,
+        {{ correction(False,
         """
         ![image](data/corr_exo1.png){: .center}
         
@@ -75,7 +75,7 @@
             - c. ```end``` 
             - d.   ```kill```
 
-        {{ correction(True,
+        {{ correction(False,
         """
         ??? tip \"correction\"
             1. b
@@ -102,7 +102,7 @@
         exécuté à chaque cycle.
         ![image](data/ex2_2.png){: .center}
 
-        {{ correction(True,
+        {{ correction(False,
         """
         ??? tip \"correction\"
             ![image](data/corr_exo21.png){: .center}
@@ -116,7 +116,7 @@
 
         ![image](data/ex2_3.png){: .center}
         
-        {{ correction(True,
+        {{ correction(False,
         """
         ??? tip \"correction\"
             ![image](data/scenarios.png){: .center}
@@ -143,7 +143,7 @@
         **Q1.** Les processus s'exécutent de manière concurrente.
         Justifier qu'une situation d'interblocage peut se produire.
 
-        {{ correction(True,
+        {{ correction(False,
         """
         ??? tip \"correction\"
             Supposons que chaque ligne de chaque programme s'effectue consécutivement (d'abord la ligne 1 de P1, puis celle de P2, puis celle de P3, puis la ligne 2 de P1, etc.). Dans ce cas-là, le diagramme de dépendance serait :
@@ -155,7 +155,7 @@
         **Q2**. Modifier l'ordre des instructions du programme 3 pour qu'une telle situation ne puisse pas se produire. Aucune justification n'est attendue.
 
 
-        {{ correction(True,
+        {{ correction(False,
         """
         ??? tip \"correction\"
             On peut par exemple inverser la demande d'imprimante et de table traçante.
@@ -171,7 +171,7 @@
         - c. prêt
         - d. terminé
 
-        {{ correction(True,
+        {{ correction(False,
         """
         ??? tip \"correction\"
             Il sera à l'état bloqué.
@@ -210,7 +210,7 @@
 
         **Q3.** Quel est l'identifiant du processus dont le temps d'exécution est le plus long ?
 
-        {{ correction(True,
+        {{ correction(False,
         """
         ??? tip \"correction\"
             **Q1.** b.
