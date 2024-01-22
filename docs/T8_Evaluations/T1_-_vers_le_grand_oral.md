@@ -1,4 +1,4 @@
-# Vers le grand oral (1/3)
+# Projets - Vers le grand oral (1/3)
 
 Pour préparer le grand oral, nous allons développer des projets individualisés basés sur vos souhaits qui vous permettront d'acquérir une expertise dans un domaine.
 
