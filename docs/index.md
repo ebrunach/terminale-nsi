@@ -4,7 +4,7 @@
     - [DM4](./T8_Evaluations/DM.md)
     - [Projets 2eme trimestre](./T8_Evaluations/T2.md)
     - [Présentation sur la spécialité NSI](./T7_Divers/10_orientation/cours.md)
-    - :star: :star: :star: [Protocoles de routage](./T5_Architecture_materielle/5.3_Protocoles_de_routage/11%20-%20Routage%20-%20Cours.md) :star: :star: :star:
+    - :star: :star: :star: [Cryptographie](./T5_Architecture_materielle/5.4_Cryptographie/cours.md) :star: :star: :star:
 
     
     
@@ -18,6 +18,7 @@
 
 
 ### *Thèmes déjà traités*
+- [Protocoles de routage](./T5_Architecture_materielle/5.3_Protocoles_de_routage/11%20-%20Routage%20-%20Cours.md)
 - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)
 - [Autour de GNU/Linux](./T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/tp.md)
 - [Arbres Binaires de Recherche](./T1_Structures_de_donnees/1.3_Arbres_Binaires_de_Recherche/cours.md)
