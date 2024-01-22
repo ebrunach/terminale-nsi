@@ -3,20 +3,23 @@
 
 
 !!! abstract "{{ exercice() }}"
+    === "énoncé"
 
-    Exercice 5 du sujet [La Réunion J1 2022](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_10.pdf){. target="_blank"}
+        Exercice 5 du sujet [La Réunion J1 2022](https://pixees.fr/informatiquelycee/term/suj_bac/2022/sujet_10.pdf){. target="_blank"}
 
-<!--     ??? tip "Correction Q1.a."
-        Une adresse IPv4 se code à l'aide de 4 octets.
+    === "correction"
+        {{ correction(True,
+        """
 
-    ??? tip "Correction Q1.b."
-        Le PC3 a pour adresse ```172.150.4.30 / 24```. Cela signfie que son masque, en notation CIDR, est 24. Ses 24 premiers bits sont donc à 1. Cela correspond au masque ```255.255.255.0``` en notation décimale.
+        Q1.a. Une adresse IPv4 se code à l'aide de 4 octets.
 
-    ??? tip "Correction Q2."
+        Q1.b. Le PC3 a pour adresse ```172.150.4.30 / 24```. Cela signfie que son masque, en notation CIDR, est 24. Ses 24 premiers bits sont donc à 1. Cela correspond au masque ```255.255.255.0``` en notation décimale.
+
+        Q2.
+        
         ![image](data/ex5LR2022.png){: .center}
 
-    ??? tip "Correction Q3.a."
-        Pour être dans le réseau 1, il faut que le & logique entre l'IP de la machine et l'adresse du masque donne l'adresse réseau (```172.150.4.0``` ).
+        Q3.a. Pour être dans le réseau 1, il faut que le & logique entre l'IP de la machine et l'adresse du masque donne l'adresse réseau (```172.150.4.0``` ).
 
         Le réseau étant en ```/24``` (équivalent au masque ```255.255.255.0```), cela signifie que l'adresse IP de la machine soit de la forme ```172.150.4.???```.
 
@@ -24,134 +27,24 @@
 
         Il reste alors les adresses 4) et 6). (```172.150.4.11``` et ```172.150.4.200```)
 
-    ??? tip "Correction Q3.b."
-        La commande permettant de connaître son adresse IP est ```ifconfig``` ou ```ip addr``` sous Linux / MacOS. Ou bien ```ipconfig``` sous Windows.  
+        Q3.b. La commande permettant de connaître son adresse IP est ```ifconfig``` sous Linux / MacOS. Ou bien ```ipconfig``` sous Windows.  
 
-    ??? tip "Correction Q4." 
-        La solution de relier les switchs entre eux n'est pas satisfaisante. Les deux réseaux ne pourront pas communiquer entre eux, à moins d'élargir (beaucoup) leur masque de sous-réseau.
+        Q4. La solution de relier les switchs entre eux n'est pas satisfaisante. Les deux réseaux ne pourront pas communiquer entre eux, à moins d'élargir (beaucoup) leur masque de sous-réseau.
 
         La meilleure solution est d'installer un routeur entre les deux switchs, de lui attribuer une adresse IP dans chaque sous-réseau, et de renseigner cette adresse IP comme adresse de passerelle sur chacun des PCs des deux sous-réseaux. 
 
-    ??? tip "Correction Q5."       
+        Q5.
+
         ```python linenums='1'
         def adresse(IP, liste_IP):
             if IP in liste_IP:
-                print("trouvée")
+                print(\"trouvée\")
             else:
                 liste_IP.append(IP)
-                print("pas trouvée, ajoutée")
-        ``` -->
-
-<!-- !!! abstract ""
-    === "Énoncé"
-        Créer une fonction ```meme_sous_reseau(ip_a, ip_b, masque)``` qui renvoie un booléen indiquant si A et B sont partie du même sous-réseau.
-
-        Exercice (difficile) à réaliser en Test Driven Developpement à partir du squelette de code ci-dessous, en testant chaque fonction après sa réalisation, jusqu'à la fonction finale.
-
-        ```python
-        def convert_ip_to_list(ip):
-            """
-            entrée : ip (string) 
-            sortie : liste d'entiers
-            """
-            # à vous
-
-        def test_convert_ip_to_list():
-            assert convert_ip_to_list('192.168.0.1') == [192, 168, 0, 1]
-            
-
-        def nb_to_binary_word(masque):
-            """
-            entrée : masque (int)
-            sortie : string
-            """
-            # à vous
-            
-        def test_nb_convert_to_binary_word():
-            assert nb_to_binary_word(24) == '11111111111111111111111100000000'
-
-
-        def binary_word_to_list(word):
-            """
-            entrée : word (string de 32 caractères)
-            sortie : liste de 4 entiers
-            """
-            # à vous
-
-
-        def test_binary_word_to_list():
-            assert binary_word_to_list('11111111111111111111111100000000') == [255, 255, 255, 0]
-
-
-
-        def meme_sous_reseau(ip_a, ip_b, masque):
-            """
-            ip_a:  string contenant une IP (ex "192.168.0.1")
-            ip_b : string contenant une IP
-            masque : entier du masque en notation CIDR (ex : 24)
-            renvoie un booléen indiquant si ip_a et ip_b sont dans
-            le même sous-réseau
-            """
-            # à vous
-            
-
-        def test_meme_sous_reseau():
-            assert meme_sous_reseau("192.168.0.1", "192.168.1.3", 24) == False
-            assert meme_sous_reseau("192.168.0.1", "192.168.1.3", 20) == True
-            assert meme_sous_reseau("192.168.0.1", "192.168.0.3", 30) == True
+                print(\"pas trouvée, ajoutée\")
         ```
-
-
-    === "Correction"
-        Exercice difficile, il n'est pas à savoir faire mais c'est bien de le comprendre !
-        ```python
-        def convert_ip_to_list(ip):
-            """
-            entrée : ip (string) 
-            sortie : liste d'entiers
-            """
-            return [int(k) for k in ip.split(".")]
-
-        def test_convert_ip_to_list():
-            assert convert_ip_to_list('192.168.0.1') == [192, 168, 0, 1]
-
-
-        def nb_to_binary_word(masque):
-            """
-            entrée : masque (int)
-            sortie : string
-            """
-            return '1'*masque + '0'*(32-masque)
-
-        def test_nb_convert_to_binary_word():
-            assert nb_to_binary_word(24) == '11111111111111111111111100000000'
-
-
-        def binary_word_to_list(word):
-            """
-            entrée : word (string de 32 caractères)
-            sortie : liste de 4 entiers
-            """
-            decoupe = [word[8*i:8*(i+1)] for i in range(4)]
-            return [int(k,2) for k in decoupe]
-
-        def test_binary_word_to_list():
-            assert binary_word_to_list('11111111111111111111111100000000') == [255, 255, 255, 0]
-
-        def meme_sous_reseau(ip_a, ip_b, masque):
-            lstA = convert_ip_to_list(ip_a)
-            lstB = convert_ip_to_list(ip_b)
-            mask = binary_word_to_list(nb_to_binary_word(masque))
-            resA = [lstA[i] & mask[i] for i in range(4)]
-            resB = [lstB[i] & mask[i] for i in range(4)]
-            return resA == resB
-
-        def test_meme_sous_reseau():
-            assert meme_sous_reseau("192.168.0.1", "192.168.1.3", 24) == False
-            assert meme_sous_reseau("192.168.0.1", "192.168.1.3", 20) == True
-            assert meme_sous_reseau("192.168.0.1", "192.168.0.3", 30) == True
-
-        ``` -->
+        """
+        )}}
 
 
 !!! abstract "{{ exercice() }}"
@@ -180,7 +73,9 @@
         protocole RIP.
 
 
-<!--     === "Correction"
+    === "Correction"
+        {{ correction(True,
+        """
         **Q1.1.** Le trajet parcouru de A à G est A-C-F-G  
         **Q1.2.** 
         Table de routage de G :  
@@ -203,7 +98,9 @@
         |D|D|1|
         |E|D|2|
         |G|D|3|
-        |F|D|4| -->
+        |F|D|4|
+        """
+        )}}
 
 
 !!! abstract "{{ exercice() }}"
@@ -255,7 +152,9 @@
 
         c. Indiquer pour quel(s) routeur(s) l’extrait de la table de routage sera modifié pour un paquet à destination de L2, avec la métrique OSPF.
 
-<!--     === "Correction"
+    === "Correction"
+        {{ correction(True,
+        """
         1.a. D'après la table, R1 doit passer par la passerelle 86.154.10.1 qui correspond au routeur R2.  
         1.b. Le paquet va traverser R1, R2, R6 avant d'arriver à L2.  
         2.a. RIP doit minimiser le nombre de sauts, donc les deux chemins minimaux possibles sont R1-R3-R4-R6 et R1-R3-R2-R6.  
@@ -263,7 +162,9 @@
         3.a $\dfrac{10^9}{10 \times 10^6}=100$ donc le coût R2-R3 est 100.  
         3.b. Avec OSPF, le chemin qui minimise le coût est le chemin R1-R2-R4-R5-R6 (coût 103) :
         ![image](data/bac1_corr.png){: .center width=50%}
-        3.c. Dans la table de routage initiale, il faut modifier R2 pour qu'elle envoie sur R4 (et non sur R6), mais aussi R4 pour qu'elle envoie sur R5 (et non sur R6). -->
+        3.c. Dans la table de routage initiale, il faut modifier R2 pour qu'elle envoie sur R4 (et non sur R6), mais aussi R4 pour qu'elle envoie sur R5 (et non sur R6).
+        """
+        )}}
         
 
 
@@ -321,7 +222,9 @@
 
         ![](data/ex3_4_corrige.png)
 
-<!--     === "Correction"
+    === "Correction"
+        {{ correction(True,
+        """
         1.a L'adresse du réseau L1 est 192.168.1.0/24. L'adresse de L2 est 175.6.0.0/16.   
         1.b Pour le réseau L1 (192.168.1.0/24), l'adresse min est 192.168.1.1/24, l'adresse max est 192.168.1.254/24.  
         Pour le réseau L2 (175.6.0.0/16), l'adresse min est 175.6.0.1/16 et l'adresse max est 175.6.255.254/16  
@@ -349,10 +252,12 @@
         | IP destination | Passerelle | Interface|
         |:--:|:--:|:--:|
         |10.1.7.0/24| |Interface 2|
-        |192.168.1.0/24|10.1.7.1|Interface 2| -->
+        |192.168.1.0/24|10.1.7.1|Interface 2|
+        """
+        )}}
     
 
-!!! abstract "{{ exercice() }}"
+<!--!!! abstract "{{ exercice() }}"
     === "Énoncé"
         _2021, sujet Amérique du Nord_
 
@@ -369,17 +274,17 @@
 
         En s'appuyant sur les tables de routage, tracer les liaisons entre les routeurs.
 
-<!--     === "Correction"
+    === "Correction"
         1. A-B-E-F  
 
         2.
-        ![image](data/graphAN_corr.png){: .center} -->
+        ![image](data/graphAN_corr.png){: .center}
     
 
 !!! abstract "{{ exercice() }}"
     Exercice 4 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}.
 
-<!--     ??? tip "Correction Q1.a."
+    ??? tip "Correction Q1.a."
         ```195.168.1.0/24``` 
 
     ??? tip "Correction Q1.b."
@@ -423,7 +328,7 @@
         - R1-R2 : 10
         - R1-R4-R3-R2 : 151
 
-        Le parcours R1-R4-R2 est donc bien le parcours minimal. -->
+        Le parcours R1-R4-R2 est donc bien le parcours minimal.
         
 
 
@@ -431,7 +336,7 @@
 !!! abstract "{{ exercice() }}"
     Parties 2, 3 et 4 de l'exercice 2 du sujet [Nouvelle-Calédonie J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J1.pdf){. target="_blank"}.
 
-<!--     **Partie 2**
+    **Partie 2**
     ??? tip "Correction Q1."
         Le réseau services a pour adresse IP ```195.168.254.0```.
 
