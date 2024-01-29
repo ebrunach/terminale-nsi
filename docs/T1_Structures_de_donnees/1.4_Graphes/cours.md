@@ -182,10 +182,6 @@ Les différentes modélisations ont des impacts sur la compléxité des algorith
         ```
         Sa matrice d'adjacence est:
 
-        $$
-        \require{xcolor}
-        $$
-
         ${\begin{pmatrix}0&1&0&0&\color{red}1&0\\1&0&1&0&1&0\\0&1&0&1&0&0\\0&0&1&0&1&1\\\color{red}1&1&0&1&0&0\\0&0&0&1&0&0\\\end{pmatrix}}$
 
         *Les matrices d'adjacence des graphes non orientées sont symétriques*
@@ -213,60 +209,72 @@ L'objectif va être de créer une classe implémentant l'interface d'un graphe o
 
 | Opération | Description |
 |---|---|
-| ajouter_sommet(sommet) | Ajouter un sommet nommé *sommet* au graphe |
-| ajouter_arc(sommet_debut, sommet_fin) | AJouter un arc orienté de sommet_debut à sommet_fin |
-| arc(sommet_debut, sommet_fin) | Retoune True si un arc relie sommet_debut à sommet_fin |
-| adjacents(sommet) | Retourne la liste des sommets adjacents accessibles |
+| `ajouter_sommet(sommet)` | Ajouter un sommet nommé `sommet` au graphe |
+| `ajouter_arc(sommet_debut, sommet_fin)` | Ajouter un arc orienté de `sommet_debut` à `sommet_fin` |
+| `arc(sommet_debut, sommet_fin)` | Retoune `True` si un arc relie `sommet_debut` à `sommet_fin` |
+| `adjacents(sommet)` | Retourne la liste des sommets adjacents accessibles |
 
 ### 3.1 En utilisant la matrice d'adjacence
 
 ```python
-class graphe:
+class Graphe:
     def __init__(self):
         self.A = list()
+        self.liste_sommets = dict()
         self.ordre = 0
         
-    def ajouter_noeud(self, sommet):
-        """sommet est de type entier"""
-        for i in range(self.ordre, sommet + 1):
+    def ajouter_sommet(self, sommet):
+        if sommet not in self.liste_sommets:
+            self.liste_sommets[sommet] = self.ordre
             for ligne in self.A: # Boucle ajoutant un élément à chaque liste
                 ligne.append(False)
             self.A.append([False for i in range(self.ordre + 1)]) # Ajoute une liste à la fin
             self.ordre += 1
         
     def ajouter_arc(self, depart, arrivee):
-        self.ajouter_noeud(depart)
-        self.ajouter_noeud(arrivee)
-        self.A[depart][arrivee] = True
+        self.ajouter_sommet(depart)
+        self.ajouter_sommet(arrivee)
+        i = self.liste_sommets[depart]
+        j = self.liste_sommets[arrivee]
+        self.A[i][j] = True
         
     def arc(self, depart, arrivee):
-        return self.A[depart][arrivee]
+        i = self.liste_sommets[depart]
+        j = self.liste_sommets[arrivee]
+        return self.A[i][j]
+
+    def etiquette_sommet(self, indice):
+        """Retour le sommet en fonction de son indice dans la matrice"""
+        for sommet, num in self.liste_sommets.items():
+            if num == indice:
+                return sommet
     
     def adjacents(self, sommet):
         lst = []
-        for j in range(len(self.A[sommet])):
-            if self.A[sommet][j]:
-                lst.append(j)
+        i = self.liste_sommets[sommet]
+        for j in range(len(self.A[i])):
+            if self.A[i][j]:
+                lst.append(self.etiquette_sommet(j))
         return lst
 ```
 
 ```python
->>> G = graphe()
->>> G.ajoute_arc(0, 1)
->>> G.ajoute_arc(0, 2)
->>> G.ajoute_arc(1, 2)
+>>> G = Graphe()
+>>> G.ajouter_arc("A", "D")
+>>> G.ajouter_arc("A", "E")
+>>> G.ajouter_arc("D", "E")
 >>> G.A
 [[False, True, True], [False, False, True], [False, False, False]]
->>> G.arc(0, 1), G.arc(1, 0)
+>>> G.arc("A", "D"), G.arc("D", "A")
 (True, False)
->>> G.adjacents(0)
-[1, 2]
+>>> G.adjacents("A")
+['D', 'E']
 ```
 
 ### 3.2 En utilisant la liste d'adjacence
 
 ```python
-class graphe:
+class Graphe:
     def __init__(self):
         self.adj = dict()
 
@@ -290,7 +298,7 @@ class graphe:
 ```
 
 ```python
->>> G = graphe()
+>>> G = Graphe()
 >>> G.ajouter_arc('A','B')
 >>> G.ajouter_arc('A','C')
 >>> G.ajouter_arc('B','C')
