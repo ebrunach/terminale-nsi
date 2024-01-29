@@ -8,7 +8,7 @@
 
             ![graphe non connexe](./data/exemple_graphe_non_connexe.png) 
 
-        2. Écrire une fonction (ou une méthode) `#!py est_connexe` qui détermine si un graphe est connexe ou non.
+        2. Écrire une fonction (ou une méthode) `est_connexe` qui détermine si un graphe est connexe ou non.
 
     === "Correction" 
         {{ correction(False, 
@@ -24,7 +24,7 @@
                 return g.ordre() == len(parcours)
             ```
         
-            **Remarque:** dans la fonction précédente, il faut que le graphe soit non vide pour pouvoir prendre l'élément d'indice 0 dans la liste des sommets de `#!py g`. Si on considère qu'un graphe vide est connexe (un seul morceau... vide), alors on peut écrire:
+            **Remarque:** dans la fonction précédente, il faut que le graphe soit non vide pour pouvoir prendre l'élément d'indice 0 dans la liste des sommets de `g`. Si on considère qu'un graphe vide est connexe (un seul morceau... vide), alors on peut écrire:
 
             ```python linenums='1'
             def est_connexe(g:Graphe) -> bool:
@@ -43,7 +43,7 @@
         !!! info "Rappel"
             Un graphe est **eulérien** s'il est connexe et s'il possède exactement 0 ou 2 sommets de degré impair (le degré de sommet est son nombre de voisins).
 
-        Écrire une fonction (ou une méthode) `#!py est_eulerien` qui détermine si un graphe est eulérien ou non.
+        Écrire une fonction (ou une méthode) `est_eulerien` qui détermine si un graphe est eulérien ou non.
 
     === "Correction" 
         {{ correction(False, 
@@ -62,9 +62,9 @@
 
 !!! example "{{ exercice() }}"
     === "Énoncé" 
-        Si un graphe orienté est connexe, la fonction `#!py detection_cycle` déterminera s'il contient ou non un cycle. En revanche, si le graphe n'est pas connexe, on ne sera pas capable de détecter un cycle dans une autre composante connexe que celle à laquelle appartient le sommet de départ.
+        Si un graphe orienté est connexe, la fonction `detection_cycle` déterminera s'il contient ou non un cycle. En revanche, si le graphe n'est pas connexe, on ne sera pas capable de détecter un cycle dans une autre composante connexe que celle à laquelle appartient le sommet de départ.
 
-        Écrire une fonction `#!py cycle` qui prend un paramètre un graphe orienté (de classe `#!py GrapheO` ) et qui renvoie si le graphe contient un cycle.
+        Écrire une fonction `cycle` qui prend un paramètre un graphe orienté (de classe `GrapheO` ) et qui renvoie si le graphe contient un cycle.
     === "Correction" 
         {{ correction(False, 
         "
@@ -135,7 +135,7 @@
             return tab_court
         ```
 
-        La fonction itineraires_court prend en paramètre un graphe G, un sommet de départ dep et un sommet d’arrivée arr. Cette fonction renvoie une liste Python contenant tous les itinéraires pour aller de dep à arr en passant par le moins de villes possible.
+        La fonction `itineraires_court` prend en paramètre un graphe G, un sommet de départ `dep` et un sommet d’arrivée `arr`. Cette fonction renvoie une liste Python contenant tous les itinéraires pour aller de `dep` à `arr` en passant par le moins de villes possible.
 
         Exemple (avec le graphe G2) :
 
@@ -146,15 +146,15 @@
 
         On rappelle les points suivants :
 
-        - la méthode append ajoute un élément à une liste Python ; par exemple, tab.append(el) permet d’ajouter l’élément el à la liste Python tab ;
-        - en python, l’expression ['a'] + ['b'] vaut ['a', 'b'] ;
-        - en python float('inf') correspond à l’infini.
+        - la méthode `append` ajoute un élément à une liste Python ; par exemple, `tab.append(el)` permet d’ajouter l’élément `el` à la liste Python `tab` ;
+        - en python, l’expression `['a'] + ['b']` vaut `['a', 'b']` ;
+        - en python `float('inf')` correspond à l’infini.
 
-        6. Expliquer pourquoi la fonction cherche_itineraires peut être qualifiée de fonction récursive.
-        7. Expliquer le rôle de la fonction cherche_itineraires dans le programme p1.
-        8. Compléter la fonction itineraires_court.
+        6. Expliquer pourquoi la fonction `cherche_itineraires` peut être qualifiée de fonction récursive.
+        7. Expliquer le rôle de la fonction `cherche_itineraires` dans le programme p1.
+        8. Compléter la fonction `itineraires_court`.
 
-        Les ingénieurs sont confrontés à un problème lors du test du programme p1. Voici les résultats obtenus en testant dans la console la fonction itineraires_court deux fois de suite (sans exécuter le programme entre les deux appels à la fonction itineraires_court) :
+        Les ingénieurs sont confrontés à un problème lors du test du programme p1. Voici les résultats obtenus en testant dans la console la fonction `itineraires_court` deux fois de suite (sans exécuter le programme entre les deux appels à la fonction `itineraires_court`) :
 
         ```python
         exécution du programme p1
@@ -167,7 +167,7 @@
         ```
 
         alors que dans le cas où le programme p1 est de nouveau exécuté entre les 2 appels
-        à la fonction itineraires_court, on obtient des résultats corrects :
+        à la fonction `itineraires_court`, on obtient des résultats corrects :
 
         ```python
         exécution du programme p1
