@@ -21,18 +21,16 @@ On rappelle ici l'interface d'un graphe:
 - On revient alors sur le dernier sommet où on pouvait suivre un autre chemin puis explore un autre chemin. 
 - L'exploration s'arrête quand tous les sommets accessibles ont été visités.
 
-**POINTS CLES**: La mise en place repose donc sur deux principes:
+**POINTS CLES**: La mise en place repose donc sur :
 
-- Le **marquage** des sommets visités
 - La **récursivité**
 
 ```python
-def parcours_profondeur(graphe, sommet, lst_marque = [], lst_parcours = []):
-    if sommet not in lst_marque:
-        lst_marque.append(sommet)
+def parcours_profondeur(graphe, sommet, lst_parcours = []):
+    if sommet not in lst_parcours:
         lst_parcours.append(sommet)
         for sommet_adjacent in graphe.adjacents(sommet):
-            parcours_profondeur(graphe, sommet_adjacent, lst_marque, lst_parcours)
+            parcours_profondeur(graphe, sommet_adjacent, lst_parcours)
     return lst_parcours
 ```
 
@@ -53,18 +51,16 @@ def parcours_profondeur(graphe, sommet, lst_marque = [], lst_parcours = []):
 
 **POINTS CLEFS**:
 
-- Le **marquage** des sommets visités
 - Une **file** à mettre à jour des sommets à visiter
 
 ```python
 def parcours_largeur(graphe, depart):
-    lst_marque, lst_parcours, lst_a_parcourir = [], [], [depart]
+    lst_parcours, lst_a_parcourir = [], [depart]
     while len(lst_a_parcourir) != 0:
         sommet = lst_a_parcourir.pop(0)
-        lst_marque.append(sommet)
         lst_parcours.append(sommet)
         for sommet_adjacent in graphe.adjacents(sommet):
-            if sommet_adjacent not in lst_marque and sommet_adjacent not in lst_a_parcourir:
+            if sommet_adjacent not in lst_parcours and sommet_adjacent not in lst_a_parcourir:
                 lst_a_parcourir.append(sommet_adjacent)
     return lst_parcours
 ```
