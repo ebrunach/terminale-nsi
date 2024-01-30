@@ -60,7 +60,7 @@
         ) }}
 
 
-!!! example "{{ exercice() }}"
+<!-- !!! example "{{ exercice() }}"
     === "Énoncé" 
         Si un graphe orienté est connexe, la fonction `detection_cycle` déterminera s'il contient ou non un cycle. En revanche, si le graphe n'est pas connexe, on ne sera pas capable de détecter un cycle dans une autre composante connexe que celle à laquelle appartient le sommet de départ.
 
@@ -69,7 +69,7 @@
         {{ correction(False, 
         "
         "
-        ) }}
+        ) }} -->
 
 !!! example "{{ exercice() }}: Type bac"
     === "Énoncé" 
