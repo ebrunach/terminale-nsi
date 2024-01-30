@@ -6,7 +6,6 @@
     - [Graphes](./T1_Structures_de_donnees/1.4_Graphes/cours.md)
     - [Projets 2eme trimestre](./T8_Evaluations/T2.md)
     - [Présentation sur la spécialité NSI](./T7_Divers/10_orientation/cours.md)
-    - :star: :star: :star: [Cryptographie](./T5_Architecture_materielle/5.4_Cryptographie/cours.md) :star: :star: :star:
 
     
     
