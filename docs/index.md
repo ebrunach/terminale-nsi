@@ -1,14 +1,16 @@
 
 
 !!! abstract "Actualités"
-    - les CPGE  du  lycée  P.Eluard organisent  une  ou  deux  journée(s)  d’immersion  en  faveur  des  élèves intéressé(e)s par les prépas MPSi et PCSI. Si vous êtes intéressés, il faut venir m'en parler.
     - [Algorithmes sur les Graphes](./T3_Algorithmique/3.5_Algorithmes_sur_les_graphes/cours.md)
     - [Graphes](./T1_Structures_de_donnees/1.4_Graphes/cours.md)
     - [Projets 2eme trimestre](./T8_Evaluations/T2.md)
     - [Présentation sur la spécialité NSI](./T7_Divers/10_orientation/cours.md)
 
     
-    
+!!! warning "Orientation"
+    - [https://beta.suptracker.org/](https://beta.suptracker.org/)
+    - les CPGE  du  lycée  P.Eluard organisent  une  ou  deux  journée(s)  d’immersion  en  faveur  des  élèves intéressé(e)s par les prépas MPSi et PCSI. Si vous êtes intéressés, il faut venir m'en parler.
+
 
 <!--     - page sur l'orientation post-bac à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}. 
     - [sujet](data/BacBlancTNSI_2023.pdf){. target="_blank"} du bac blanc et son [corrigé](data/BacBlancTNSI_2023_corr.pdf). -->
