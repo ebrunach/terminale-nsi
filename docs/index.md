@@ -3,7 +3,6 @@
 !!! abstract "Actualités"
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)
     - [Algorithmes sur les Graphes](./T3_Algorithmique/3.5_Algorithmes_sur_les_graphes/cours.md)
-    - [Graphes](./T1_Structures_de_donnees/1.4_Graphes/cours.md)
     - [Projets 2eme trimestre](./T8_Evaluations/T2.md)
     - [Présentation sur la spécialité NSI](./T7_Divers/10_orientation/cours.md)
 
@@ -22,6 +21,7 @@
 
 
 ### *Thèmes déjà traités*
+- [Graphes](./T1_Structures_de_donnees/1.4_Graphes/cours.md)
 - [Cryptographie](./T5_Architecture_materielle/5.4_Cryptographie/cours.md) 
 - [Protocoles de routage](./T5_Architecture_materielle/5.3_Protocoles_de_routage/11%20-%20Routage%20-%20Cours.md)
 - [Gestion des processus](./T5_Architecture_materielle/5.2_Gestion_des_processus/cours.md)
