@@ -1,6 +1,7 @@
 
 
 !!! abstract "Actualités"
+    - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)
     - [Algorithmes sur les Graphes](./T3_Algorithmique/3.5_Algorithmes_sur_les_graphes/cours.md)
     - [Graphes](./T1_Structures_de_donnees/1.4_Graphes/cours.md)
     - [Projets 2eme trimestre](./T8_Evaluations/T2.md)
