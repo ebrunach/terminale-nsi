@@ -62,7 +62,7 @@ Exemple d'utilisation :
         Re-écrire l'algorithme précédent en s'arrêtant dès qu'une occurrence de ```motif``` est trouvée dans ```texte```.
 
         La fonction renverra uniquement un booléen. 
-    === "Correction"
+<!--     === "Correction"
         ```python linenums='1'
         def recherche_naive_bool(texte, motif):
             '''
@@ -80,7 +80,7 @@ Exemple d'utilisation :
                 i += 1
 
             return trouve
-        ```
+        ``` -->
          
 
 ### 1.3 Application à la recherche d'un motif dans un roman
@@ -102,7 +102,7 @@ with open("Les_Miserables.txt") as f:
     === "Énoncé"
         À l'aide du module ```time```, mesurer le temps de recherche dans Les Misérables d'un mot court, d'une longue phrase (présente dans le texte), d'un mot qui n'existe pas. Que remarquez-vous ?  
     
-    === "Correction"
+<!--     === "Correction"
         ```python
         t0 = time.time()
         motif = "maison"
@@ -131,7 +131,7 @@ with open("Les_Miserables.txt") as f:
         0.22150230407714844
         ```
 
-        On remarque que le temps de recherche est semblable, quel que soit le motif cherché. 
+        On remarque que le temps de recherche est semblable, quel que soit le motif cherché.  -->
 
     
 
@@ -145,7 +145,7 @@ with open("Les_Miserables.txt") as f:
         ![image](data/mickey.jpg){: .center width=40%}
         
 
-    === "Correction"
+<!--     === "Correction"
         ```python linenums='1'
         def presqueBMH(texte, motif):
             indices = []
@@ -158,7 +158,7 @@ with open("Les_Miserables.txt") as f:
                     indices.append(i-len(motif)+1)
                 i += 1
             return indices
-        ```
+        ``` -->
 
 
 ## 3. Algorithme de Boyer-Moore-Horspool
@@ -278,7 +278,7 @@ Exemple d'utilisation :
         Reprendre les mesures effectuées sur Les Misérables, mais cette fois avec l'algorithme BMH. Que remarquez-vous ?  
 
     
-    === "Correction"
+<!--     === "Correction"
         ```python
         t0 = time.time()
         motif = "maison"
@@ -309,7 +309,7 @@ Exemple d'utilisation :
 
         On constate quelque chose de remarquable (et qui peut être à première vue contre-intuitif) : 
 
-        **Plus le motif recherché est long, plus la recherche est rapide**.
+        **Plus le motif recherché est long, plus la recherche est rapide**. -->
 
 
         
