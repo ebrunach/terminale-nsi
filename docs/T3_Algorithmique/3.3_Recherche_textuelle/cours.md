@@ -11,6 +11,7 @@
 
 ???+ tip "Illustration de l'algorithme"
     <gif-player src="https://terminale-nsi.vercel.app/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_naive.gif" speed="1" play></gif-player>
+
     _Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris._
 
 
@@ -170,6 +171,7 @@ Pour cela on regarde le caractère ```X```  du texte sur lequel on s'est arrêt�
 
 ???+ tip "Illustration de l'algorithme"
     <gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_BM.gif" speed="1" play></gif-player>
+    
     _Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris._
 
 
