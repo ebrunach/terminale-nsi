@@ -1,6 +1,8 @@
 
 
 !!! abstract "Actualités"
+    - [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
+    - [Système sur puce](./T5_Architecture_materielle/5.1_Systemes_sur_puce/cours.md)
     - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)
     - [Algorithmes sur les Graphes](./T3_Algorithmique/3.5_Algorithmes_sur_les_graphes/cours.md)
     - [Projets 2eme trimestre](./T8_Evaluations/T2.md)
