@@ -9,7 +9,7 @@
         1. `commence_par_a(txt)` renvoyant `True` si la chaine `txt` commence par `a` et `False` sinon. Exemple ci-dessous:
             ```python
             >>> filtre_liste(commence_par_a, ['allemand', 'anglais', 'francais'])
-            ['francais']
+            ['allemand', 'anglais']
             ```
         2. `contient_roi(txt)` renvoyant `True` si la chaine `txt` contient la chaine `roi` et `False` sinon. Exemple ci-dessous:
             ```python
@@ -18,8 +18,8 @@
             ```
         3. `contient(chaine)` renvoyant une fonction de paramètre `txt` qui renvoie `True` si la chaine `txt` contient la chaine `chaine` et `False` sinon.
             ```python
-            >>> filtre_liste(commence_par_a, ['roi des francs', 'roi du Maroc', 'prince de Galles'])
-            ['roi des francs', 'roi du Maroc']
+            >>> filtre_liste(contient('Maroc'), ['roi des francs', 'roi du Maroc', 'prince de Galles'])
+            ['roi du Maroc']
             ```
 
         ```python
