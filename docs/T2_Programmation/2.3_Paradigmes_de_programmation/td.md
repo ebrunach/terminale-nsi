@@ -13,7 +13,7 @@
             ```
         2. `contient_roi(txt)` renvoyant `True` si la chaine `txt` contient la chaine `roi` et `False` sinon. Exemple ci-dessous:
             ```python
-            >>> filtre_liste(commence_par_a, ['roi des francs', 'roi du Maroc', 'prince de Galles'])
+            >>> filtre_liste(contient_roi, ['roi des francs', 'roi du Maroc', 'prince de Galles'])
             ['roi des francs', 'roi du Maroc']
             ```
         3. `contient(chaine)` renvoyant une fonction de paramètre `txt` qui renvoie `True` si la chaine `txt` contient la chaine `chaine` et `False` sinon.
@@ -53,7 +53,7 @@
         def applique_fonction_sur_liste(fonction, liste):
             liste_retour = ...
             for elem in ... :
-                liste_retour.append()
+                liste_retour.append(...)
             return ...
         ```
 
