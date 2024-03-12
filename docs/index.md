@@ -1,6 +1,7 @@
 
 
 !!! abstract "Actualités"
+    - [Paradigmes de programmation](./T2_Programmation/2.3_Paradigmes_de_programmation/cours.md)
     - [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
     - [Projets 2eme trimestre](./T8_Evaluations/T2.md)
 
