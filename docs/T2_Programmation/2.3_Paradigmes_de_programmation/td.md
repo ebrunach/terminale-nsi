@@ -76,8 +76,12 @@
 !!! example "{{ exercice() }}"
     === "énoncé"
         En utilisant les lambda fonctions :
-        
+
         1. Créer une fonction `superieur_a_0` renvoyant `True` si l'unique parametre d'entrée en positif et `False` sinon. 
         2. Créer une fonction `différence` renvoyant la différence entre le premier et le deuxième paramètre. 
         3. Créer une fonction `milieu` renvoyant la valeur au milieu du premier et du deuxième paramètre. 
         4. Créer une fonction `initiale` renvoyant les initiales (premières lettres) du premier et du deuxième paramètre séparées par un point.
+
+!!! example "{{ exercice() }}"
+    === "énoncé"
+        Refaire les exercices 1, 2 et 3 en utilisant `filter`, `map` et `reduce` et les lambda fonctions.
