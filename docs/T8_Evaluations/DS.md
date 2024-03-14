@@ -1,4 +1,4 @@
-# Sujets
+# Evaluations écrites
 
 - [Sujet 1 du bac blanc (décembre)](./data/TNSI-Sujet1.pdf) - [correction](./data/Correction-Sujet1.md)
 - [Sujet 2 du bac blanc (décembre)](./data/TNSI-Sujet2.pdf) - [correction](./data/Correction-Sujet2.md)

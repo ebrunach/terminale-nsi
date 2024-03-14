@@ -1,7 +1,0 @@
-nav:
-    - Evaluations écrites : DS.md
-    - Devoirs à la maison : DM.md
-    - Projets:
-        - 1er trimestre : ./Projets/T1.md
-        - 2eme trimestre : ./Projets/T2.md
-        - Liste des sujets : ./Projets/Projets
