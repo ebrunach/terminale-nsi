@@ -1,9 +1,9 @@
 
 
 !!! abstract "Actualités"
+    - [Calculabilité, décidabilité](./T2_Programmation/2.4_Calculabilite_Decidabilite/cours.md)
     - [Paradigmes de programmation](./T2_Programmation/2.3_Paradigmes_de_programmation/cours.md)
-    - [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
-    - [Projets 2eme trimestre](./T8_Evaluations/T2.md)
+    - [Projets 2eme trimestre](./T8_Evaluations/Projets/T2.md)
 
     
 !!! warning "Orientation"
@@ -21,6 +21,7 @@
 
 
 ### *Thèmes déjà traités*
+- [Programmation dynamique](./T3_Algorithmique/3.2_Programmation_dynamique/cours.md)
 - [Système sur puce](./T5_Architecture_materielle/5.1_Systemes_sur_puce/cours.md)
 - [Recherche textuelle](./T3_Algorithmique/3.3_Recherche_textuelle/cours.md)
 - [Algorithmes sur les Graphes](./T3_Algorithmique/3.5_Algorithmes_sur_les_graphes/cours.md)
@@ -33,7 +34,7 @@
 - [Arbres](./T1_Structures_de_donnees/1.2_Arbres/cours.md) 
 - [Diviser pour régner](./T3_Algorithmique/3.1_Diviser_pour_regner/cours.md)
 - [Récursivité](./T2_Programmation/2.2_Recursivite/cours.md)
-- [Projets 1er trimestre](./T8_Evaluations/T1_-_vers_le_grand_oral.md)
+- [Projets 1er trimestre](./T8_Evaluations/Projets/T1.md)
 - [SQL](./T4_Bases_de_donnees/4.3_SQL/cours.md)
 - [SGBD](./T4_Bases_de_donnees/4.2_SGBD/cours.md)
 - [Modèle relationnel](./T4_Bases_de_donnees/4.1_Modele_relationnel/cours.md)
