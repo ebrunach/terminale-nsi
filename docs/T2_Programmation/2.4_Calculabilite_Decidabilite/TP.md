@@ -1,6 +1,4 @@
-# TP
-
-## Machine de turing
+# TP - Machine de turing
 
 Le concept de machine de Turing, inventé avant l'ordinateur, était censé représenter une personne virtuelle exécutant une procédure bien définie, en changeant le contenu des cases d'un ruban infini, en choisissant ce contenu parmi un ensemble fini de symboles.
 

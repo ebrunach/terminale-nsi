@@ -1,1 +1,4 @@
 hide: false
+nav:
+    - Cours : cours.md
+    - TP : TP.md
