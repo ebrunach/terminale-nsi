@@ -83,3 +83,12 @@ flowchart TD
     1. Donner la représentation binaire de 25 et 50. Puis de 6 et 12. Puis de 31 et 62. Que remarquez vous ?
     2. Ecrire la table d'action permettant de multipliser un nombre binaire par deux. Faire fonctionner la machine de Turing sur les exemples de la question 1.
     3. Réaliser le diagrammes des transitions de cette machine.
+
+!!! example "Exercice 3 : Additionner deux nombres binaire"
+    Ecrire la table d'action permettant de réaliser la somme de deux nombres binaires.
+
+    Organisation sur le ruban:
+
+    <figure markdown>
+    ![addition_turing](./data/addition_turing.svg)
+    </figure>
